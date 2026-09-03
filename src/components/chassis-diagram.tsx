@@ -440,10 +440,12 @@ export function ChassisDiagram({
   arch,
   selected,
   onSelect,
+  hideChips,
 }: {
   arch: Architecture;
   selected: string | null;
   onSelect: (key: string) => void;
+  hideChips?: boolean;
 }) {
   const c = arch.color;
   const layout = chassisLayout(arch.id);
@@ -627,7 +629,7 @@ export function ChassisDiagram({
 
       <p className="mt-1 min-h-5 text-center text-[12px] text-muted">{caption}</p>
 
-      {chips.length ? (
+      {chips.length && !hideChips ? (
         <div className="mt-3 flex flex-wrap gap-1.5">
           {chips.map((p) => (
             <button
@@ -719,80 +721,3 @@ function SkateboardPhoto({
     </div>
   );
 }
-
-export function ChassisThumb({
-  arch,
-  className,
-}: {
-  arch: Architecture;
-  className?: string;
-}) {
-  if (arch.skateboardImg) {
-    return (
-      <img
-        src={`/${arch.skateboardImg}`}
-        alt={`${arch.name} 滑板底盘`}
-        className={cn("block h-full w-full object-cover object-center", className)}
-      />
-    );
-  }
-  const c = arch.color;
-  const layout = chassisLayout(arch.id);
-  return (
-    <svg
-      viewBox="0 0 900 252"
-      className={cn("block h-full w-full", className)}
-      aria-hidden
-    >
-      <rect
-        x={layout.deck.x}
-        y={layout.deck.y}
-        width={layout.deck.w}
-        height={layout.deck.h}
-        rx={layout.deck.rx}
-        fill="var(--color-surface)"
-        stroke={c}
-        strokeWidth="2.5"
-      />
-      {layout.wheels.map((w, i) => (
-        <g key={i}>
-          <line
-            x1={w.cx}
-            y1={layout.deck.y + layout.deck.h}
-            x2={w.cx}
-            y2={w.cy - 20}
-            stroke={c}
-            strokeWidth="3"
-            strokeOpacity="0.4"
-          />
-          <circle
-            cx={w.cx}
-            cy={w.cy}
-            r="20"
-            fill="var(--color-surface)"
-            stroke={c}
-            strokeWidth="3"
-          />
-          <circle cx={w.cx} cy={w.cy} r="8" fill="none" stroke={c} strokeWidth="2" />
-        </g>
-      ))}
-      {layout.parts.map((p) => (
-        <g key={p.key}>
-          <rect
-            x={p.x}
-            y={p.y}
-            width={p.w}
-            height={p.h}
-            rx={p.rx}
-            fill={c}
-            fillOpacity={opacityFor(p.variant, false, false, false)}
-            stroke={c}
-            strokeWidth="1.5"
-          />
-          <CellGrid part={p} color={c} dim={false} />
-        </g>
-      ))}
-    </svg>
-  );
-}
-

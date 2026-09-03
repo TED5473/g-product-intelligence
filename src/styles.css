@@ -17,7 +17,7 @@
   --color-ok: #166534;
   --color-inf: #57534e;
 
-  --font-sans: "IBM Plex Sans", "IBM Plex Sans SC", "Noto Sans SC", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, "IBM Plex Sans SC", "IBM Plex Sans", "Noto Sans SC", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
   --radius-xs: 4px;
@@ -44,12 +44,18 @@
 
   html {
     height: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
   }
 
   body {
     min-height: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
     font-size: 15px;
     line-height: 1.5;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
   :focus-visible {

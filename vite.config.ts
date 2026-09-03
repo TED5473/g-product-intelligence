@@ -150,6 +150,17 @@ export default defineConfig(({ command, isPreview }) => ({
     host: "0.0.0.0",
     port: 8080,
     strictPort: true,
+    warmup: {
+      clientFiles: [
+        "./src/routes/__root.tsx",
+        "./src/routes/index.tsx",
+        "./src/components/app-shell.tsx",
+        "./src/components/arch-tree.tsx",
+        "./src/components/vehicle-card.tsx",
+        "./src/lib/catalog.ts",
+        "./src/data/pm-wall.ts",
+      ],
+    },
   },
   preview: {
     host: "127.0.0.1",

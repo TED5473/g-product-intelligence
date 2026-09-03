@@ -1,13 +1,8 @@
 import { PM_WALL } from "@/data/pm-wall";
 import { BYD_WALL } from "@/data/byd-wall";
 import { CHERY_WALL } from "@/data/chery-wall";
-import {
-  officialBrands,
-  officialVehicles,
-  type OfficialBrand,
-  type OfficialVehicle,
-} from "@/data/official-intel";
-import { mediaVehicles, type MediaVehicle } from "@/data/media-intel";
+import { XPENG_WALL } from "@/data/xpeng-wall";
+import { nameSearchBlob } from "@/data/markets";
 
 export const SRC = PM_WALL.SRC as {
   ZK: string;
@@ -17,15 +12,31 @@ export const SRC = PM_WALL.SRC as {
 };
 
 export const GROUPS = [
-  { id: "geely", label: "吉利系", title: "G-Product Intelligence" },
+  { id: "geely", label: "吉利", title: "G-Product Intelligence" },
   { id: "byd", label: "比亚迪", title: "BYD Product Intelligence" },
   { id: "chery", label: "奇瑞", title: "Chery Product Intelligence" },
+  { id: "xpeng", label: "小鹏", title: "XPeng Product Intelligence" },
 ] as const;
 
 export type GroupId = (typeof GROUPS)[number]["id"];
 
 export function groupMeta(id?: string) {
   return GROUPS.find((g) => g.id === id) || GROUPS[0];
+}
+
+export function isGroupId(v: unknown): v is GroupId {
+  return v === "geely" || v === "byd" || v === "chery" || v === "xpeng";
+}
+
+export function parseGroup(v: unknown): GroupId {
+  return isGroupId(v) ? v : "geely";
+}
+
+/** Card-sized webp (≈4KB) — full photos stay in `imgs/cars/` for the sheet. */
+export function cardPhoto(photo?: string | null): string | null {
+  if (!photo) return null;
+  const m = photo.match(/^imgs\/cars\/([^/]+)\.\w+$/);
+  return m ? `imgs/cars/thumbs/${m[1]}.webp` : photo;
 }
 
 export const footnote: string = PM_WALL.footnote;
@@ -94,7 +105,7 @@ export type Hotspot = {
 
 export type ArchDetailBlock = {
   title: string;
-  items?: { k: string; v: string; s?: string }[];
+  items?: { k: string; v: string; s?: string; cmp?: boolean }[];
   img?: string;
   thumbs?: string[];
 };
@@ -196,24 +207,28 @@ export const architectures = [
   ...tagGroup(PM_WALL.architectures as unknown as Architecture[], "geely"),
   ...tagGroup(BYD_WALL.architectures as unknown as Architecture[], "byd"),
   ...tagGroup(CHERY_WALL.architectures as unknown as Architecture[], "chery"),
+  ...tagGroup(XPENG_WALL.architectures as unknown as Architecture[], "xpeng"),
 ];
 
 export const platforms = {
   ...tagPlat(PM_WALL.platforms as Record<string, Platform>, "geely"),
   ...tagPlat(BYD_WALL.platforms as Record<string, Platform>, "byd"),
   ...tagPlat(CHERY_WALL.platforms as Record<string, Platform>, "chery"),
+  ...tagPlat(XPENG_WALL.platforms as Record<string, Platform>, "xpeng"),
 } as Record<string, Platform>;
 
 export const vehicles = [
   ...tagGroup(PM_WALL.vehicles as Vehicle[], "geely"),
   ...tagGroup(BYD_WALL.vehicles as Vehicle[], "byd"),
   ...tagGroup(CHERY_WALL.vehicles as Vehicle[], "chery"),
+  ...tagGroup(XPENG_WALL.vehicles as Vehicle[], "xpeng"),
 ];
 
 export const homologGroups = [
   ...(PM_WALL.homologGroups as HomologGroup[]),
   ...(BYD_WALL.homologGroups as HomologGroup[]),
   ...(CHERY_WALL.homologGroups as HomologGroup[]),
+  ...(XPENG_WALL.homologGroups as HomologGroup[]),
 ];
 
 export const brandMap = PM_WALL.brandMap as {
@@ -225,6 +240,7 @@ export const brandMap = PM_WALL.brandMap as {
 export function brandMapFor(group?: string) {
   if (group === "byd") return BYD_WALL.brandMap as typeof brandMap;
   if (group === "chery") return CHERY_WALL.brandMap as typeof brandMap;
+  if (group === "xpeng") return XPENG_WALL.brandMap as typeof brandMap;
   return brandMap;
 }
 
@@ -234,6 +250,7 @@ export const briefBank = PM_WALL.briefBank as Brief[];
 export function archCompareFor(group?: string): ArchCompare {
   if (group === "byd") return BYD_WALL.archCompare as ArchCompare;
   if (group === "chery") return CHERY_WALL.archCompare as ArchCompare;
+  if (group === "xpeng") return XPENG_WALL.archCompare as ArchCompare;
   return PM_WALL.archCompare as ArchCompare;
 }
 
@@ -244,28 +261,12 @@ export const compareFields = PM_WALL.compareFields as {
   label: string;
 }[];
 
-export { officialBrands, officialVehicles };
-export type { OfficialBrand, OfficialVehicle };
-
-export function officialFor(v: Vehicle): {
-  brand: OfficialBrand | null;
-  car: OfficialVehicle | null;
-} {
-  const brand = officialBrands[v.brand] || null;
-  const car = officialVehicles[v.id] || null;
-  return { brand, car };
-}
-
-export function mediaFor(v: Vehicle): MediaVehicle | null {
-  return mediaVehicles[v.id] || null;
-}
-
 export function archById(id: string) {
   return architectures.find((a) => a.id === id);
 }
 
 export function carById(id: string) {
-  return vehicles.find((v) => v.id === id);
+  return vehicles.find((x) => x.id === id);
 }
 
 export function platById(id: string) {
@@ -326,6 +327,7 @@ export function matchesFilters(v: Vehicle, f: Filters) {
       v.eea,
       v.summary,
       v.course,
+      nameSearchBlob(v.id),
     ]
       .join(" ")
       .toLowerCase();
@@ -400,11 +402,15 @@ export function stats(f: Filters) {
 
 export const TRIM_LABELS: Record<string, string> = {
   name: "配置",
+  msrp: "指导价",
   battery: "电池",
   packCode: "包码",
   range: "续航",
   hv: "电压",
   motors: "电机",
+  acc: "0–100",
+  drive: "驱动",
+  energy: "能源",
   adas: "智驾",
   v2l: "V2L",
   dc: "DC",

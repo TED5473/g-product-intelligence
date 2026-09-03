@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { Filters, GroupId } from "@/lib/catalog";
+import { hostedArches, type Filters, type GroupId } from "@/lib/catalog";
 
 export type ViewMode = "hierarchy" | "landscape" | "matrix";
 
@@ -20,6 +20,7 @@ type UIState = {
   collapsedPlat: Record<string, boolean>;
   toggleArch: (id: string) => void;
   togglePlat: (id: string) => void;
+  setCollapsedArch: (m: Record<string, boolean>) => void;
   expandAll: () => void;
   collapseAll: () => void;
   searchOpen: boolean;
@@ -35,6 +36,17 @@ const emptyFilters: Filters = {
   group: "geely",
 };
 
+/** First architecture open, the rest folded — keeps first paint to one swimlane of cars. */
+function foldAllButFirst(group: GroupId): Record<string, boolean> {
+  const arches = hostedArches(group);
+  const first = arches[0]?.id;
+  const m: Record<string, boolean> = {};
+  for (const a of arches) {
+    if (a.id !== first) m[a.id] = true;
+  }
+  return m;
+}
+
 export const useUI = create<UIState>((set) => ({
   filters: emptyFilters,
   setFilter: (k, v) => set((s) => ({ filters: { ...s.filters, [k]: v } })),
@@ -42,7 +54,7 @@ export const useUI = create<UIState>((set) => ({
     set((s) => ({
       filters: { ...emptyFilters, group: g, q: s.filters.q, showPh: true },
       compare: [],
-      collapsedArch: {},
+      collapsedArch: foldAllButFirst(g),
       collapsedPlat: {},
     })),
   resetFilters: () =>
@@ -63,7 +75,7 @@ export const useUI = create<UIState>((set) => ({
     }),
   compareDiffOnly: false,
   setCompareDiffOnly: (v) => set({ compareDiffOnly: v }),
-  collapsedArch: {},
+  collapsedArch: foldAllButFirst("geely"),
   collapsedPlat: {},
   toggleArch: (id) =>
     set((s) => ({
@@ -73,10 +85,13 @@ export const useUI = create<UIState>((set) => ({
     set((s) => ({
       collapsedPlat: { ...s.collapsedPlat, [id]: !s.collapsedPlat[id] },
     })),
+  setCollapsedArch: (m) => set({ collapsedArch: m }),
   expandAll: () => set({ collapsedArch: {}, collapsedPlat: {} }),
-  collapseAll: () => {
-    /* filled by caller with ids */
-  },
+  collapseAll: () =>
+    set((s) => ({
+      collapsedArch: foldAllButFirst(s.filters.group),
+      collapsedPlat: {},
+    })),
   searchOpen: false,
   setSearchOpen: (v) => set({ searchOpen: v }),
 }));

@@ -34,14 +34,27 @@ function span(nums: number[]) {
   return a === b ? String(a) : `${a}–${b}`;
 }
 
-function classDims(body: string) {
-  const parsed = vehicles
-    .filter((v) => v.body === body)
-    .map((v) => parseDims(v.detail?.dims))
-    .filter((d): d is Dims => Boolean(d));
-  const pick = (k: keyof Dims) =>
-    span(parsed.map((p) => p[k]).filter((n): n is number => typeof n === "number"));
-  return { l: pick("l"), w: pick("w"), h: pick("h"), wb: pick("wb") };
+type ClassDims = { l: string | null; w: string | null; h: string | null; wb: string | null };
+const EMPTY_CLS: ClassDims = { l: null, w: null, h: null, wb: null };
+let classCache: Record<string, ClassDims> | null = null;
+
+function classDims(body: string): ClassDims {
+  if (!classCache) {
+    classCache = {};
+    const buckets: Record<string, Dims[]> = {};
+    for (const v of vehicles) {
+      if (!v.body) continue;
+      const d = parseDims(v.detail?.dims);
+      if (!d) continue;
+      (buckets[v.body] ||= []).push(d);
+    }
+    for (const [b, parsed] of Object.entries(buckets)) {
+      const pick = (k: keyof Dims) =>
+        span(parsed.map((p) => p[k]).filter((n): n is number => typeof n === "number"));
+      classCache[b] = { l: pick("l"), w: pick("w"), h: pick("h"), wb: pick("wb") };
+    }
+  }
+  return classCache[body] || EMPTY_CLS;
 }
 
 function Row({ k, v }: { k: string; v?: string | number | null }) {
@@ -61,7 +74,7 @@ function TipBody({
 }: {
   label: string;
   own: Dims | null;
-  cls: { l: string | null; w: string | null; h: string | null; wb: string | null };
+  cls: ClassDims;
 }) {
   const hasOwn = Boolean(own);
   const hasCls = Boolean(cls.l || cls.w || cls.h || cls.wb);
@@ -123,10 +136,10 @@ export function BodyMark({
 }) {
   const label = body || "—";
   const own = parseDims(dims);
-  const cls = body ? classDims(body) : { l: null, w: null, h: null, wb: null };
   const triggerRef = useRef<HTMLSpanElement>(null);
   const tipRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
+  const cls = open && body ? classDims(body) : EMPTY_CLS;
 
   useLayoutEffect(() => {
     if (!open) return;

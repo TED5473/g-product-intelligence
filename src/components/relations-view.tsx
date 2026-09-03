@@ -7,7 +7,7 @@ import {
   liveCars,
   brandMapFor,
 } from "@/lib/catalog";
-import { useUI } from "@/lib/store";
+import { useFilters, useOpenVehicle } from "@/lib/app-search";
 import { cn } from "@/lib/utils";
 
 function relGroups(vId: string) {
@@ -40,8 +40,8 @@ function relGroups(vId: string) {
 }
 
 export function RelationsView() {
-  const filters = useUI((s) => s.filters);
-  const openVehicle = useUI((s) => s.openVehicle);
+  const filters = useFilters();
+  const openVehicle = useOpenVehicle();
   const [mode, setMode] = useState<"board" | "map">("map");
   const [relId, setRelId] = useState("7x");
   const [q, setQ] = useState("");
@@ -65,7 +65,7 @@ export function RelationsView() {
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">Vehicle Relations</h1>
         </div>
-        <div className="flex rounded-sm border border-line">
+        <div className="flex h-11 overflow-hidden rounded-sm border border-line md:h-8">
           <button
             type="button"
             className={cn("px-3 py-1.5 text-[12px]", mode === "board" ? "bg-ink text-white" : "text-muted")}
@@ -99,7 +99,7 @@ export function RelationsView() {
                       <button
                         key={id}
                         type="button"
-                        className="rounded-sm border border-line px-2 py-1 text-[12px] hover:border-ink"
+                        className="min-h-11 rounded-sm border border-line px-2.5 text-[12px] hover:border-ink"
                         onClick={() => openVehicle(id)}
                       >
                         {c.name}
@@ -114,7 +114,7 @@ export function RelationsView() {
               </div>
             ))}
           </div>
-          <div className="rounded-md border border-line p-4">
+            <div className="overflow-x-auto rounded-md border border-line p-4">
             <h3 className="mb-3 text-[13px] font-semibold">Brand map</h3>
             <table className="w-full text-left text-[13px]">
               <thead>
@@ -155,7 +155,7 @@ export function RelationsView() {
                     openVehicle(x.id);
                   }}
                   className={cn(
-                    "flex w-full flex-col items-start px-3 py-2 text-left text-[13px]",
+                    "flex min-h-12 w-full flex-col items-start px-3 py-2.5 text-left text-[13px]",
                     x.id === v.id ? "bg-bg font-medium" : "hover:bg-bg/70",
                   )}
                 >
@@ -189,7 +189,7 @@ export function RelationsView() {
                     <button
                       key={n.id}
                       type="button"
-                      className="rounded-sm border border-line px-2 py-1 text-[12px] hover:border-ink"
+                      className="min-h-11 rounded-sm border border-line px-2.5 text-[12px] hover:border-ink"
                       onClick={() => {
                         setRelId(n.id);
                         openVehicle(n.id);

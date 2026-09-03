@@ -1,7 +1,7 @@
-/* Media intel: Geely captured 2026-08-31; BYD/Chery recaptured 2026-09-01 from 汽车之家 __NEXT_DATA__ and 懂车帝 car_list.
- * Public口径. Autohome 厂商指导价 ≠ 官网限时价. Never invent missing series.
+/* Media intel: Geely CMA/GEA recaptured 2026-09-02 from 汽车之家 / 懂车帝.
+ * BYD/Chery/XPeng captured 2026-09-01. Public口径. Autohome 厂商指导价 ≠ 官网限时价. Never invent missing series.
  */
-export const MEDIA_CAPTURED = "2026-09-01";
+export const MEDIA_CAPTURED = "2026-09-02";
 
 export type MediaTrim = {
   name: string;
@@ -23,6 +23,8 @@ export type MediaAH = {
   hotSpec?: string;
   koubei?: MediaKoubei[];
   tags?: string[];
+  /** Autohome 即将上市 / 未上市. */
+  phase?: "coming";
 };
 
 export type MediaSibling = {
@@ -33,7 +35,7 @@ export type MediaSibling = {
 };
 
 export type MediaDCD = {
-  seriesId: string;
+  seriesId?: string;
   name?: string;
   msrp?: string;
   trims?: MediaTrim[];
@@ -44,6 +46,11 @@ export type MediaVehicle = {
   ah?: MediaAH;
   dcd?: MediaDCD;
 };
+
+export function mediaFor(v: { id: string } | string): MediaVehicle | null {
+  const id = typeof v === "string" ? v : v.id;
+  return mediaVehicles[id] || null;
+}
 
 export const mediaVehicles: Record<string, MediaVehicle> = {
   "001": {
@@ -96,7 +103,46 @@ export const mediaVehicles: Record<string, MediaVehicle> = {
     ah: { seriesId: "7812", name: "领克Z20", msrp: "10.99-15.09万", score: "4.5", rangeKm: "530" },
   },
   lynk03: {
-    ah: { seriesId: "4402", name: "领克03", msrp: undefined, score: undefined },
+    ah: { seriesId: "4402", name: "领克03", msrp: "12.18-42.03万" },
+  },
+  lynk03plus: {
+    ah: { seriesId: "4402", name: "领克03", msrp: "12.18-42.03万" },
+  },
+  lynk02: {
+    ah: { seriesId: "6070", name: "领克02 Hatchback", msrp: "15.08-18.18万" },
+  },
+  lynk05: {
+    ah: { seriesId: "5194", name: "领克05", msrp: "17.58-26.18万" },
+  },
+  lynk06: {
+    ah: { seriesId: "5555", name: "领克06", msrp: "11.76-12.96万" },
+  },
+  "galaxy-e5": {
+    ah: { seriesId: "7650", name: "银河E5", msrp: "10.98-17.98万", score: "4.51", rangeKm: "610" },
+  },
+  "galaxy-xingyuan": {
+    ah: { seriesId: "7806", name: "星愿", msrp: "6.48-9.48万", score: "4.51", rangeKm: "480" },
+  },
+  "galaxy-m9": {
+    ah: { seriesId: "7165", name: "银河M9", msrp: "18.38-26.98万", score: "4.56", rangeKm: "230" },
+  },
+  "galaxy-l7": {
+    ah: { seriesId: "7158", name: "银河L7", msrp: "11.58-18.57万" },
+  },
+  e8: {
+    ah: { seriesId: "7170", name: "银河E8", msrp: "16.18-19.88万" },
+  },
+  "galaxy-l6": {
+    ah: { seriesId: "7167", name: "银河L6", msrp: "7.98-10.68万" },
+  },
+  xc90: {
+    ah: { seriesId: "177", name: "沃尔沃XC90", msrp: "63.89-78.19万" },
+  },
+  z20: {
+    ah: { seriesId: "6369", name: "smart精灵#1", msrp: "15.29-24.99万" },
+  },
+  polestar2: {
+    ah: { seriesId: "5078", name: "Polestar 2", msrp: "29.80-41.80万" },
   },
   "xingyue-l": {
     ah: { seriesId: "6004", name: "星越L", msrp: "13.97-17.97万", score: "4.52" },
@@ -601,6 +647,45 @@ export const mediaVehicles: Record<string, MediaVehicle> = {
         { name: "200km 四驱猎鹰700", msrp: "19.68万", owner: "18.11万", year: 2026, tags: ["145KM", "四驱"] },
       ] },
   },
+  "xp-m03": {
+    ah: { seriesId: "6998", name: "小鹏MONA M03", msrp: "11.98万-15.18万", score: "4.43", rangeKm: "640" },
+  },
+  "xp-p7": {
+    ah: { seriesId: "5213", name: "小鹏P7", msrp: "20.38万-30.18万", score: "4.55", rangeKm: "820" },
+  },
+  "xp-p7p": {
+    ah: { seriesId: "7554", name: "小鹏P7+", msrp: "18.68万-19.88万", score: "4.54", rangeKm: "725" },
+  },
+  "xp-l03": {
+    ah: { seriesId: "8305", name: "小鹏MONA L03", msrp: "12.38万-15.68万", score: "4.47", rangeKm: "650" },
+  },
+  "xp-g6": {
+    ah: { seriesId: "7162", name: "小鹏G6", msrp: "17.68万-18.68万", score: "4.29", rangeKm: "625" },
+  },
+  "xp-g7": {
+    ah: { seriesId: "8014", name: "小鹏G7", msrp: "19.58万-20.58万", score: "4.45", rangeKm: "702" },
+  },
+  "xp-g9": {
+    ah: { seriesId: "6492", name: "小鹏G9", msrp: "24.88万-27.88万", score: "4.59", rangeKm: "725" },
+  },
+  "xp-x9": {
+    ah: { seriesId: "7067", name: "小鹏X9", msrp: "30.98万-36.98万", score: "4.54", rangeKm: "750" },
+  },
+  "xp-gx": {
+    ah: { seriesId: "8224", name: "小鹏GX", msrp: "27.98万-35.98万", score: "4.42", rangeKm: "750" },
+  },
+  "xp-g9l": {
+    ah: { seriesId: "8659", name: "小鹏G9L", msrp: "25.98万", rangeKm: "755" },
+  },
+  "denza-z9gt": {
+    ah: { seriesId: "7659", name: "腾势Z9GT", msrp: "26.98万-36.98万", score: "4.55", rangeKm: "1036" },
+  },
+  lynk20: {
+    ah: { seriesId: "8669", name: "领克20", level: "紧凑型SUV" },
+  },
+  "galaxy-zhanjian700": {
+    ah: { seriesId: "8131", name: "银河战舰700", level: "中大型SUV", phase: "coming" },
+  },
 };
 
 export function ahUrl(id: string, kind: "home" | "spec" | "koubei" = "home") {
@@ -609,7 +694,8 @@ export function ahUrl(id: string, kind: "home" | "spec" | "koubei" = "home") {
   return `https://www.autohome.com.cn/${id}/`;
 }
 
-export function dcdUrl(id: string) {
+export function dcdUrl(id?: string) {
+  if (!id) return "https://www.dongchedi.com/";
   return `https://www.dongchedi.com/auto/series/${id}`;
 }
 

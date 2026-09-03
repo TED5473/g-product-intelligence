@@ -5,10 +5,12 @@ import {
   officialPriceTag,
   serviceGroup,
   splitOfficialHighlights,
+  officialFor,
   type OfficialKV,
   type OfficialLink,
 } from "@/data/official-intel";
-import { officialFor, vehicles, type Vehicle } from "@/lib/catalog";
+import { brochureFor, BROCHURE_CAPTURED, type BrochureIntel } from "@/data/brochure-intel";
+import { vehicles, type Vehicle } from "@/lib/catalog";
 import { useUI } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -224,7 +226,7 @@ export function OfficialPanel({
       ) : null}
 
       {lane === "manuals" ? (
-        <ManualLane manuals={manuals} brandSite={brand?.site} />
+        <ManualLane manuals={manuals} brandSite={brand?.site} vehicleId={v.id} />
       ) : null}
 
       {lane === "service" ? (
@@ -312,15 +314,66 @@ export function OfficialPanel({
   );
 }
 
+function brochureBlurb(kind?: OfficialLink["kind"]) {
+  if (kind === "owner") return "用户手册 / 车主手册入口。电子版以官网或品牌 App 为准；纸质以随车交付为准。";
+  if (kind === "service") return "保养手册 / 保养周期入口。项目与零件建议零售价以授权网点公示为准。";
+  if (kind === "warranty") return "质保与道路救援细则页。终身条款有首任车主等限制，点开原文核对。";
+  if (kind === "config") return "官网配置表 / 产品手册摘录。SKU 与参数以打开后的实时页面为准，不编造未印数字。";
+  if (kind === "brochure") return "产品页入口。卖点与指导价以打开后的实时页面为准。";
+  if (kind === "overseas") return "海外产品手册。数字为 WLTP / 当地规格，不与中国 CLTC 混挂。";
+  return "官网入口。费率、库存与活动以打开后的实时页面为准。";
+}
+
+function BrochureExtract({ b }: { b: BrochureIntel }) {
+  return (
+    <div className="mt-3 space-y-2 border-t border-line pt-3">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <div className="text-[11px] font-medium tracking-wide text-muted uppercase">{b.source}摘录</div>
+        <span className="font-mono text-[11px] text-muted">
+          {BROCHURE_CAPTURED}
+          {b.sku ? ` · ${b.sku} SKU` : ""}
+        </span>
+      </div>
+      {b.trims?.length ? (
+        <ul className="flex flex-wrap gap-1.5">
+          {b.trims.map((t) => (
+            <li
+              key={`${t.name}-${t.msrp || ""}-${t.power || ""}`}
+              className="rounded-sm border border-line px-2 py-1 text-[12px]"
+            >
+              <span className="font-medium">{t.name}</span>
+              {t.msrp ? <span className="ml-1 font-mono tabular-nums text-muted">{t.msrp}</span> : null}
+              {t.power ? <span className="ml-1 text-[11px] text-muted">{t.power}</span> : null}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {b.specs.length ? (
+        <dl className="grid grid-cols-1 gap-x-4 gap-y-1.5 sm:grid-cols-2">
+          {b.specs.map((s) => (
+            <div key={s.k} className="min-w-0">
+              <dt className="text-[11px] text-muted">{s.k}</dt>
+              <dd className="font-mono text-[12px] leading-snug tabular-nums">{s.v}</dd>
+            </div>
+          ))}
+        </dl>
+      ) : null}
+    </div>
+  );
+}
+
 function ManualLane({
   manuals,
   brandSite,
+  vehicleId,
 }: {
   manuals: OfficialLink[];
   brandSite?: string;
+  vehicleId: string;
 }) {
   const [sel, setSel] = useState<string | null>(manuals[0]?.url || null);
   const active = manuals.find((m) => m.url === sel) || manuals[0];
+  const brochure = brochureFor(vehicleId).find((b) => b.url === active?.url);
   if (!manuals.length) {
     return (
       <p className="text-muted">
@@ -345,7 +398,7 @@ function ManualLane({
             type="button"
             onClick={() => setSel(m.url)}
             className={cn(
-              "rounded-sm px-2.5 py-2 text-left text-[12px]",
+              "min-h-11 rounded-sm px-2.5 py-2 text-left text-[12px] md:min-h-0",
               (sel || manuals[0].url) === m.url
                 ? "bg-ink text-white"
                 : "border border-line text-muted hover:text-ink",
@@ -364,15 +417,8 @@ function ManualLane({
             {MANUAL_KIND[active.kind || "hub"]}
           </div>
           <div className="mt-1 text-[14px] font-semibold">{active.title}</div>
-          <p className="mt-2 text-[13px] leading-relaxed text-muted">
-            {active.kind === "owner"
-              ? "用户手册 / 车主手册入口。电子版以官网或品牌 App 为准；纸质以随车交付为准。"
-              : active.kind === "service"
-                ? "保养手册 / 保养周期入口。项目与零件建议零售价以授权网点公示为准。"
-                : active.kind === "warranty"
-                  ? "质保与道路救援细则页。终身条款有首任车主等限制，点开原文核对。"
-                  : "官网入口。费率、库存与活动以打开后的实时页面为准。"}
-          </p>
+          <p className="mt-2 text-[13px] leading-relaxed text-muted">{brochureBlurb(active.kind)}</p>
+          {brochure ? <BrochureExtract b={brochure} /> : null}
           <div className="mt-3">
             <ExtLink href={active.url}>打开原文</ExtLink>
           </div>

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState, Fragment } from "react";
 import { Link } from "@tanstack/react-router";
 import { SrcBadge } from "@/components/src-badge";
 import { EeaText } from "@/components/eea-text";
-import { ChassisThumb } from "@/components/chassis-diagram";
+import { ChassisThumb } from "@/components/chassis-thumb";
 import { parseDims } from "@/components/body-mark";
 import {
   vehicles,
@@ -14,6 +14,7 @@ import {
   isPlaceholder,
   architectures,
 } from "@/lib/catalog";
+import { useFilters, type AppSearch } from "@/lib/app-search";
 import { useUI } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -97,7 +98,7 @@ export function CompareView() {
   const toggle = useUI((s) => s.toggleCompare);
   const diffOnly = useUI((s) => s.compareDiffOnly);
   const setDiff = useUI((s) => s.setCompareDiffOnly);
-  const group = useUI((s) => s.filters.group);
+  const group = useFilters().group;
   const [tab, setTab] = useState<"arch" | "car">("arch");
   const [picked, setPicked] = useState<string[]>([]);
   const archCompare = archCompareFor(group);
@@ -135,7 +136,7 @@ export function CompareView() {
             架构差什么、车型差什么，分栏对照。公开口径标「公」，待补不编造。
           </p>
         </div>
-        <div className="flex h-8 overflow-hidden rounded-sm border border-line">
+        <div className="flex h-11 overflow-hidden rounded-sm border border-line md:h-8">
           <button
             type="button"
             className={cn("px-3 text-[12px] font-medium", tab === "arch" ? "bg-ink text-white" : "bg-surface text-muted")}
@@ -167,7 +168,7 @@ export function CompareView() {
                 type="button"
                 onClick={() => toggleArch(a.id)}
                 className={cn(
-                  "inline-flex h-8 items-center gap-1.5 rounded-sm px-2.5 text-[12px] font-medium",
+                  "inline-flex h-11 items-center gap-1.5 rounded-sm px-2.5 text-[12px] font-medium md:h-8",
                   picked.includes(a.id) ? "bg-ink text-white" : "bg-surface text-muted hover:text-ink",
                 )}
               >
@@ -176,7 +177,7 @@ export function CompareView() {
               </button>
             ))}
             {picked.length ? (
-              <button type="button" className="h-8 px-2 text-[12px] text-accent hover:underline" onClick={() => setPicked([])}>
+              <button type="button" className="h-11 px-2 text-[12px] text-accent hover:underline md:h-8" onClick={() => setPicked([])}>
                 看全部
               </button>
             ) : null}
@@ -192,7 +193,11 @@ export function CompareView() {
                   <Link
                     key={id}
                     to="/architecture"
-                    search={{ id, vs: picked.find((x) => x !== id) }}
+                    search={(prev: AppSearch) => ({
+                      ...prev,
+                      id,
+                      vs: picked.find((x) => x !== id),
+                    })}
                     className="overflow-hidden rounded-lg border border-line bg-surface hover:border-ink"
                   >
                     <div className="flex items-center gap-2 px-3 py-2">
@@ -309,7 +314,7 @@ export function CompareView() {
         <section className="space-y-4">
           <div className="flex items-center justify-between gap-2">
             <h2 className="text-[14px] font-semibold">选 2–4 款车</h2>
-            <div className="flex rounded-sm border border-line">
+            <div className="flex h-11 overflow-hidden rounded-sm border border-line md:h-8">
               <button
                 type="button"
                 className={cn("px-3 py-1.5 text-[12px]", diffOnly ? "bg-ink text-white" : "text-muted")}
@@ -339,7 +344,7 @@ export function CompareView() {
                     type="button"
                     onClick={() => toggle(v.id)}
                     className={cn(
-                      "rounded-sm border px-2.5 py-1 text-[12px]",
+                      "min-h-11 rounded-sm border px-2.5 py-2 text-[12px]",
                       compare.includes(v.id) ? "border-ink bg-ink text-white" : "border-line hover:border-ink",
                     )}
                   >
