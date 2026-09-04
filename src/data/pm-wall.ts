@@ -3,7 +3,14 @@
  * Captured 2026-08-27. NEVER invent numbers. Source badges: 极氪学 | 公开口径 | 待补
  * Footnote: 内部培训摘录，仅供个人学习；数字以极氪学课件为准。
  */
+import {
+  WALL_TRAP_LINE,
+  ARCH_SEEDS,
+  SEED_GAP_UPDATES,
+} from "@/data/zeekr-academy-seed";
+
   const SRC = { ZK: "极氪学", PUB: "公开口径", TBD: "待补", INF: "推断(课件无对比页)" };
+  const spaEvoSeed = ARCH_SEEDS.find((a) => a.id === "SPA-Evo");
 
   const architectures = [
     {
@@ -425,7 +432,7 @@ crash: {
       color: "#4a5568",
       accent: "#718096",
       owner: "沃尔沃持有 · Lynk 09 落点",
-      note: "09 = SPA 48V MHEV；SPA-Evo 课图：纵置 2.0T + DHT Pro + 地板电池 + P4",
+      note: "09 = SPA 48V MHEV；SPA-Evo：大型电混专属 · 2.0T + DHT Pro(P1+P2) + 170kW×2 P4 · WB 3050–3300 · 课件未点名车型",
       source: SRC.ZK,
       platforms: ["SPA", "SPA2", "SPA-Evo", "SPA3"],
       skateboardImg: "imgs/arch/spa.webp",
@@ -472,10 +479,13 @@ crash: {
           dht: {
             title: "SPA-Evo 纵置混动（架构课图）",
             items: [
-              { k: "布置", v: "纵置 2.0T 电混发动机 + DHT Pro（P1+P2）+ 地板电池 + 后 P4", s: SRC.ZK },
-              { k: "课来源", v: "SPA-Evo Features and Customer Benefits · 滑板/滚动底盘图", s: SRC.ZK },
-              { k: "三支柱", v: "Flexibility & Modularity · Lightweight (HSS+Al) · Electrification ready (BEV/PHEV/ICE)", s: SRC.ZK },
-              { k: "勿混讲", v: "09 产品课是 48V MHEV + 8AT + FYRA 机械四驱，没有 DHT Pro / 地板大电池。这张底盘图是 SPA-Evo 混动族。", s: SRC.ZK },
+              { k: "定位", v: "大型电混车专属架构 / Dedicated architecture for large electric hybrid vehicles", s: SRC.ZK },
+              { k: "动力", v: "2.0T 电混发动机 + DHT Pro（P1+P2）+ 双 P4 电机 170 kW×2", s: SRC.ZK },
+              { k: "轴距", v: "覆盖 3050–3300 mm（课件空间页）；「66% extension」是陷阱≈+8%", s: SRC.ZK },
+              { k: "安全短摘", v: "G-AES / AEB max 均标 130 km/h；100–0 33.95 m；NTP 2.5/8/60 mm", s: SRC.ZK },
+              { k: "课来源", v: "SPA-Evo Features and Customer Benefits · 纵置混动底盘图（非 SEA 滑板）", s: SRC.ZK },
+              { k: "车型名", v: "课件未点名量产车；公开口径：领克 900 = SPA Evo EM-P", s: SRC.ZK },
+              { k: "勿混讲", v: "09 产品课是 48V MHEV + 8AT + FYRA 机械四驱，没有 DHT Pro / 地板大电池。", s: SRC.ZK },
             ],
           },
           eea: {
@@ -483,7 +493,7 @@ crash: {
             items: [
               { k: "屏", v: "12.3\" 仪表 + 14.6\" 中控；全彩 W-HUD 15° FOV，VID 2405 mm", s: SRC.ZK },
               { k: "Pilot", v: "Lynk Co Pilot 0–130 km/h；ACC 0–150", s: SRC.ZK },
-              { k: "SPA-Evo", v: "EEA 代数待补（SPA-Evo 课未提取）", s: SRC.TBD },
+              { k: "SPA-Evo ADAS", v: "同课件 L3–L5（s7/s21）与 L2+（s25）冲突，简报双标勿单选；EEA 代数仍待补", s: SRC.ZK },
             ],
           },
           thermal: {
@@ -600,7 +610,7 @@ crash: {
     "CMA-2.0": { id: "CMA-2.0", arch: "CMA", name: "CMA 2.0 Evo", desc: "E-CMA · 08/07 EM-P（极氪学）· 10 EM-P（领克官网）· 10 EV（纯电页未点名，挂此泳道）· Galaxy L7（极氪学）· L6 EM-i（官网 e-CMA）", source: SRC.ZK },
     "SPA": { id: "SPA", arch: "SPA", name: "SPA", desc: "Lynk 09 MHEV（极氪学）· XC90 同源公开口径", source: SRC.ZK },
     "SPA2": { id: "SPA2", arch: "SPA", name: "SPA2", desc: "公开口径", source: SRC.PUB },
-    "SPA-Evo": { id: "SPA-Evo", arch: "SPA", name: "SPA Evo", desc: "领克官网：900 基于 SPA Evo；极氪学课页曾卡住未提取参数", source: SRC.PUB },
+    "SPA-Evo": { id: "SPA-Evo", arch: "SPA", name: "SPA Evo", desc: "极氪学：大型电混专属 · 2.0T+DHT Pro(P1+P2)+170kW×2 P4 · WB 3050–3300 · 课件未点名车型；公开口径：900 基于 SPA Evo", source: SRC.ZK },
     "SPA3": { id: "SPA3", arch: "SPA", name: "SPA3", desc: "公开口径", source: SRC.PUB },
     "BMA": { id: "BMA", arch: "BMA", name: "BMA", desc: "公开口径", source: SRC.PUB },
     "BMA-Evo": { id: "BMA-Evo", arch: "BMA", name: "BMA Evo", desc: "公开口径 · 领克 06 Relive（BMA evo 报道）", source: SRC.PUB },
@@ -1041,7 +1051,7 @@ ncap: { stars: null, year: null, adult: null, child: null, vru: null, assist: nu
       platform: "SPA",
       powertrain: "MHEV",
       voltageClass: "48V",
-      eea: "—（SPA-Evo 课未提取）",
+      eea: "—（课未给统一 EEA 代数）",
       source: SRC.ZK,
       course: "Lynk & Co 09 MHEV Product Training (MEA) C1955563214426673152",
       summary: "SPA · 48V MHEV · 5042 mm · Drive-E 2.0TD + 8AT · 非 CMA、非 EM-P",
@@ -1788,17 +1798,20 @@ ncap: { stars: null, year: null, adult: null, child: null, vru: null, assist: nu
       placeholder: true,
       photo: null,
       ncap: { stars: null, year: null, adult: null, child: null, vru: null, assist: null, url: null, note: "未公布/未测试", source: "公开口径" },
-      name: "SPA Evo 车型",
-      brand: "Volvo",
-      body: "—",
+      name: "SPA Evo 车型（课件未点名）",
+      brand: "—",
+      body: "大型电混",
       arch: "SPA",
       platform: "SPA-Evo",
-      powertrain: "—",
-      source: SRC.TBD,
-      summary: "课件页卡住 · 待补",
+      powertrain: "PHEV",
+      source: SRC.ZK,
+      summary: "SPA-Evo 课：大型电混专属 · 2.0T+DHT Pro+170kW×2 P4 · 未点名量产车",
       pending: true,
-      publicOnly: true,
-      detail: { note: "SPA-Evo Features and Customer Benefits 页面卡住，未能提取" },
+      publicOnly: false,
+      detail: {
+        note: "课件未点名量产车型。公开口径可写领克 900 = SPA Evo EM-P（另卡）。短摘：WB 3050–3300；G-AES/AEB 130；100–0 33.95 m；NTP 2.5/8/60。保密一级 PPT 不全文入库。",
+        homolog: "公开口径：900 基于 SPA Evo；课件本身未写 900",
+      },
     },
     {
       id: "spa3-tbd",
@@ -1997,6 +2010,13 @@ ncap: { stars: null, year: null, adult: null, child: null, vru: null, assist: nu
       tags: ["arch", "homolog"],
     },
     {
+      id: "f12b",
+      q: "SPA-Evo 课一句话 + 陷阱？",
+      a: "大型电混专属：2.0T + DHT Pro(P1+P2) + 170kW×2 P4；WB 3050–3300；课件未点名车型。陷阱：勿统一标 L3–L5（同课 s25 写 L2+）；「66%」轴距延伸是陷阱；勿用 SEA 滑板图讲 SPA-Evo；900 归属仅公开口径。",
+      source: SRC.ZK,
+      tags: ["arch", "spa-evo"],
+    },
+    {
       id: "f13",
       q: "Z20 vs X？",
       a: "Z20（领克官网）：SEA 浩瀚纯电架构 · 250kW 后驱 · 0–100 5.3s。X（极氪学）：SEA2 400V（Std ~49.6kWh / 380V）。墙上 Z20 挂 SEA2 仅泳道；官网未与 X 做同源声明，不并入 SEA2 对照组成员。",
@@ -2129,8 +2149,9 @@ ncap: { stars: null, year: null, adult: null, child: null, vru: null, assist: nu
       fields: [
         { key: "voltage", label: "09", answer: "SPA 48V MHEV · Drive-E 2.0TD 187kW/350Nm + 8AT · P0 10kW（极氪学）" },
         { key: "evo", label: "900", answer: "SPA Evo EM-P（领克官网）：六座 650kW/1248Nm · 52.38kWh · CLTC纯电至高280km · 5240mm" },
+        { key: "course", label: "SPA-Evo 课", answer: spaEvoSeed?.oneLiner ?? "大型电混专属：2.0T + DHT Pro(P1+P2) + 170kW×2 P4；WB 3050–3300；课件未点名车型" },
         { key: "homolog", label: "同源", answer: "09≈XC90（公开口径）。900 单独 SPA-Evo 组，勿并入 09。" },
-        { key: "risk", label: "销售风险", answer: "09≠CMA≠EM-P；900≠09 MHEV" },
+        { key: "risk", label: "销售风险", answer: "09≠CMA≠EM-P；900≠09 MHEV；课内 L3–L5 vs L2+ 冲突须双标；「66%」轴距延伸是陷阱（3050→3300≈+8%）" },
       ],
     },
     {
@@ -2158,7 +2179,7 @@ ncap: { stars: null, year: null, adult: null, child: null, vru: null, assist: nu
   ];
 
   const archCompare = {
-    trap: "009≠800V · 7X≠900V · 09≠CMA≠EM-P · 900=SPA Evo EM-P（官网）≠09 MHEV · E8=SEA≠GEA · 06=BMA≠CMA · 战舰700=GTA≠GEA。",
+    trap: WALL_TRAP_LINE,
     columns: [
       { id: "SEA", name: "SEA" },
       { id: "GEA", name: "GEA" },
@@ -2267,7 +2288,7 @@ ncap: { stars: null, year: null, adult: null, child: null, vru: null, assist: nu
           SEA: { v: "009 不是 800V；007/7X 才是 800V 级。20 官网页未印 SEA。", s: SRC.ZK },
           GEA: { v: "E8 是 SEA 800V，不是 GEA。勿编造 GEA 电压/包容量。", s: SRC.PUB },
           CMA: { v: "09 不是 CMA。10 EV 官网页未点名，墙上因同系 10 EM-P 挂 CMA 2.0。", s: SRC.ZK },
-          SPA: { v: "900 ≠ 09 MHEV。09 ≠ EM-P ≠ CMA。", s: SRC.ZK },
+          SPA: { v: "900 ≠ 09 MHEV。09 ≠ EM-P ≠ CMA。SPA-Evo 课：L3–L5 vs L2+ 冲突；「66%」轴距延伸陷阱。", s: SRC.ZK },
           BMA: { v: "06 不是 CMA。官网页未印 BMA，归属来自公开报道。", s: SRC.PUB },
           GTA: { v: "战舰700 不是 GEA。kW/kWh/mm 专页待补。", s: SRC.PUB },
       }},
@@ -2298,9 +2319,9 @@ export const PM_WALL = {
     briefBank,
     archCompare,
     compareFields,
-    footnote: "内部培训摘录，仅供个人学习；数字以极氪学课件为准。",
+    footnote: "内部培训摘录，仅供个人学习；数字以极氪学课件为准。SPA-Evo PPT 保密一级：公开墙仅为短摘要。",
     gaps: [
-      "SPA-Evo 课件页卡住，未提取",
+      ...SEED_GAP_UPDATES.add,
       "无 SEA 架构专课",
       "001 / 007 本体深参待补（仅电压表/布局）",
       "Lynk 09 的 EM-P/PHEV 变体不在本课（仅 MHEV）",
