@@ -854,6 +854,103 @@ export const odpFacts: AcademyFact[] = [
   },
 ];
 
+
+
+// ─── BECM Control (极氪学 BECM Control Introduction) ─────────────────────────
+
+export const becmFacts: AcademyFact[] = [
+  {
+    id: "becm-ntc",
+    topic: "Battery module NTC (X)",
+    text: "ZEEKR X：NTC1–NTC20 = 20 个电池模组温度传感器",
+    sourceBadge: "极氪学",
+    course: "BECM Control Introduction",
+    captured: "2026-09-04",
+    tags: ["BECM", "x", "battery"],
+  },
+  {
+    id: "becm-hvil-types",
+    topic: "HVIL interlock types",
+    text: "HVIL = Hardware Interlock + Software Interlock；故障判据：HV 连接器后端母线电压低于总电池电压的 80%",
+    sourceBadge: "极氪学",
+    course: "BECM Control Introduction",
+    captured: "2026-09-04",
+    tags: ["BECM", "HVIL"],
+  },
+  {
+    id: "becm-hvil-voltage",
+    topic: "Voltage-type HVIL",
+    text: "电压型 HVIL：MCU SAK-TC275 · HVILX_IN/OUT · supply · divider · enable · sampling · GND",
+    sourceBadge: "极氪学",
+    course: "BECM Control Introduction",
+    captured: "2026-09-04",
+    tags: ["BECM", "HVIL"],
+  },
+  {
+    id: "becm-hvil-current",
+    topic: "Current-type HVIL",
+    text: "电流型 HVIL：current source · D · R3 · R7 · R4 · C · HVIL loop；示意方：HVIL1/2/3 · HVIL IN/OUT · HV/LV connectors · CDD · HVCH · ACCM · LV service switch · BECM/PCMU",
+    sourceBadge: "极氪学",
+    course: "BECM Control Introduction",
+    captured: "2026-09-04",
+    tags: ["BECM", "HVIL"],
+  },
+  {
+    id: "becm-layout-001x",
+    topic: "001/X HVIL layout",
+    text: "001/X：EFAD(MGM/EM/TM) · ERAD(IEM/EM/TM) · ODP(ACCM/HVCH/DCDC/OBC) · HV BATT/BDU/BECM · HVIL2 · LV MSD · LV battery · collision · EVI AC/DC；线径标注 50/4/6/95 mm²",
+    sourceBadge: "极氪学",
+    course: "BECM Control Introduction",
+    captured: "2026-09-04",
+    tags: ["BECM", "HVIL", "001", "x"],
+  },
+  {
+    id: "becm-layout-009",
+    topic: "009 RHD HVIL layout",
+    text: "009 RHD：EFAD · ACCM · HVCH Front · HVAH Rear · ODP/HVCM/OBC · HV BATT/BDU/BECM · ERAD/IEM · LV MSD · EVI AC/DC；线径标注 50/35/4/3/6 mm²",
+    sourceBadge: "极氪学",
+    course: "BECM Control Introduction",
+    captured: "2026-09-04",
+    tags: ["BECM", "HVIL", "009"],
+  },
+  {
+    id: "becm-layout-7x",
+    topic: "7X HVIL / HV layout",
+    text: "7X：PCMU HVIL2 A52/A53；LV service switch A1–A4；High–Low Voltage Charging System Assembly；Power Battery/BECM；ERAD；HVIL3/4；ODP；EFAD/MGM；HVCH；ACCM；EVI AC/DC",
+    sourceBadge: "极氪学",
+    course: "BECM Control Introduction",
+    captured: "2026-09-04",
+    tags: ["BECM", "HVIL", "7x"],
+  },
+  {
+    id: "becm-isolation",
+    topic: "Isolation monitoring",
+    text: "隔离监测：HV 与底盘/LV（battery ground、shunt、connector、motor/charger/DCDC→12V、接触器）；Rp=HV+→chassis · Rn=HV−→chassis；监测网 R1–R5 · K1–K3 · Vp/Vn · VBUS± · VADC · MCU · 5V（K1/K2 切换 + R5 分压）",
+    sourceBadge: "极氪学",
+    course: "BECM Control Introduction",
+    captured: "2026-09-04",
+    tags: ["BECM", "isolation"],
+  },
+  {
+    id: "becm-isolation-fault",
+    topic: "Isolation fault example",
+    text: "故障例（课件印）：电池 400 V · 中点 200 V · battery ground 0 V；200→0 短路 → 底盘 200 V · 车机侧 212 V",
+    sourceBadge: "极氪学",
+    course: "BECM Control Introduction",
+    captured: "2026-09-04",
+    tags: ["BECM", "isolation"],
+  },
+  {
+    id: "becm-gaps",
+    topic: "BECM course gaps",
+    text: "温传感前更早 BECM 章节本遍未全转录；Launch Lesson Exam 未做；UI ~45%",
+    sourceBadge: "待补",
+    course: "BECM Control Introduction",
+    captured: "2026-09-04",
+    tags: ["BECM"],
+  },
+];
+
 export const academyFacts: AcademyFact[] = [
   ...spaEvoFacts,
   ...hv800Facts,
@@ -867,6 +964,7 @@ export const academyFacts: AcademyFact[] = [
   ...chargingFacts,
   ...electricDriveFacts,
   ...odpFacts,
+  ...becmFacts,
 ];
 
 // ─── Traps (ids referenced by archSeeds / TRAPS.md) ──────────────────────────
@@ -1100,6 +1198,16 @@ export const ARCH_SEEDS: ArchSeed[] = [
     factIds: odpFacts.map((f) => f.id),
     trapIds: [],
   },
+  {
+    id: "BECM",
+    name: "BECM Control",
+    nameZh: "电池能量控制",
+    oneLiner:
+      "NTC1–20（X）；HVIL 软硬互锁·故障<80%总压；电压型 SAK-TC275 / 电流型 loop；001/X·009 RHD·7X 分布局；隔离 Rp/Rn + 400V例；更早章节/Exam待补 UI~45%",
+    sourceBadge: "极氪学",
+    factIds: becmFacts.map((f) => f.id),
+    trapIds: [],
+  },
 ];
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
@@ -1119,6 +1227,7 @@ export const SEED_GAP_UPDATES = {
     "Charging 课：Boost vs Direct / max kW 表待补；Launch Lesson Exam 跳过；UI ~35%",
     "Electric Drive 课：分车峰值 kW/N·m 待补；Lesson Exam 未做；UI Studied ~62%",
     "ODP 课：除 7X 22 kW 外其他 ODP kW 额定待补；Lesson Exam 未做；UI ~52%",
+    "BECM 课：温传感前更早章节本遍未全转录；Launch Lesson Exam 未做；UI ~45%",
   ],
 };
 
@@ -1133,6 +1242,7 @@ export const ZEEKR_ACADEMY_SEED = {
   chargingFacts,
   electricDriveFacts,
   odpFacts,
+  becmFacts,
   traps: academyTraps,
   archSeeds: ARCH_SEEDS,
   wallTrapLine: WALL_TRAP_LINE,
