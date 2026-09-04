@@ -85,6 +85,10 @@ import {
               { k: "7X 后 PMSM", v: "310 kW / 440 N·m · SiC · 油冷电机/水冷控制器", s: SRC.ZK },
               { k: "007GT 后 NDE34", v: "335 kW / 520 N·m（以色列市场 310/440）", s: SRC.ZK },
               { k: "009 后", v: "250 kW / 373 N·m · X-pin 绕组", s: SRC.ZK },
+              { k: "功率路径", v: "HV 电池 → inverter → motor controller → drive motor（电驱课原理）", s: SRC.ZK },
+              { k: "逆变器", v: "H-bridge PWM 三相正弦 · 电平 +Vd/0/−Vd · Ton/Toff（电驱课）", s: SRC.ZK },
+              { k: "旋变", v: "EXC± · SIN± · COS±；转子位 0°/90°/180°/270°（电驱课）", s: SRC.ZK },
+              { k: "油泵线束", v: "BAT+ · LIN · BAT−（电驱课）", s: SRC.ZK },
             ],
           },
           edrive_f: {
@@ -109,7 +113,7 @@ crash: {
           },
           /* retained for search / compare — not on PNG pins */
           odp: {
-            title: "ODP / HVCM",
+            title: "ODP / HVCM / 充电控制",
             items: [
               { k: "HVCM", v: "集成在后电机逆变器内（Rear Motor Controller Integrated with HVCM）", s: SRC.ZK },
               { k: "Boost 条件", v: "DC 快充时电压低于 818.4V 进入 Boost", s: SRC.ZK },
@@ -118,6 +122,11 @@ crash: {
               { k: "007 布局标签", v: "HVCH · ODP · ACCM · 前电机 · 电池 · 充电口 · 后电机", s: SRC.ZK },
               { k: "X 布局", v: "HV Battery · HVCH · ODP · ACCM · 前/后驱电机（高压件课）", s: SRC.ZK },
               { k: "ODP ECU", v: "ODP 的 ECU 名称 = CDD（高压件课）", s: SRC.ZK },
+              { k: "充电模式", v: "AC→OBC→电池 · DC→接触器→电池（OBC 不在功率路径）· DCDC HV→LV（充电控制课）", s: SRC.ZK },
+              { k: "DC 顺序", v: "枪锁 → PLC → isolation check → pre-charge → DC 接触器；CP/PLC · PP · PE（CCS2）", s: SRC.ZK },
+              { k: "示意分档", v: "A：001/X/009 RHD；B：7X 800V ODP · BECM · PCMU · 充电口", s: SRC.ZK },
+              { k: "线缆温路由", v: "001/X/009：AC→CDD · DC→BECM；7X：AC/DC→PCMU", s: SRC.ZK },
+              { k: "Boost/kW 表", v: "充电控制课 Boost vs Direct / max kW 表待补（见 800V 课 Boost 818.4V）", s: SRC.TBD },
             ],
           },
           eea: {
@@ -2388,7 +2397,7 @@ export const PM_WALL = {
       "07 EM-P 技术专课仅点名；现款之家 18.4/28.3 kWh。FWD/AWD 分档仍以 EM-P 系统页为准",
       "EM-P 技术专课 lesson 04 视频（1h09）未观看",
       "7X/007GT 100kWh Kirin 无独立电池课",
-      "热泵专课无学习权限；Thermal/HV Parts 已补短摘（HVCH 7kW、Mode5/11、X/001 控制图）；多数 °C/流量/kW 设定点仍待补",
+      "热泵专课无学习权限；Thermal/HV Parts/Charging/Electric Drive 已补短摘（HVCH 7kW、Mode5/11、充电模式/CCS2 顺序、电驱功率路径）；多数 °C/流量/kW 与分车电驱峰值仍待补",
       "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包双 badge 并存",
       "GEA 平台级 kW/kWh/电压未印（科技页只有 GEEA3.0 / 神盾金砖密度与循环）。车型级 kWh 已从之家参配补：E5 60.22/68.39、星愿 30.12/40.16/47.14、M9 18.4/41.46，不外推平台。",
       "领克 10/Z20/20/06/03+/10 EV 规格来自 lynkco.com.cn，非极氪学；900 动力/电池/NEDC 已由 900 EMP 产品课补，官网 CLTC/尺寸/系统功率仍为公开口径双标；06 架构公开报道为 BMA evo，20 架构公开报道为 SEA 浩瀚（官网页均未印）",

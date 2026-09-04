@@ -657,6 +657,143 @@ export const hvPartsFacts: AcademyFact[] = [
   },
 ];
 
+
+// ─── Charging Control (极氪学 Charging Control Introduction) ─────────────────
+
+export const chargingFacts: AcademyFact[] = [
+  {
+    id: "charge-modes",
+    topic: "Charging modes",
+    text: "AC：电网 AC → OBC → HV 电池；DC：EVSE DC → DC 接触器 → HV 电池（OBC 不在功率路径）；DCDC：HV → LV 车载低压",
+    sourceBadge: "极氪学",
+    course: "Charging Control Introduction",
+    captured: "2026-09-04",
+    tags: ["charging", "OBC", "SEA"],
+  },
+  {
+    id: "charge-dc-seq",
+    topic: "DC / CCS2 sequence",
+    text: "EVSE↔EV 经 CP/PLC；PP、PE、锁监控。顺序：枪锁 → PLC → isolation check → pre-charge → DC 接触器（隔离/电压 OK 条件）",
+    sourceBadge: "极氪学",
+    course: "Charging Control Introduction",
+    captured: "2026-09-04",
+    tags: ["charging", "CCS2"],
+  },
+  {
+    id: "charge-ccs2-pwm",
+    topic: "CCS2 CP PWM duty",
+    text: "CP PWM：<3% 禁止；3–<7% 需数字通信（5%=数字通信）；7–<8% 禁止；8–<10%=6A；10–85%→duty×0.6A；>86–96%→(duty−64)×2.5A；>96–97%=80A；>97% 禁止",
+    sourceBadge: "极氪学",
+    course: "Charging Control Introduction",
+    captured: "2026-09-04",
+    tags: ["charging", "CCS2"],
+  },
+  {
+    id: "charge-pins",
+    topic: "Charge port pin labels",
+    text: "GB/T DC：S−, CC2, S+, CC1, DC−, DC+, A−, PE, A+；CCS2：PP, CP, PE, N, L1, L2, L3, DC−, DC+（课件 DC−/DC+ 极性标注或有不一致，按所示引用）",
+    sourceBadge: "极氪学",
+    course: "Charging Control Introduction",
+    captured: "2026-09-04",
+    tags: ["charging", "CCS2", "GB/T"],
+  },
+  {
+    id: "charge-schematics",
+    topic: "Charging schematic sets",
+    text: "示意 A：001 / X / 009 RHD；示意 B：7X — 800V ODP · HV battery/BECM · PCMU · CAN-H/CAN-L · 充电口",
+    sourceBadge: "极氪学",
+    course: "Charging Control Introduction",
+    captured: "2026-09-04",
+    tags: ["charging", "001", "x", "009", "7x"],
+  },
+  {
+    id: "charge-gun-lock",
+    topic: "Charge-gun lock pins",
+    text: "枪锁针脚：1 motor+ · 2 motor− · 3 status",
+    sourceBadge: "极氪学",
+    course: "Charging Control Introduction",
+    captured: "2026-09-04",
+    tags: ["charging"],
+  },
+  {
+    id: "charge-cable-temp",
+    topic: "Cable temperature routing",
+    text: "001/X/009：AC 线缆温 → CDD；DC 线缆温 → BECM｜7X：AC/DC 线缆温 → PCMU",
+    sourceBadge: "极氪学",
+    course: "Charging Control Introduction",
+    captured: "2026-09-04",
+    tags: ["charging", "CDD", "PCMU", "7x"],
+  },
+  {
+    id: "charge-crosslink",
+    topic: "Charging cross-links / gaps",
+    text: "交叉：ODP ECU=CDD（高压件课）；800V Boost 充电模式见 007/7X。本课 Boost vs Direct / max kW 表待补",
+    sourceBadge: "待补",
+    course: "Charging Control Introduction",
+    captured: "2026-09-04",
+    tags: ["charging", "800V", "7x", "007"],
+  },
+];
+
+// ─── Electric Drive (极氪学 Electric Drive System Introduction) ──────────────
+
+export const electricDriveFacts: AcademyFact[] = [
+  {
+    id: "edrive-path",
+    topic: "Electric drive power path",
+    text: "功率路径：HV 电池 → inverter → motor controller → drive motor assembly",
+    sourceBadge: "极氪学",
+    course: "Electric Drive System Introduction",
+    captured: "2026-09-04",
+    tags: ["electric-drive", "SEA"],
+  },
+  {
+    id: "edrive-inverter",
+    topic: "Inverter PWM",
+    text: "逆变器：H-bridge PWM 生成三相交流正弦；电平 +Vd / 0 / −Vd；时序 Ton/Toff",
+    sourceBadge: "极氪学",
+    course: "Electric Drive System Introduction",
+    captured: "2026-09-04",
+    tags: ["electric-drive", "inverter"],
+  },
+  {
+    id: "edrive-motors",
+    topic: "Motor types (principle)",
+    text: "覆盖 PMSM 与感应电机结构（原理级）；本提取无车型峰值 kW/N·m 表",
+    sourceBadge: "极氪学",
+    course: "Electric Drive System Introduction",
+    captured: "2026-09-04",
+    tags: ["electric-drive", "PMSM"],
+  },
+  {
+    id: "edrive-resolver",
+    topic: "Resolver / position",
+    text: "旋变：励磁 + SIN/COS 绕组；转子位示意 0°/90°/180°/270°；线束 EXC± · SIN± · COS±",
+    sourceBadge: "极氪学",
+    course: "Electric Drive System Introduction",
+    captured: "2026-09-04",
+    tags: ["electric-drive", "resolver"],
+  },
+  {
+    id: "edrive-oil-pump",
+    topic: "Cooling / oil pump wiring",
+    text: "温度传感 + 冷却；油泵线束 BAT+ · LIN · BAT−",
+    sourceBadge: "极氪学",
+    course: "Electric Drive System Introduction",
+    captured: "2026-09-04",
+    tags: ["electric-drive", "cooling"],
+  },
+  {
+    id: "edrive-gaps",
+    topic: "Electric drive course gaps",
+    text: "分车峰值功率/扭矩待补（用车型课 / 800V / X / 7X）；Lesson Exam 未做；UI Studied ~62%",
+    sourceBadge: "待补",
+    course: "Electric Drive System Introduction",
+    captured: "2026-09-04",
+    tags: ["electric-drive"],
+  },
+];
+
 export const academyFacts: AcademyFact[] = [
   ...spaEvoFacts,
   ...hv800Facts,
@@ -667,6 +804,8 @@ export const academyFacts: AcademyFact[] = [
   ...zeekrX2026Facts,
   ...thermalFacts,
   ...hvPartsFacts,
+  ...chargingFacts,
+  ...electricDriveFacts,
 ];
 
 // ─── Traps (ids referenced by archSeeds / TRAPS.md) ──────────────────────────
@@ -870,6 +1009,26 @@ export const ARCH_SEEDS: ArchSeed[] = [
     factIds: hvPartsFacts.map((f) => f.id),
     trapIds: [],
   },
+  {
+    id: "Charging",
+    name: "Charging Control",
+    nameZh: "充电控制",
+    oneLiner:
+      "AC→OBC→电池 · DC→接触器→电池 · DCDC HV→LV；CCS2：锁→PLC→隔离→预充→接触器；示意A 001/X/009 · 示意B 7X PCMU；线温 001/X/009 AC→CDD DC→BECM / 7X→PCMU；Boost/kW表待补",
+    sourceBadge: "极氪学",
+    factIds: chargingFacts.map((f) => f.id),
+    trapIds: [],
+  },
+  {
+    id: "ElectricDrive",
+    name: "Electric Drive",
+    nameZh: "电驱",
+    oneLiner:
+      "HV→逆变器→电机控制器→驱动电机；H-bridge PWM ±Vd；PMSM/感应原理；旋变 EXC/SIN/COS；油泵 BAT+/LIN/BAT−；分车峰值待补",
+    sourceBadge: "极氪学",
+    factIds: electricDriveFacts.map((f) => f.id),
+    trapIds: [],
+  },
 ];
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
@@ -886,6 +1045,8 @@ export const SEED_GAP_UPDATES = {
     "900 EMP 课：尺寸/轴距/轮胎待补；Studied UI ~63%，互动页未全验",
     "热泵专课无学习权限；Thermal/HV Parts 课多数 °C/流量/kW 设定点待补（已采 HVCH 7kW）",
     "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包须双 badge 并存",
+    "Charging 课：Boost vs Direct / max kW 表待补；Launch Lesson Exam 跳过；UI ~35%",
+    "Electric Drive 课：分车峰值 kW/N·m 待补；Lesson Exam 未做；UI Studied ~62%",
   ],
 };
 
@@ -897,6 +1058,8 @@ export const ZEEKR_ACADEMY_SEED = {
   zeekrX2026Facts,
   thermalFacts,
   hvPartsFacts,
+  chargingFacts,
+  electricDriveFacts,
   traps: academyTraps,
   archSeeds: ARCH_SEEDS,
   wallTrapLine: WALL_TRAP_LINE,
