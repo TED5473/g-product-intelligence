@@ -1065,6 +1065,102 @@ export const becmFacts: AcademyFact[] = [
   },
 ];
 
+
+// ─── ZEEKR 007GT Product Introduction (极氪学; captured 2026-09-05) ──────────
+
+export const zeekr007gtFacts: AcademyFact[] = [
+  {
+    id: "007gt-platform",
+    topic: "007GT platform / EEA / ADAS",
+    text: "Long Range 示于 800V 平台；电气架构 ZEEA 2.5；ADAS 硬件 7V3R",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 007GT Product Introduction",
+    captured: "2026-09-05",
+    tags: ["007gt", "800V", "ZEEA", "ADAS", "SEA"],
+  },
+  {
+    id: "007gt-battery-range",
+    topic: "007GT battery / WLTC range",
+    text: "Std：75 kWh LFP / 519 km WLTC｜Long Range：100 kWh NCM / 655 km｜Performance：100 kWh NCM / 558 km",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 007GT Product Introduction",
+    captured: "2026-09-05",
+    tags: ["007gt", "battery"],
+  },
+  {
+    id: "007gt-motors-rwd",
+    topic: "007GT Std / Long Range motors",
+    text: "Std / Long Range：后 NDE34（以色列名 NDE31）峰值 335 kW / 520 N·m",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 007GT Product Introduction",
+    captured: "2026-09-05",
+    tags: ["007gt", "motor"],
+  },
+  {
+    id: "007gt-motors-awd",
+    topic: "007GT Performance AWD motors",
+    text: "Performance：前 NDE16 感应 + 后 NDE34 PMSM；峰值 500 kW（335+165）/ 790 N·m（520+270）",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 007GT Product Introduction",
+    captured: "2026-09-05",
+    tags: ["007gt", "motor", "AWD"],
+  },
+  {
+    id: "007gt-dims",
+    topic: "007GT dimensions",
+    text: "L 4864 mm · W 1900 mm · H 1460 / 1445 mm · WB 2925 mm",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 007GT Product Introduction",
+    captured: "2026-09-05",
+    tags: ["007gt"],
+  },
+  {
+    id: "007gt-pack-dual-badge",
+    topic: "007GT pack dual-badge vs 800V course",
+    text: "本课 WLTC 表 75/100 kWh；800V 课 007/7X 包电压 618/685 V — 双 badge，勿与本课续航表合并成单一行",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 007GT Product Introduction · 800V HV",
+    captured: "2026-09-05",
+    tags: ["007gt", "007", "7x", "800V"],
+  },
+  {
+    id: "007gt-vs-7x-power",
+    topic: "007GT vs 7X peak power cross-link",
+    text: "7X 销售课 AWD 475 kW / 710 N·m 是另一车型；勿与 007GT Performance 500/790 混报",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 007GT Product Introduction · 7X New Model",
+    captured: "2026-09-05",
+    tags: ["007gt", "7x"],
+  },
+  {
+    id: "007-non-gt-course-tbd",
+    topic: "007 non-GT product course gap",
+    text: "搜 Courses「007」（2026-09-05）仅返回 007GT Product Introduction — 非 GT 007 产品专课待补；共享参数用 800V/007GT，勿编轿车独有数",
+    sourceBadge: "待补",
+    course: "Courses search 007 (alongside 007GT Product Introduction)",
+    captured: "2026-09-05",
+    tags: ["007", "007gt"],
+  },
+  {
+    id: "8x-course-tbd",
+    topic: "8X product course gap",
+    text: "Courses search「8X」/「ZEEKR 8」（2026-09-05）页1：无 8X 产品/新车型/销讲专课 — 待补",
+    sourceBadge: "待补",
+    course: "Courses search 8X / ZEEKR 8",
+    captured: "2026-09-05",
+    tags: ["8x"],
+  },
+  {
+    id: "9x-course-tbd",
+    topic: "9X product course gap",
+    text: "Courses search「9X」/「ZEEKR 9」（2026-09-05）页1：无 9X 产品专课；命中 NX21-A2 / 7X / 009 等勿假定=9X — 待补",
+    sourceBadge: "待补",
+    course: "Courses search 9X / ZEEKR 9",
+    captured: "2026-09-05",
+    tags: ["9x"],
+  },
+];
+
 export const academyFacts: AcademyFact[] = [
   ...spaEvoFacts,
   ...hv800Facts,
@@ -1080,6 +1176,7 @@ export const academyFacts: AcademyFact[] = [
   ...electricDriveFacts,
   ...odpFacts,
   ...becmFacts,
+  ...zeekr007gtFacts,
 ];
 
 // ─── Traps (ids referenced by archSeeds / TRAPS.md) ──────────────────────────
@@ -1196,6 +1293,20 @@ export const academyTraps: AcademyTrap[] = [
     right: "413 V 是 61 LFP Std 标称；Prem/Flag 66 NCM 电压本课待补；392 V 来自 800V 课电压表（X 66 kWh）— 分源标注",
     sourceBadge: "极氪学",
     tags: ["x", "800V"],
+  },
+  {
+    id: "trap-007gt-pack-vs-800v-table",
+    wrong: "把 007GT 课 WLTC 75/100 与 800V 课 618/685V 合成一行唯一口径",
+    right: "续航/化学看 007GT 产品课 WLTC 表；包电压看 800V 课 007/7X 618/685 V — 双 badge",
+    sourceBadge: "极氪学",
+    tags: ["007gt", "007", "7x", "800V"],
+  },
+  {
+    id: "trap-007gt-vs-7x-awd-peak",
+    wrong: "007GT Performance 与 7X AWD 共用 475/710 或 500/790 当同一数",
+    right: "7X AWD 销售口径 475 kW / 710 N·m；007GT Performance 500 kW（335+165）/ 790 N·m（520+270）— 分车分 badge",
+    sourceBadge: "极氪学",
+    tags: ["007gt", "7x"],
   },
 ];
 
@@ -1340,11 +1451,21 @@ export const ARCH_SEEDS: ArchSeed[] = [
     factIds: becmFacts.map((f) => f.id),
     trapIds: [],
   },
+  {
+    id: "Zeekr007GT",
+    name: "ZEEKR 007GT",
+    nameZh: "极氪 007GT",
+    oneLiner:
+      "800V · ZEEA 2.5 · 7V3R · Std 75LFP/519 · LR 100NCM/655 · Perf 100NCM/558 · NDE34 335/520（以NDE31）· AWD NDE16+NDE34 500/790 · 4864×1900×1460/1445 WB2925；包电压618/685双badge；非GT007/8X/9X专课待补",
+    sourceBadge: "极氪学",
+    factIds: zeekr007gtFacts.map((f) => f.id),
+    trapIds: ["trap-007gt-pack-vs-800v-table", "trap-007gt-vs-7x-awd-peak", "trap-7x-not-900v"],
+  },
 ];
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
+  "009≠800V · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -1362,6 +1483,8 @@ export const SEED_GAP_UPDATES = {
     "Electric Drive 课：分车峰值 kW/N·m 待补；Lesson Exam 未做；UI Studied ~62%",
     "ODP 课：除 7X 22 kW 外其他 ODP kW 额定待补；Lesson Exam 未做；UI ~52%",
     "BECM 课：温传感前更早章节本遍未全转录；Launch Lesson Exam 未做；UI ~45%",
+    "007GT 产品课已采（2026-09-05）：800V/ZEEA2.5/7V3R · WLTC 519/655/558 · NDE34 335/520 · AWD 500/790 · 4864×1900×1460/1445；quiz跳过；包电压仍看800V课双badge",
+    "007 非GT产品专课待补（Courses搜007仅返回007GT）；8X/9X 产品专课待补（页1无命中；NX21-A2勿假定=9X）",
   ],
 };
 
@@ -1372,6 +1495,7 @@ export const ZEEKR_ACADEMY_SEED = {
   lynk900Facts,
   lynk08ProductFacts,
   zeekrX2026Facts,
+  zeekr007gtFacts,
   thermalFacts,
   hvPartsFacts,
   chargingFacts,
