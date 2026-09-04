@@ -320,6 +320,118 @@ export const modelFacts: AcademyFact[] = [
     captured: "2026-08-27",
     tags: ["09"],
   },
+  {
+    id: "900-arch-short",
+    topic: "900 architecture short",
+    text: "900 EM-P = GEEA 3.0 · AWD · 3DHT Pro（P1+P2 串并联）+ 独立后 P4；SPA Evo 名牌本课待补（公开口径仍写 SPA Evo）",
+    sourceBadge: "极氪学",
+    course: "Lynk & Co 900 EM-P Product Introduction (Service)",
+    captured: "2026-09-04",
+    tags: ["lynk900", "SPA-Evo", "EM-P"],
+  },
+];
+
+// ─── Lynk 900 EM-P (Service Product Introduction; captured 2026-09-04) ───────
+
+export const lynk900Facts: AcademyFact[] = [
+  {
+    id: "900-eea",
+    topic: "900 EEA / drive",
+    text: "电气结构 GEEA 3.0 · 驱动 AWD",
+    sourceBadge: "极氪学",
+    course: "900 EM-P Product Introduction (Service)",
+    captured: "2026-09-04",
+    tags: ["lynk900", "GEEA"],
+  },
+  {
+    id: "900-topology",
+    topic: "900 hybrid topology",
+    text: "前混 3DHT Pro Series-Parallel（P1+P2）· 3 Speed AT；拓扑 engine→P1→C0→P2；独立后 P4（不在 3DHT 内）",
+    sourceBadge: "极氪学",
+    course: "900 EM-P Product Introduction (Service)",
+    captured: "2026-09-04",
+    tags: ["lynk900", "3DHT", "EM-P"],
+  },
+  {
+    id: "900-engine",
+    topic: "900 VEP4 engine",
+    text: "VEP4 2.0TD · 1969 mL · CR 10.8:1 · 254 Ps / 187 kW@5500 · 350 N·m@1800–4800 · 95#",
+    sourceBadge: "极氪学",
+    course: "900 EM-P Product Introduction (Service)",
+    captured: "2026-09-04",
+    tags: ["lynk900", "VEP4"],
+  },
+  {
+    id: "900-p1p2",
+    topic: "900 3DHT Pro P1/P2",
+    text: "P1 峰值 60 kW / 180 N·m（额定 30/90）；P2 峰值 123 kW / 338 N·m（额定 50/160）；三相交流永磁 · 油冷+水冷行均印",
+    sourceBadge: "极氪学",
+    course: "900 EM-P Product Introduction (Service)",
+    captured: "2026-09-04",
+    tags: ["lynk900", "3DHT"],
+  },
+  {
+    id: "900-p4",
+    topic: "900 rear P4",
+    text: "后 P4 独立三相 PMSM · 峰值 230 kW / 350 N·m · 最高 17,000 rpm · 电机油冷 / 控制器水冷",
+    sourceBadge: "极氪学",
+    course: "900 EM-P Product Introduction (Service)",
+    captured: "2026-09-04",
+    tags: ["lynk900", "P4"],
+  },
+  {
+    id: "900-battery",
+    topic: "900 battery detail vs table",
+    text: "详参 52.38 kWh NCM 1P102S · 133.8 Ah · 374 V（系统标 400 V）· 296 kg · 液冷；规格表圆整 50 kWh — 须脚注双值",
+    sourceBadge: "极氪学",
+    course: "900 EM-P Product Introduction (Service)",
+    captured: "2026-09-04",
+    tags: ["lynk900", "battery"],
+  },
+  {
+    id: "900-range-perf",
+    topic: "900 NEDC range / performance",
+    text: "NEDC 条件纯电 170 km · 综合 870–1000 km · 油耗 7.1 L/100km · 0–100 4.6 s（规格表）",
+    sourceBadge: "极氪学",
+    course: "900 EM-P Product Introduction (Service)",
+    captured: "2026-09-04",
+    tags: ["lynk900"],
+  },
+  {
+    id: "900-charge-adas",
+    topic: "900 charge / ADAS",
+    text: "DC 130 kW · AC 6.6 kW · V2L/V2V 6 kW · ADAS 硬件 11V5R1L",
+    sourceBadge: "极氪学",
+    course: "900 EM-P Product Introduction (Service)",
+    captured: "2026-09-04",
+    tags: ["lynk900", "ADAS"],
+  },
+  {
+    id: "900-spa-evo-tbd",
+    topic: "900 SPA Evo string on course",
+    text: "本课 SPA Evo 名牌字符串待补（未采到确定印刷行）；公开口径 lynkco.com.cn：900 = SPA Evo EM-P — 分 badge",
+    sourceBadge: "待补",
+    course: "900 EM-P Product Introduction (Service)",
+    captured: "2026-09-04",
+    tags: ["lynk900", "SPA-Evo"],
+  },
+  {
+    id: "900-dims-tbd",
+    topic: "900 dimensions on course",
+    text: "轴距 / L×W×H / 离地 / 轮胎：本课待补；公开口径尺寸 5240×1999×1810 另存",
+    sourceBadge: "待补",
+    course: "900 EM-P Product Introduction (Service)",
+    captured: "2026-09-04",
+    tags: ["lynk900"],
+  },
+  {
+    id: "900-pub-cltc",
+    topic: "900 public CLTC vs NEDC",
+    text: "公开口径（lynkco）：CLTC 纯电至高 280 km · 系统至高 650 kW / 1248 N·m · 5240×1999×1810 — 与极氪学 NEDC 170 不同循环，双标勿覆写",
+    sourceBadge: "公开口径",
+    captured: "2026-09-04",
+    tags: ["lynk900"],
+  },
 ];
 
 export const academyFacts: AcademyFact[] = [
@@ -328,6 +440,7 @@ export const academyFacts: AcademyFact[] = [
   ...cmaFacts,
   ...empFacts,
   ...modelFacts,
+  ...lynk900Facts,
 ];
 
 // ─── Traps (ids referenced by archSeeds / TRAPS.md) ──────────────────────────
@@ -357,9 +470,30 @@ export const academyTraps: AcademyTrap[] = [
   {
     id: "trap-09-not-900",
     wrong: "09 = 900 / 同一套电混",
-    right: "900 公开口径 = SPA Evo EM-P；09 = SPA 1.0 MHEV（P0+8AT）。拓扑不同",
-    sourceBadge: "公开口径",
+    right: "900 EM-P（极氪学）= HV NCM + NEDC EV 170 + 3DHT Pro(P1+P2) + 独立 P4；09 = SPA 48V MHEV P0+8AT。公开口径另写 900=SPA Evo — 拓扑不同勿混",
+    sourceBadge: "极氪学",
     tags: ["09", "lynk900", "SPA-Evo"],
+  },
+  {
+    id: "trap-900-p4-not-in-3dht",
+    wrong: "P4 在 3DHT Pro 里面",
+    right: "3DHT Pro = 前桥 P1+P2 串并联；P4 是独立后电机（峰值 230 kW / 350 N·m）",
+    sourceBadge: "极氪学",
+    tags: ["lynk900", "3DHT", "P4"],
+  },
+  {
+    id: "trap-900-50-vs-5238",
+    wrong: "只报 50 kWh 或只报 52.38 kWh 当唯一值",
+    right: "规格表圆整 50 kWh；详参 52.38 kWh NCM 1P102S — 简报须脚注双值",
+    sourceBadge: "极氪学",
+    tags: ["lynk900", "battery"],
+  },
+  {
+    id: "trap-900-nedc-vs-cltc",
+    wrong: "用 CLTC 280 覆盖 NEDC 170（或反之）当同一数字",
+    right: "极氪学规格表 NEDC EV 170；公开口径 CLTC 纯电至高 280 — 不同循环，双 badge",
+    sourceBadge: "极氪学",
+    tags: ["lynk900"],
   },
   {
     id: "trap-spa-evo-l3-l5",
@@ -420,6 +554,9 @@ export const ARCH_SEEDS: ArchSeed[] = [
       "trap-spa-evo-no-names",
       "trap-spa-evo-not-sea-skateboard",
       "trap-09-not-900",
+      "trap-900-p4-not-in-3dht",
+      "trap-900-50-vs-5238",
+      "trap-900-nedc-vs-cltc",
     ],
   },
   {
@@ -449,11 +586,26 @@ export const ARCH_SEEDS: ArchSeed[] = [
     factIds: empFacts.map((f) => f.id),
     trapIds: ["trap-08-vs-09-hybrid", "trap-09-not-cma"],
   },
+  {
+    id: "Lynk900",
+    name: "Lynk 900 EM-P",
+    nameZh: "领克 900",
+    oneLiner:
+      "GEEA 3.0 AWD · VEP4 2.0TD + 3DHT Pro(P1+P2) + 独立 P4 230kW · 52.38/50 kWh NCM · NEDC EV 170；SPA Evo 名牌本课待补",
+    sourceBadge: "极氪学",
+    factIds: lynk900Facts.map((f) => f.id),
+    trapIds: [
+      "trap-09-not-900",
+      "trap-900-p4-not-in-3dht",
+      "trap-900-50-vs-5238",
+      "trap-900-nedc-vs-cltc",
+    ],
+  },
 ];
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V · 7X≠900V · 09≠CMA≠EM-P · 900=SPA Evo EM-P（官网）≠09 MHEV · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
+  "009≠800V · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -461,7 +613,8 @@ export const SEED_GAP_UPDATES = {
   add: [
     "SPA-Evo PPT 保密：一级 — 公开墙仅短 bullet，完整笔记留在私有 zeekr-knowledge/architecture/spa-evo.md",
     "SPA-Evo 课件自动驾驶 L3–L5 与 L2+ 冲突未裁决",
-    "SPA-Evo 课件未点名 900；900 归属仅公开口径",
+    "SPA-Evo 架构课未点名 900；900 EMP 产品课亦未印定 SPA Evo 字符串（名牌待补）；公开口径仍写 900=SPA Evo",
+    "900 EMP 课：尺寸/轴距/轮胎待补；Studied UI ~63%，互动页未全验",
   ],
 };
 
@@ -469,6 +622,7 @@ export const ZEEKR_ACADEMY_SEED = {
   captured: ACADEMY_CAPTURED,
   SOURCE_BADGE,
   facts: academyFacts,
+  lynk900Facts,
   traps: academyTraps,
   archSeeds: ARCH_SEEDS,
   wallTrapLine: WALL_TRAP_LINE,
