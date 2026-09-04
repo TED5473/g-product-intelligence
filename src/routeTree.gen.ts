@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ArchitectureRouteImport } from './routes/architecture'
 import { Route as CompareRouteImport } from './routes/compare'
+import { Route as LearnRouteImport } from './routes/learn'
 import { Route as RelationsRouteImport } from './routes/relations'
 
 const IndexRoute = IndexRouteImport.update({
@@ -29,6 +30,11 @@ const CompareRoute = CompareRouteImport.update({
   path: '/compare',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LearnRoute = LearnRouteImport.update({
+  id: '/learn',
+  path: '/learn',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RelationsRoute = RelationsRouteImport.update({
   id: '/relations',
   path: '/relations',
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/architecture': typeof ArchitectureRoute
   '/compare': typeof CompareRoute
+  '/learn': typeof LearnRoute
   '/relations': typeof RelationsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/architecture': typeof ArchitectureRoute
   '/compare': typeof CompareRoute
+  '/learn': typeof LearnRoute
   '/relations': typeof RelationsRoute
 }
 export interface FileRoutesById {
@@ -52,20 +60,22 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/architecture': typeof ArchitectureRoute
   '/compare': typeof CompareRoute
+  '/learn': typeof LearnRoute
   '/relations': typeof RelationsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/architecture' | '/compare' | '/relations'
+  fullPaths: '/' | '/architecture' | '/compare' | '/learn' | '/relations'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/architecture' | '/compare' | '/relations'
-  id: '__root__' | '/' | '/architecture' | '/compare' | '/relations'
+  to: '/' | '/architecture' | '/compare' | '/learn' | '/relations'
+  id: '__root__' | '/' | '/architecture' | '/compare' | '/learn' | '/relations'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArchitectureRoute: typeof ArchitectureRoute
   CompareRoute: typeof CompareRoute
+  LearnRoute: typeof LearnRoute
   RelationsRoute: typeof RelationsRoute
 }
 
@@ -92,6 +102,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CompareRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/learn': {
+      id: '/learn'
+      path: '/learn'
+      fullPath: '/learn'
+      preLoaderRoute: typeof LearnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/relations': {
       id: '/relations'
       path: '/relations'
@@ -106,6 +123,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArchitectureRoute: ArchitectureRoute,
   CompareRoute: CompareRoute,
+  LearnRoute: LearnRoute,
   RelationsRoute: RelationsRoute,
 }
 export const routeTree = rootRouteImport

@@ -9,6 +9,10 @@ export type AppSearch = {
   id?: string;
   vs?: string;
   m?: MarketId;
+  /** Learn Center: selected architecture id */
+  a?: string;
+  /** Learn Center: selected platform id */
+  p?: string;
 };
 
 export function useAppSearch(): AppSearch {
