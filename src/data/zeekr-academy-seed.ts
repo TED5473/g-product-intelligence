@@ -794,6 +794,66 @@ export const electricDriveFacts: AcademyFact[] = [
   },
 ];
 
+
+// ─── ODP Introduction (极氪学 ODP Introduction) ──────────────────────────────
+
+export const odpFacts: AcademyFact[] = [
+  {
+    id: "odp-what",
+    topic: "ODP definition",
+    text: "集成电源总成：PDU + DC/DC + OBC；课件标签「OBC+DC/DC+PDU (CDD)」；交叉：高压件课 ODP ECU=CDD",
+    sourceBadge: "极氪学",
+    course: "ODP Introduction",
+    captured: "2026-09-04",
+    tags: ["ODP", "CDD", "SEA"],
+  },
+  {
+    id: "odp-obc",
+    topic: "OBC path",
+    text: "OBC：充电桩 AC → DC 给 HV 电池；链路 Grid → Filter → PFC → DCDC (primary) → DCDC (secondary) → Filter → HV Battery",
+    sourceBadge: "极氪学",
+    course: "ODP Introduction",
+    captured: "2026-09-04",
+    tags: ["ODP", "OBC"],
+  },
+  {
+    id: "odp-dcdc",
+    topic: "DC/DC path",
+    text: "DC/DC：HV 电池 → LV 给 12V 电池；电路 EMI filter → Q1–Q4 DC→AC → HF transformer → D1–D4 rectifier → LC filter；控制含 pre-charge、EMC、chopper、sampling、comms、gate driver",
+    sourceBadge: "极氪学",
+    course: "ODP Introduction",
+    captured: "2026-09-04",
+    tags: ["ODP", "DCDC"],
+  },
+  {
+    id: "odp-pdu",
+    topic: "PDU interfaces",
+    text: "PDU 接口：HV battery / BDU / BECM；充电 EV1 AC / EV1 DC；驱动 MGM/EFAD 与 IEM/ERAD；热/充模块 ACCM、HVCH、HVAH；12V 经 MDB",
+    sourceBadge: "极氪学",
+    course: "ODP Introduction",
+    captured: "2026-09-04",
+    tags: ["ODP", "PDU"],
+  },
+  {
+    id: "odp-layouts",
+    topic: "ODP model layouts",
+    text: "001/X：DCDC + OBC（独立 MGM/EFAD & IEM/ERAD）｜009 RHD：HVCM + OBC（含 HVAH + LV battery）｜7X：22 kW ODP；HVCM + OBC（EFAD/MGM、HVCH、ACCM、ERAD、BECM）",
+    sourceBadge: "极氪学",
+    course: "ODP Introduction",
+    captured: "2026-09-04",
+    tags: ["ODP", "001", "x", "009", "7x"],
+  },
+  {
+    id: "odp-gaps",
+    topic: "ODP course gaps",
+    text: "Lesson Exam 未做；UI ~52%；除 7X 22 kW ODP 外其他 kW 额定待补",
+    sourceBadge: "待补",
+    course: "ODP Introduction",
+    captured: "2026-09-04",
+    tags: ["ODP"],
+  },
+];
+
 export const academyFacts: AcademyFact[] = [
   ...spaEvoFacts,
   ...hv800Facts,
@@ -806,6 +866,7 @@ export const academyFacts: AcademyFact[] = [
   ...hvPartsFacts,
   ...chargingFacts,
   ...electricDriveFacts,
+  ...odpFacts,
 ];
 
 // ─── Traps (ids referenced by archSeeds / TRAPS.md) ──────────────────────────
@@ -1029,6 +1090,16 @@ export const ARCH_SEEDS: ArchSeed[] = [
     factIds: electricDriveFacts.map((f) => f.id),
     trapIds: [],
   },
+  {
+    id: "ODP",
+    name: "ODP",
+    nameZh: "集成电源",
+    oneLiner:
+      "PDU+DC/DC+OBC（CDD）；OBC AC→DC；DC/DC HV→12V；PDU：BDU/BECM·EV1 AC/DC·MGM/EFAD·IEM/ERAD·ACCM/HVCH/HVAH·MDB；001/X DCDC+OBC · 009 RHD HVCM+OBC · 7X 22kW；其他kW待补",
+    sourceBadge: "极氪学",
+    factIds: odpFacts.map((f) => f.id),
+    trapIds: [],
+  },
 ];
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
@@ -1047,6 +1118,7 @@ export const SEED_GAP_UPDATES = {
     "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包须双 badge 并存",
     "Charging 课：Boost vs Direct / max kW 表待补；Launch Lesson Exam 跳过；UI ~35%",
     "Electric Drive 课：分车峰值 kW/N·m 待补；Lesson Exam 未做；UI Studied ~62%",
+    "ODP 课：除 7X 22 kW 外其他 ODP kW 额定待补；Lesson Exam 未做；UI ~52%",
   ],
 };
 
@@ -1060,6 +1132,7 @@ export const ZEEKR_ACADEMY_SEED = {
   hvPartsFacts,
   chargingFacts,
   electricDriveFacts,
+  odpFacts,
   traps: academyTraps,
   archSeeds: ARCH_SEEDS,
   wallTrapLine: WALL_TRAP_LINE,
