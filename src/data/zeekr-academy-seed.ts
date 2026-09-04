@@ -434,6 +434,134 @@ export const lynk900Facts: AcademyFact[] = [
   },
 ];
 
+
+// ─── Thermal Control (极氪学 Thermal Control System Introduction) ────────────
+
+export const thermalFacts: AcademyFact[] = [
+  {
+    id: "thermal-loops",
+    topic: "Thermal control loops",
+    text: "回路阀件：BCV（Battery Circuit Four-way）· BEXV · CEXV · EEXV；另有 PUMP-M/H、SOV1–3、Compressor、温压传感器",
+    sourceBadge: "极氪学",
+    course: "Thermal Control System Introduction",
+    captured: "2026-09-04",
+    tags: ["thermal", "001", "x", "SEA"],
+  },
+  {
+    id: "thermal-mode5",
+    topic: "HV thermal mode 5",
+    text: "Mode 5：电机冷却小循环（heat self-balancing）；电池冷却回路与乘员舱冷却回路并联，经 PTC 为电池与乘员舱加热",
+    sourceBadge: "极氪学",
+    course: "Thermal Control System Introduction ~20:00",
+    captured: "2026-09-04",
+    tags: ["thermal"],
+  },
+  {
+    id: "thermal-mode11",
+    topic: "HV thermal mode 11",
+    text: "Mode 11：四通阀切换，电机循环与电池循环串联；A/C 制冷系统与电机散热器共同冷却电机与电池",
+    sourceBadge: "极氪学",
+    course: "Thermal Control System Introduction ~25:00",
+    captured: "2026-09-04",
+    tags: ["thermal"],
+  },
+  {
+    id: "thermal-hp-4proc",
+    topic: "Heat-pump heating 4 processes",
+    text: "热泵制热工作原理四过程：Compression · Condensation and exothermic · Throttle expansion · Evaporation endothermic",
+    sourceBadge: "极氪学",
+    course: "Thermal Control System Introduction ~30:00",
+    captured: "2026-09-04",
+    tags: ["thermal", "heat-pump"],
+  },
+  {
+    id: "thermal-x-diagram",
+    topic: "ZEEKR X control diagram",
+    text: "X 控制图：VCU · ACCM · HVCH · BCV · BCTV · AGM（另 EEXV/BEXV/CEXV、散热水泵/电磁阀等）",
+    sourceBadge: "极氪学",
+    course: "Thermal Control System Introduction ~40:00",
+    captured: "2026-09-04",
+    tags: ["thermal", "x"],
+  },
+  {
+    id: "thermal-001-diagram",
+    topic: "ZEEKR 001 control diagram",
+    text: "001 控制图：双 ECM；输入冷却液/电池冷却液温传；输出 Battery Cooling Fan（MF02）· SOV1–3 · CPSR",
+    sourceBadge: "极氪学",
+    course: "Thermal Control System Introduction",
+    captured: "2026-09-04",
+    tags: ["thermal", "001"],
+  },
+  {
+    id: "thermal-hp-no-perm",
+    topic: "Heat Pump course permission",
+    text: "《ZEEKR Heat Pump System Introduction》专课无学习权限（本账号 blocked）；勿编造 COP/kW",
+    sourceBadge: "待补",
+    course: "ZEEKR Heat Pump System Introduction",
+    captured: "2026-09-04",
+    tags: ["thermal", "heat-pump"],
+  },
+  {
+    id: "thermal-setpoints-tbd",
+    topic: "Thermal numeric setpoints",
+    text: "除 HVCH 7kW（见高压件课）外，多数 kW/流量/°C 设定点待补；车型差异页无数值热参",
+    sourceBadge: "待补",
+    course: "Thermal Control System Introduction",
+    captured: "2026-09-04",
+    tags: ["thermal"],
+  },
+];
+
+// ─── High Voltage Parts (极氪学 High Voltage Parts Introduction) ─────────────
+
+export const hvPartsFacts: AcademyFact[] = [
+  {
+    id: "hvparts-x-layout",
+    topic: "ZEEKR X HV layout",
+    text: "X 高压布置：HV Battery · HVCH · ODP · ACCM · 前驱电机 · 后驱电机（充电口等标签部分遮挡待补）",
+    sourceBadge: "极氪学",
+    course: "High Voltage Parts Introduction Part1",
+    captured: "2026-09-04",
+    tags: ["hv-parts", "x", "SEA"],
+  },
+  {
+    id: "hvparts-hvch-7kw",
+    topic: "HVCH rating",
+    text: "HVCH（High Voltage Coolant Heater）示意图标注 7 kW",
+    sourceBadge: "极氪学",
+    course: "High Voltage Parts Introduction Part3",
+    captured: "2026-09-04",
+    tags: ["hv-parts", "thermal", "x"],
+  },
+  {
+    id: "hvparts-odp-cdd",
+    topic: "ODP ECU name",
+    text: "ODP 的 ECU 名称 = CDD",
+    sourceBadge: "极氪学",
+    course: "High Voltage Parts Introduction Part3",
+    captured: "2026-09-04",
+    tags: ["hv-parts", "x"],
+  },
+  {
+    id: "hvparts-soc-soh",
+    topic: "SOC / SOH",
+    text: "概念：State of Charge（SOC）· State of Health（SOH）",
+    sourceBadge: "极氪学",
+    course: "High Voltage Parts Introduction Part1",
+    captured: "2026-09-04",
+    tags: ["hv-parts", "battery"],
+  },
+  {
+    id: "hvparts-numeric-tbd",
+    topic: "HV parts numeric gaps",
+    text: "除 HVCH 7kW 外多数 V/A/°C 额定待补（Part2 深参中断）",
+    sourceBadge: "待补",
+    course: "High Voltage Parts Introduction",
+    captured: "2026-09-04",
+    tags: ["hv-parts"],
+  },
+];
+
 export const academyFacts: AcademyFact[] = [
   ...spaEvoFacts,
   ...hv800Facts,
@@ -441,6 +569,8 @@ export const academyFacts: AcademyFact[] = [
   ...empFacts,
   ...modelFacts,
   ...lynk900Facts,
+  ...thermalFacts,
+  ...hvPartsFacts,
 ];
 
 // ─── Traps (ids referenced by archSeeds / TRAPS.md) ──────────────────────────
@@ -601,6 +731,25 @@ export const ARCH_SEEDS: ArchSeed[] = [
       "trap-900-nedc-vs-cltc",
     ],
   },
+  {
+    id: "Thermal",
+    name: "Thermal Control",
+    nameZh: "热管理",
+    oneLiner:
+      "BCV/BEXV/CEXV/EEXV · Mode5 小循环+并联PTC · Mode11 串联+AC/散热器共冷 · 热泵四过程；X图 VCU/ACCM/HVCH/BCV/BCTV/AGM；热泵专课无权限",
+    sourceBadge: "极氪学",
+    factIds: thermalFacts.map((f) => f.id),
+    trapIds: [],
+  },
+  {
+    id: "HV-Parts",
+    name: "High Voltage Parts",
+    nameZh: "高压件",
+    oneLiner: "X 布局 HVCH/ODP/ACCM/前后电机 · HVCH 7kW · ODP ECU=CDD · SOC/SOH；其余额定待补",
+    sourceBadge: "极氪学",
+    factIds: hvPartsFacts.map((f) => f.id),
+    trapIds: [],
+  },
 ];
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
@@ -615,6 +764,7 @@ export const SEED_GAP_UPDATES = {
     "SPA-Evo 课件自动驾驶 L3–L5 与 L2+ 冲突未裁决",
     "SPA-Evo 架构课未点名 900；900 EMP 产品课亦未印定 SPA Evo 字符串（名牌待补）；公开口径仍写 900=SPA Evo",
     "900 EMP 课：尺寸/轴距/轮胎待补；Studied UI ~63%，互动页未全验",
+    "热泵专课无学习权限；Thermal/HV Parts 课多数 °C/流量/kW 设定点待补（已采 HVCH 7kW）",
   ],
 };
 
@@ -623,6 +773,8 @@ export const ZEEKR_ACADEMY_SEED = {
   SOURCE_BADGE,
   facts: academyFacts,
   lynk900Facts,
+  thermalFacts,
+  hvPartsFacts,
   traps: academyTraps,
   archSeeds: ARCH_SEEDS,
   wallTrapLine: WALL_TRAP_LINE,
