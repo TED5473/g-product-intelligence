@@ -435,6 +435,101 @@ export const lynk900Facts: AcademyFact[] = [
 ];
 
 
+// ─── 2026 ZEEKR X New Model (极氪学; captured 2026-09-04) ─────────────────────
+
+export const zeekrX2026Facts: AcademyFact[] = [
+  {
+    id: "x2026-platform",
+    topic: "2026 X platform / drive",
+    text: "全系 400V；Std/Prem = RWD；Flagship = AWD",
+    sourceBadge: "极氪学",
+    course: "2026 ZEEKR X New Model Introduction",
+    captured: "2026-09-04",
+    tags: ["x", "SEA"],
+  },
+  {
+    id: "x2026-trims-table",
+    topic: "2026 X trim table",
+    text: "Std：61 kWh LFP · WLTC 405 · 250 kW/373 N·m · AC11 · DC230 · 0–100 5.6s｜Prem：66 NCM · WLTC 445 · 250/373 · AC11 · DC150 · 5.3s｜Flag：66 NCM · WLTC 415 · 365(250+115)/573(373+200) · AC22 · DC150 · 3.7s",
+    sourceBadge: "极氪学",
+    course: "2026 ZEEKR X New Model Introduction",
+    captured: "2026-09-04",
+    tags: ["x", "battery"],
+  },
+  {
+    id: "x2026-flag-topspeed",
+    topic: "2026 X Flagship top speed",
+    text: "Flagship 最高车速 190 km/h；新 61 kWh LFP 最高 DC 快充 230 kW",
+    sourceBadge: "极氪学",
+    course: "2026 ZEEKR X New Model Introduction",
+    captured: "2026-09-04",
+    tags: ["x"],
+  },
+  {
+    id: "x2026-61lfp",
+    topic: "2026 X 61 kWh LFP pack",
+    text: "Std only：CTP（电芯不可维修）· IPS2.0 · 体积能量密度 73% · 1P132S · 总能量 61.47 kWh · 标称 413 V · DC 10–80% 15 min · 最高快充 230 kW",
+    sourceBadge: "极氪学",
+    course: "2026 ZEEKR X New Model Introduction",
+    captured: "2026-09-04",
+    tags: ["x", "battery"],
+  },
+  {
+    id: "x2026-61-repair",
+    topic: "2026 X 61 pack repairable parts",
+    text: "可修：接触器、外部 HV 连接器、前辅件；既有主熔断/PSS/CVS/接触器；新增 M1 fuse",
+    sourceBadge: "极氪学",
+    course: "2026 ZEEKR X New Model Introduction",
+    captured: "2026-09-04",
+    tags: ["x", "battery"],
+  },
+  {
+    id: "x2026-eea",
+    topic: "2026 X E/E features",
+    text: "高压布局未变（HVCH/QDP·ODP/ACCM/前后电机/交直流口/HV 电池）；ZEEA 2.0：DPOD/PPOD 前门锁电开合 · CDSM 驱动滑动 CSD；手套箱电动（CEM）；选装便携冰箱（LHD）；中控 50 W 风冷无线充",
+    sourceBadge: "极氪学",
+    course: "2026 ZEEKR X New Model Introduction",
+    captured: "2026-09-04",
+    tags: ["x", "ZEEA"],
+  },
+  {
+    id: "x2026-csd",
+    topic: "2026 X sliding CSD",
+    text: "滑动中控屏：电机化驾驶员↔副驾；防夹；导轨+滑动电机+CDSM+DHU+DHU LIN2",
+    sourceBadge: "极氪学",
+    course: "2026 ZEEKR X New Model Introduction",
+    captured: "2026-09-04",
+    tags: ["x"],
+  },
+  {
+    id: "x2026-trim-colors",
+    topic: "2026 X exterior / interior",
+    text: "哑光卡其绿；更多轮圈；内饰 Full Black / Black-White / Black-Orange；一体中控+卷帘储物+托盘+双杯架+X 铬标",
+    sourceBadge: "极氪学",
+    course: "2026 ZEEKR X New Model Introduction",
+    captured: "2026-09-04",
+    tags: ["x"],
+  },
+  {
+    id: "x2026-pack-crosslink",
+    topic: "X pack cross-link (do not collapse)",
+    text: "本课 Std：61/61.47 kWh LFP @413 V nom｜本课 Prem/Flag：66 kWh NCM（本课电压待补）｜800V 课电压表 X：66 kWh @392 V｜旧 BE13-B Std：~49.6 kWh LFP 1P120S @380.6 V — 四源勿合并",
+    sourceBadge: "极氪学",
+    course: "2026 X New Model + 800V HV + BE13-B",
+    captured: "2026-09-04",
+    tags: ["x", "battery", "800V", "BE13-B"],
+  },
+  {
+    id: "x2026-gaps",
+    topic: "2026 X course gaps",
+    text: "Quiz/exam 未做；Prem/Flag NCM 电芯详参 beyond「NCM」待补",
+    sourceBadge: "待补",
+    course: "2026 ZEEKR X New Model Introduction",
+    captured: "2026-09-04",
+    tags: ["x"],
+  },
+];
+
 // ─── Thermal Control (极氪学 Thermal Control System Introduction) ────────────
 
 export const thermalFacts: AcademyFact[] = [
@@ -569,6 +664,7 @@ export const academyFacts: AcademyFact[] = [
   ...empFacts,
   ...modelFacts,
   ...lynk900Facts,
+  ...zeekrX2026Facts,
   ...thermalFacts,
   ...hvPartsFacts,
 ];
@@ -667,6 +763,20 @@ export const academyTraps: AcademyTrap[] = [
     sourceBadge: "极氪学",
     tags: ["08", "09", "EM-P"],
   },
+  {
+    id: "trap-x-pack-collapse",
+    wrong: "把 X Std 只报一个包（49.6 / 61 / 66 任选其一当唯一）",
+    right: "2026 课 Std=61/61.47 LFP @413V（CTP IPS2.0 1P132S）；旧 BE13-B Std≈49.6 LFP 1P120S @380.6V；Prem/Flag=66 NCM；800V 课表 X 66@392V — 双/多 badge 勿覆写",
+    sourceBadge: "极氪学",
+    tags: ["x", "battery", "BE13-B"],
+  },
+  {
+    id: "trap-x-66-voltage",
+    wrong: "本课 66 NCM 直接写成 392 V（或把 413 V 套到 Prem/Flag）",
+    right: "413 V 是 61 LFP Std 标称；Prem/Flag 66 NCM 电压本课待补；392 V 来自 800V 课电压表（X 66 kWh）— 分源标注",
+    sourceBadge: "极氪学",
+    tags: ["x", "800V"],
+  },
 ];
 
 export const ARCH_SEEDS: ArchSeed[] = [
@@ -732,6 +842,16 @@ export const ARCH_SEEDS: ArchSeed[] = [
     ],
   },
   {
+    id: "ZeekrX2026",
+    name: "ZEEKR X 2026",
+    nameZh: "极氪 X 2026",
+    oneLiner:
+      "400V · Std 61/61.47 LFP @413V CTP IPS2.0 1P132S DC230 · Prem/Flag 66 NCM · Flag AWD 365kW/3.7s/190km/h；勿与旧 BE13-B ~49.6/380.6 或 800V 表 66@392 合并",
+    sourceBadge: "极氪学",
+    factIds: zeekrX2026Facts.map((f) => f.id),
+    trapIds: ["trap-x-pack-collapse", "trap-x-66-voltage"],
+  },
+  {
     id: "Thermal",
     name: "Thermal Control",
     nameZh: "热管理",
@@ -754,7 +874,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
+  "009≠800V · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -765,6 +885,7 @@ export const SEED_GAP_UPDATES = {
     "SPA-Evo 架构课未点名 900；900 EMP 产品课亦未印定 SPA Evo 字符串（名牌待补）；公开口径仍写 900=SPA Evo",
     "900 EMP 课：尺寸/轴距/轮胎待补；Studied UI ~63%，互动页未全验",
     "热泵专课无学习权限；Thermal/HV Parts 课多数 °C/流量/kW 设定点待补（已采 HVCH 7kW）",
+    "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包须双 badge 并存",
   ],
 };
 
@@ -773,6 +894,7 @@ export const ZEEKR_ACADEMY_SEED = {
   SOURCE_BADGE,
   facts: academyFacts,
   lynk900Facts,
+  zeekrX2026Facts,
   thermalFacts,
   hvPartsFacts,
   traps: academyTraps,
