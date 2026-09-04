@@ -462,6 +462,93 @@ export const lynk900Facts: AcademyFact[] = [
 ];
 
 
+// ─── Lynk 08 Product Training (极氪学; captured 2026-09-05) ───────────────────
+
+export const lynk08ProductFacts: AcademyFact[] = [
+  {
+    id: "08pt-arch",
+    topic: "08 product training architecture",
+    text: "CMA Evo / Co EM-P（PHEV）— 产品课确认架构族，非 SEA、非 SPA MHEV",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 08",
+    captured: "2026-09-05",
+    tags: ["08", "CMA", "EM-P"],
+  },
+  {
+    id: "08pt-ee",
+    topic: "08 cabin EE",
+    text: "5G；Snapdragon 8155 8-core 7nm / 8 TOPS；12GB RAM / 128GB；15.4″ 2.5K + 10.2″ 仪表；15W 无线 / 60W 有线充电",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 08",
+    captured: "2026-09-05",
+    tags: ["08"],
+  },
+  {
+    id: "08pt-dims",
+    topic: "08 dimensions / aero / cargo",
+    text: "4820×1915×1685 mm · WB 2848 mm · Cd 0.295；行李箱 545 L → 座椅放倒 1277 L",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 08",
+    captured: "2026-09-05",
+    tags: ["08"],
+  },
+  {
+    id: "08pt-body-safety",
+    topic: "08 body / passive safety",
+    text: "车身高强钢 74.94%；热成型 1300–1600 MPa；侧梁最高 2000 MPa；七气囊",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 08",
+    captured: "2026-09-05",
+    tags: ["08", "safety"],
+  },
+  {
+    id: "08pt-battery-safety",
+    topic: "08 battery safety",
+    text: "电池 IP68；DP1180 护板屈服 900 MPa；气凝胶 4.2 mm；碰撞高压切断 65 ms；175 项安全试验",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 08",
+    captured: "2026-09-05",
+    tags: ["08", "battery", "safety"],
+  },
+  {
+    id: "08pt-adas",
+    topic: "08 ADAS",
+    text: "5R10V / 116 TOPS；ACC 0–155 km/h；ICC 0–150 km/h；脱手提醒 15/30/45 s",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 08",
+    captured: "2026-09-05",
+    tags: ["08", "ADAS"],
+  },
+  {
+    id: "08pt-competitor-claims",
+    topic: "08 product-training competitor-slide claims",
+    text: "本课竞品页主张：前电机 350 N·m；0–100 6.5 s；WLTC 纯电至高 200 km；综合 1400+ km；综合油耗 0.9 L/100 km；23 扬声器 / 1600 W Harman Kardon — 课件销售主张，须与专课分档分源",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 08",
+    captured: "2026-09-05",
+    tags: ["08", "EM-P"],
+  },
+  {
+    id: "08pt-dual-badge",
+    topic: "08 triple-source power dual-badge",
+    text: "三源勿单选：本产品课竞品页 前350 N·m / 6.5 s / WLTC EV≤200；销售攻防课 257 kW/580 N·m/6.75 s；EM-P 技术专课板 FWD 280 kW / AWD 436 kW — 双/三 badge",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 08 · Competitor Attack · EM-P Tech",
+    captured: "2026-09-05",
+    tags: ["08", "EM-P"],
+  },
+  {
+    id: "08pt-sea-course-tbd",
+    topic: "SEA architecture course gap",
+    text: "采录本课同时搜 Courses 页1：未找到 SEA 架构专课 — 待补",
+    sourceBadge: "待补",
+    course: "Courses search (alongside 08 Product Training)",
+    captured: "2026-09-05",
+    tags: ["SEA"],
+  },
+];
+
+
 // ─── 2026 ZEEKR X New Model (极氪学; captured 2026-09-04) ─────────────────────
 
 export const zeekrX2026Facts: AcademyFact[] = [
@@ -985,6 +1072,7 @@ export const academyFacts: AcademyFact[] = [
   ...empFacts,
   ...modelFacts,
   ...lynk900Facts,
+  ...lynk08ProductFacts,
   ...zeekrX2026Facts,
   ...thermalFacts,
   ...hvPartsFacts,
@@ -1090,8 +1178,8 @@ export const academyTraps: AcademyTrap[] = [
   },
   {
     id: "trap-08-257-vs-280-436",
-    wrong: "对外只报 257 kW（或只报 280/436）当唯一系统功率",
-    right: "销售攻防课 257 kW/580 N·m ≠ 技术专课 FWD 280 / AWD 436 — 双 badge；简报须分源",
+    wrong: "对外只报 257 kW（或只报 280/436，或只报产品课竞品页 350 N·m/6.5 s）当唯一功率口径",
+    right: "三源分 badge：产品课竞品页 前350 N·m/6.5 s/WLTC EV≤200；销售攻防 257 kW/580 N·m/6.75 s；技术专课 FWD 280 / AWD 436 — 简报须分源，勿单选",
     sourceBadge: "极氪学",
     tags: ["08", "EM-P"],
   },
@@ -1174,6 +1262,16 @@ export const ARCH_SEEDS: ArchSeed[] = [
     ],
   },
   {
+    id: "Lynk08Product",
+    name: "Lynk 08 Product Training",
+    nameZh: "领克 08 产品课",
+    oneLiner:
+      "CMA Evo · 4820×1915×1685 / WB2848 / Cd0.295 · 5R10V/116TOPS · 车身74.94%HSS · 电池IP68/DP1180 900MPa/气凝胶4.2mm/65ms · 三源功率勿单选（竞品页350Nm/6.5s vs 销售257/6.75 vs 专课280/436）",
+    sourceBadge: "极氪学",
+    factIds: lynk08ProductFacts.map((f) => f.id),
+    trapIds: ["trap-08-257-vs-280-436", "trap-08-vs-09-hybrid"],
+  },
+  {
     id: "ZeekrX2026",
     name: "ZEEKR X 2026",
     nameZh: "极氪 X 2026",
@@ -1246,7 +1344,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
+  "009≠800V · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -1256,6 +1354,8 @@ export const SEED_GAP_UPDATES = {
     "SPA-Evo 课件自动驾驶 L3–L5 与 L2+ 冲突未裁决",
     "SPA-Evo 架构课未点名 900；900 EMP 产品课亦未印定 SPA Evo 字符串（名牌待补）；公开口径仍写 900=SPA Evo",
     "900 EMP 课：尺寸/轴距/轮胎待补；Studied UI ~63%，互动页未全验",
+    "SEA 架构专课待补：08 产品课采录时 Courses 搜索页1未找到",
+    "08 产品课：Videos 01–03 + PPT 04–08 已采；quiz 跳过；功率须三源分 badge（竞品页/销售攻防/技术专课）",
     "热泵专课无学习权限；Thermal/HV Parts 课多数 °C/流量/kW 设定点待补（已采 HVCH 7kW）",
     "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包须双 badge 并存",
     "Charging 课：Boost vs Direct / max kW 表待补；Launch Lesson Exam 跳过；UI ~35%",
@@ -1270,6 +1370,7 @@ export const ZEEKR_ACADEMY_SEED = {
   SOURCE_BADGE,
   facts: academyFacts,
   lynk900Facts,
+  lynk08ProductFacts,
   zeekrX2026Facts,
   thermalFacts,
   hvPartsFacts,
