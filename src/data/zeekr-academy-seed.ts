@@ -865,6 +865,94 @@ export const lynk05ProductFacts: AcademyFact[] = [
   },
 ];
 
+
+// ─── Lynk 03 Product Training (极氪学; captured 2026-09-05) ───────────────────
+
+export const lynk03ProductFacts: AcademyFact[] = [
+  {
+    id: "03pt-identity",
+    topic: "03 product training identity",
+    text: "Lynk & Co 03 Product Training = CMA 燃油轿车 · 本课分 03 / 03+ 两套动力 — 课进度约 92%（Video9 skipped）；本课 ≠ 05 Coupe SUV ≠ 06 ICE BHE15 ≠ 01/08 EM-P",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 03",
+    captured: "2026-09-05",
+    tags: ["03", "ICE", "CMA"],
+  },
+  {
+    id: "03pt-dims",
+    topic: "03 dimensions / platform",
+    text: "CMA；4684×1843×1460 mm · WB 2730 mm",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 03",
+    captured: "2026-09-05",
+    tags: ["03", "CMA"],
+  },
+  {
+    id: "03pt-powertrain-03",
+    topic: "03 ICE powertrain (base)",
+    text: "03：Drive-E 2.0TD T4Evo + 7DCT Evo · 160 kW / 325 N·m · 0–100 待补 — 勿与 03+ T5Evo/8AT 混写",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 03",
+    captured: "2026-09-05",
+    tags: ["03", "ICE", "T4Evo", "7DCT"],
+  },
+  {
+    id: "03pt-powertrain-03plus",
+    topic: "03+ ICE powertrain",
+    text: "03+：T5Evo + Aisin 8AT · 195 kW / 380 N·m · 0–100 5.7 s — 勿写成基型 03（T4Evo/7DCT/160kW）",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 03",
+    captured: "2026-09-05",
+    tags: ["03+", "ICE", "T5Evo", "8AT"],
+  },
+  {
+    id: "03pt-7dct-evo",
+    topic: "03 7DCT-Evo gearbox",
+    text: "7DCT-Evo：扭矩容量 380 N·m；效率 97.2% / 95.5%；流量 15→18 L/min；油量 4.3 L",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 03",
+    captured: "2026-09-05",
+    tags: ["03", "7DCT"],
+  },
+  {
+    id: "03pt-8at-awd-chassis",
+    topic: "03+ Aisin 8AT / BW 4WD / stab bar",
+    text: "Aisin 8AT 96 kg；BorgWarner 6th-gen 4WD 扭矩分配 100:0 / 50:50；稳定杆 22→22.5 mm",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 03",
+    captured: "2026-09-05",
+    tags: ["03+", "8AT", "AWD"],
+  },
+  {
+    id: "03pt-competitors-cn-price",
+    topic: "03 China-training competitor price bands",
+    text: "中国培训竞品价带（CNY）：SA3 196500–256200；BMW 1 199800–317800；Lamando 朗逸 145900–215900；Civic 思域 115900–169900；Axela 昂克赛拉 112900–162900 — 中国价带 ≠ 本地 MSRP，勿当当地售价覆写",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 03",
+    captured: "2026-09-05",
+    tags: ["03", "competitors", "price"],
+  },
+  {
+    id: "03pt-regional-a200-a4-gap",
+    topic: "03 regional vs A200/A4 headers gap",
+    text: "区域对比页有 03 / A200 / A4 表头，但本遍未采到 A200/A4 数字 — 待补；勿外推填空",
+    sourceBadge: "待补",
+    course: "Product Training of Lynk & Co 03",
+    captured: "2026-09-05",
+    tags: ["03", "competitors"],
+  },
+  {
+    id: "03pt-video9-skip",
+    topic: "03 Video9 skipped / progress",
+    text: "课进度约 92%；Video9 skipped — 已采规格勿用跳过视频外推",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 03",
+    captured: "2026-09-05",
+    tags: ["03"],
+  },
+];
+
+
 // ─── 2026 ZEEKR X New Model (极氪学; captured 2026-09-04) ─────────────────────
 
 export const zeekrX2026Facts: AcademyFact[] = [
@@ -1708,6 +1796,7 @@ export const academyFacts: AcademyFact[] = [
   ...lynk01ProductFacts,
   ...lynk06ProductFacts,
   ...lynk05ProductFacts,
+  ...lynk03ProductFacts,
   ...zeekrX2026Facts,
   ...thermalFacts,
   ...hvPartsFacts,
@@ -1922,6 +2011,27 @@ export const academyTraps: AcademyTrap[] = [
     sourceBadge: "极氪学",
     tags: ["05", "competitors"],
   },
+  {
+    id: "trap-03-not-03plus",
+    wrong: "把 03 与 03+ 动力/加速混写（T4Evo/7DCT/160kW 与 T5Evo/8AT/195kW/5.7s）",
+    right: "03 = Drive-E 2.0TD T4Evo + 7DCT Evo · 160 kW / 325 N·m · 0–100 待补；03+ = T5Evo + Aisin 8AT · 195 kW / 380 N·m · 5.7 s — 分型分 badge",
+    sourceBadge: "极氪学",
+    tags: ["03", "03+"],
+  },
+  {
+    id: "trap-03-not-05-06-01-08",
+    wrong: "把 03 与 05 Coupe SUV / 06 ICE / 01·08 EM-P 规格混用",
+    right: "03 产品课 = CMA 轿车 4684×1843×1460/WB2730 · T4Evo/T5Evo ICE；≠05 4592/254hp/8AT/BW Gen V；≠06 BHE15 133kW/7DCT；≠01/08 EM-P",
+    sourceBadge: "极氪学",
+    tags: ["03", "05", "06", "01", "08"],
+  },
+  {
+    id: "trap-03-china-price-not-local-msrp",
+    wrong: "把中国培训竞品价带（SA3/BMW1/Lamando/Civic/Axela）当本地 MSRP 外推",
+    right: "课内价带为 China-training 口径（如 SA3 196500–256200 等 CNY）— ≠ 当地官方 MSRP，简报须标注中国培训价带",
+    sourceBadge: "极氪学",
+    tags: ["03", "competitors", "price"],
+  },
 ];
 
 export const ARCH_SEEDS: ArchSeed[] = [
@@ -1957,7 +2067,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
     id: "CMA",
     name: "CMA",
     nameZh: "紧凑模块化",
-    oneLiner: "CEVT · 极氪≠CMA · 01 产品课=CMA（勿贴Evo）· 08 属 CMA Evo / EM-P",
+    oneLiner: "CEVT · 极氪≠CMA · 01/03 产品课=CMA（勿贴Evo）· 08 属 CMA Evo / EM-P",
     sourceBadge: "极氪学",
     factIds: cmaFacts.map((f) => f.id),
     trapIds: ["trap-09-not-cma", "trap-zeekr-not-cma", "trap-01-cma-vs-cma-evo"],
@@ -1966,7 +2076,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
     id: "EM-P",
     name: "EM-P",
     nameZh: "超级电混",
-    oneLiner: "08/07 DHT Evo；01 EM-P（206/535 · 17.72 · TE38.1%）≠08 280/436·39.6·TE44.26%；≠06 ICE BHE15 133/290+7DCT（无包）；≠05 ICE 254hp/350+8AT+BW Gen V；≠09 MHEV；≠7X BEV",
+    oneLiner: "08/07 DHT Evo；01 EM-P（206/535 · 17.72 · TE38.1%）≠08 280/436·39.6·TE44.26%；≠06 ICE BHE15 133/290+7DCT（无包）；≠05 ICE 254hp/350+8AT+BW Gen V；≠03/03+ ICE T4Evo/T5Evo；≠09 MHEV；≠7X BEV",
     sourceBadge: "极氪学",
     factIds: empFacts.map((f) => f.id),
     trapIds: [
@@ -1980,6 +2090,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
       "trap-06-ice-not-emp",
       "trap-06-bhe15-133-vs-102-120",
       "trap-05-not-emp-01-08",
+      "trap-03-not-05-06-01-08",
     ],
   },
   {
@@ -2041,6 +2152,20 @@ export const ARCH_SEEDS: ArchSeed[] = [
     sourceBadge: "极氪学",
     factIds: lynk05ProductFacts.map((f) => f.id),
     trapIds: ["trap-05-not-06-ice", "trap-05-not-emp-01-08", "trap-05-q5-width-2140"],
+  },
+  {
+    id: "Lynk03Product",
+    name: "Lynk 03 Product Training",
+    nameZh: "领克 03 产品课",
+    oneLiner:
+      "CMA · 4684×1843×1460/WB2730 · 03：T4Evo+7DCT Evo 160kW/325Nm（0–100待补）· 03+：T5Evo+Aisin 8AT 195kW/380Nm/5.7s · 7DCT-Evo 380Nm/97.2%·95.5%/15→18L/min/4.3L · 8AT 96kg · BW 6th-gen 4WD 100:0/50:50 · stab 22→22.5 · 中国竞品价带≠本地MSRP · A200/A4数字待补 · ~92% Video9 skipped · ≠03+混写 ≠05/06/01 EM-P/08",
+    sourceBadge: "极氪学",
+    factIds: lynk03ProductFacts.map((f) => f.id),
+    trapIds: [
+      "trap-03-not-03plus",
+      "trap-03-not-05-06-01-08",
+      "trap-03-china-price-not-local-msrp",
+    ],
   },
   {
     id: "ZeekrX2026",
@@ -2173,7 +2298,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V（本遍销讲勿贴800V课包/续航；dims/pack/rated range待补） · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230 · 05≠06 ICE（4592/254hp/8AT/BW Gen V ≠4340/133kW/7DCT）· 05≠01/08 EM-P·≠09/900 · Q5宽课表2140须脚注";
+  "009≠800V（本遍销讲勿贴800V课包/续航；dims/pack/rated range待补） · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230 · 05≠06 ICE（4592/254hp/8AT/BW Gen V ≠4340/133kW/7DCT）· 05≠01/08 EM-P·≠09/900 · Q5宽课表2140须脚注 · 03≠03+（T4Evo/7DCT/160kW ≠ T5Evo/8AT/195kW/5.7s）· 03≠05/06/01 EM-P/08 · 中国竞品价带≠本地MSRP · A200/A4数字待补";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -2188,6 +2313,7 @@ export const SEED_GAP_UPDATES = {
     "NEW 01 / 01 EM-P 产品课：PPT+主视频已采（2026-09-05）；视频 item 100% · 整课 UI ~18%；Exam/Evaluate未开；视频补 R19 · 5 controls/17 modes · 18 ADAS · 课内碰撞对比速度 72vs64/64vs56/84vs80；01≠08（206/535·17.72·TE38.1%·CMA vs 280/436·39.6·TE44.26%·CMA Evo）",
     "Lynk 06 产品课已采（2026-09-05，C1955518318159941632，100%）：ICE BHE15 133kW/290Nm+7DCT · ≠EM-P·无包 · CMA/SPA本课待补；4340×1820×1625/WB2640（公开摘4350分badge）· WLTC6.4（公开6.55分badge）· 17ADAS/ACC·AEB150m；PPT s25–35 viewer gap待补",
     "Lynk 05 产品课已采（2026-09-05，C1955464229049405440，100%）：Sporty Coupe SUV · 4592×1879×1628/WB2734 · 254hp/350Nm · 0–100 6.7s · Aisin 8AT · BorgWarner Gen V AWD · 20 ADAS · 78.4%HSS · 12.3″+12.8″ · Infinity 10；竞品 Q5 SPB（宽课表2140须脚注）/GLC 300 Coupe/X4；≠06 ICE ≠01/08 EM-P；Quiz/Exam 未开",
+    "Lynk 03 产品课已采（2026-09-05，~92%，Video9 skipped）：CMA · 4684×1843×1460/WB2730 · 03 T4Evo+7DCT Evo 160kW/325Nm（0–100待补）· 03+ T5Evo+Aisin 8AT 195kW/380Nm/5.7s · 7DCT-Evo 380Nm/97.2%·95.5%/15→18L/min/4.3L · 8AT 96kg · BW 6th-gen 4WD 100:0/50:50 · stab 22→22.5；中国竞品价带 SA3/BMW1/Lamando/Civic/Axela ≠本地MSRP；区域 03/A200/A4 表头无 A200/A4 数字待补；≠03+混写 ≠05/06/01 EM-P/08",
     "热泵专课无学习权限；Thermal/HV Parts 课多数 °C/流量/kW 设定点待补（已采 HVCH 7kW）",
     "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包须双 badge 并存",
     "Charging 课：Boost vs Direct / max kW 表待补；Launch Lesson Exam 跳过；UI ~35%",
@@ -2213,6 +2339,7 @@ export const ZEEKR_ACADEMY_SEED = {
   lynk01ProductFacts,
   lynk06ProductFacts,
   lynk05ProductFacts,
+  lynk03ProductFacts,
   zeekrX2026Facts,
   zeekr007gtFacts,
   zeekr009SalesFacts,
