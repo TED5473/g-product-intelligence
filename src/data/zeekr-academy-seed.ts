@@ -1161,6 +1161,147 @@ export const zeekr007gtFacts: AcademyFact[] = [
   },
 ];
 
+
+// ─── Network Structure Introduction Lynk (极氪学; captured 2026-09-05) ───────
+
+export const networkStructureLynkFacts: AcademyFact[] = [
+  {
+    id: "net-geea-gens",
+    topic: "GEEA generations",
+    text: "GEEA = Geely / Lynk & Co 面向智能与新能源的电子电气架构；代际：GEEA 2.0、2.5、3.0",
+    sourceBadge: "极氪学",
+    course: "Network Structure Introduction (Lynk & Co)",
+    captured: "2026-09-05",
+    tags: ["GEEA", "network", "lynk900", "08"],
+  },
+  {
+    id: "net-bus-types",
+    topic: "In-vehicle networks covered",
+    text: "课内网络：LIN · CAN / CAN FD · FlexRay · Ethernet · LVDS",
+    sourceBadge: "极氪学",
+    course: "Network Structure Introduction (Lynk & Co)",
+    captured: "2026-09-05",
+    tags: ["GEEA", "network", "lynk900", "08"],
+  },
+  {
+    id: "net-flexray",
+    topic: "FlexRay payload / bit time",
+    text: "FlexRay payload 0–127 words（0–254 bytes）；1 bit = 100 ns @ 10 Mbit/s",
+    sourceBadge: "极氪学",
+    course: "Network Structure Introduction (Lynk & Co)",
+    captured: "2026-09-05",
+    tags: ["GEEA", "network", "FlexRay"],
+  },
+  {
+    id: "net-ethernet",
+    topic: "Ethernet 100BASE-T1 / AD+display",
+    text: "Ethernet 100BASE-T1（双绞）；100M / 1G 用于自动驾驶与显示单元等",
+    sourceBadge: "极氪学",
+    course: "Network Structure Introduction (Lynk & Co)",
+    captured: "2026-09-05",
+    tags: ["GEEA", "network", "Ethernet", "ADAS"],
+  },
+  {
+    id: "net-lvds",
+    topic: "LVDS electrical",
+    text: "LVDS：摆幅 350 mV · 电流源 3.5 mA · 端接 100 Ω",
+    sourceBadge: "极氪学",
+    course: "Network Structure Introduction (Lynk & Co)",
+    captured: "2026-09-05",
+    tags: ["GEEA", "network", "LVDS"],
+  },
+  {
+    id: "net-gateway-topo",
+    topic: "Gateway / topology diagrams",
+    text: "Gateway：CAN↔FlexRay；拓扑含 ADCU、DHU、ECM；含 900 与 08 EM-P 网络拓扑图（细节以原课图为准）",
+    sourceBadge: "极氪学",
+    course: "Network Structure Introduction (Lynk & Co)",
+    captured: "2026-09-05",
+    tags: ["GEEA", "network", "lynk900", "08"],
+  },
+];
+
+
+// ─── ADAS Basic Lynk (极氪学; captured 2026-09-05) ───────────────────────────
+
+export const adasBasicLynkFacts: AcademyFact[] = [
+  {
+    id: "adas-lynk-flow",
+    topic: "ADAS Basic flow",
+    text: "Perception（camera / 毫米波 / 超声波）→ Decision（controllers）→ Execution（reminder / 电子制动 / 电子转向）",
+    sourceBadge: "极氪学",
+    course: "Intelligent Driving Assistance System Introduction_Basic (Lynk & Co)",
+    captured: "2026-09-05",
+    tags: ["ADAS", "08", "lynk900"],
+  },
+  {
+    id: "adas-lynk-08-5r1v",
+    topic: "08 EM-P ADAS Basic hardware",
+    text: "08 EM-P：5R1V（本课未给 TOPS）；含前后角雷达、前向雷达、FLC 等 — 勿与产品课 5R10V/116 TOPS 合并",
+    sourceBadge: "极氪学",
+    course: "Intelligent Driving Assistance System Introduction_Basic (Lynk & Co)",
+    captured: "2026-09-05",
+    tags: ["ADAS", "08"],
+  },
+  {
+    id: "adas-lynk-900-lidar",
+    topic: "900 ADAS Basic hardware",
+    text: "900：5R11V1V/L 含 LiDAR；超声波 6F+6R；100M/1G Ethernet · Safety CANFD；本课未显示 TOPS / GEEA",
+    sourceBadge: "极氪学",
+    course: "Intelligent Driving Assistance System Introduction_Basic (Lynk & Co)",
+    captured: "2026-09-05",
+    tags: ["ADAS", "lynk900"],
+  },
+];
+
+
+// ─── Electric Door Working Principle (极氪学; captured 2026-09-05) ───────────
+
+export const electricDoorFacts: AcademyFact[] = [
+  {
+    id: "edoor-x-private-can",
+    topic: "ZEEKR X electric door buses",
+    text: "ZEEKR X：DPOD/PPOD — Private CAN — DDRM/PDRM；另有 Body Exposed CAN；TCAM（Telematics & Connectivity Antenna Module）",
+    sourceBadge: "极氪学",
+    course: "Electric Door Working Principle",
+    captured: "2026-09-05",
+    tags: ["x", "door", "ZEEA"],
+  },
+];
+
+
+// ─── Electric Control Working Principle (极氪学; captured 2026-09-05) ───────
+
+export const electricControlFacts: AcademyFact[] = [
+  {
+    id: "ectl-pwm",
+    topic: "PWM output",
+    text: "PWM：Vout = Vmax × duty（课内例 5 V × 50% = 2.5 V）",
+    sourceBadge: "极氪学",
+    course: "Electric Control Working Principle",
+    captured: "2026-09-05",
+    tags: ["electric-control"],
+  },
+  {
+    id: "ectl-sent-psi5",
+    topic: "SENT / PSI5",
+    text: "SENT：Single Edge Nibble Transmission；PSI5：两线电流接口（ECU microcontroller + receiver ASIC）",
+    sourceBadge: "极氪学",
+    course: "Electric Control Working Principle",
+    captured: "2026-09-05",
+    tags: ["electric-control"],
+  },
+  {
+    id: "ectl-ntc-chain",
+    topic: "NTC / sensor→ECU→actuator",
+    text: "NTC：温度升高→电阻下降；链路 Sensor signal → ECU → actuator control",
+    sourceBadge: "极氪学",
+    course: "Electric Control Working Principle",
+    captured: "2026-09-05",
+    tags: ["electric-control"],
+  },
+];
+
 export const academyFacts: AcademyFact[] = [
   ...spaEvoFacts,
   ...hv800Facts,
@@ -1177,6 +1318,10 @@ export const academyFacts: AcademyFact[] = [
   ...odpFacts,
   ...becmFacts,
   ...zeekr007gtFacts,
+  ...networkStructureLynkFacts,
+  ...adasBasicLynkFacts,
+  ...electricDoorFacts,
+  ...electricControlFacts,
 ];
 
 // ─── Traps (ids referenced by archSeeds / TRAPS.md) ──────────────────────────
@@ -1308,6 +1453,13 @@ export const academyTraps: AcademyTrap[] = [
     sourceBadge: "极氪学",
     tags: ["007gt", "7x"],
   },
+  {
+    id: "trap-08-adas-5r1v-vs-5r10v",
+    wrong: "把 ADAS Basic 课 08 的 5R1V（无 TOPS）与产品课 5R10V/116 TOPS 合成唯一硬件口径",
+    right: "产品课：5R10V / 116 TOPS；ADAS Basic（Lynk）：08 EM-P = 5R1V 且本课未给 TOPS — 不同课程，双 badge 勿塌缩",
+    sourceBadge: "极氪学",
+    tags: ["08", "ADAS"],
+  },
 ];
 
 export const ARCH_SEEDS: ArchSeed[] = [
@@ -1380,7 +1532,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
       "CMA Evo · 4820×1915×1685 / WB2848 / Cd0.295 · 5R10V/116TOPS · 车身74.94%HSS · 电池IP68/DP1180 900MPa/气凝胶4.2mm/65ms · 三源功率勿单选（竞品页350Nm/6.5s vs 销售257/6.75 vs 专课280/436）",
     sourceBadge: "极氪学",
     factIds: lynk08ProductFacts.map((f) => f.id),
-    trapIds: ["trap-08-257-vs-280-436", "trap-08-vs-09-hybrid"],
+    trapIds: ["trap-08-257-vs-280-436", "trap-08-vs-09-hybrid", "trap-08-adas-5r1v-vs-5r10v"],
   },
   {
     id: "ZeekrX2026",
@@ -1452,6 +1604,44 @@ export const ARCH_SEEDS: ArchSeed[] = [
     trapIds: [],
   },
   {
+    id: "GEEA-Network",
+    name: "GEEA / Network Structure (Lynk)",
+    nameZh: "网络结构 · 领克",
+    oneLiner:
+      "GEEA 2.0/2.5/3.0 · LIN/CAN/CAN FD/FlexRay/Ethernet/LVDS · FlexRay 0–127 words/0–254B · 1bit=100ns@10M · 100BASE-T1 100M/1G AD+显示 · LVDS 350mV/3.5mA/100Ω · Gateway CAN↔FlexRay · ADCU/DHU/ECM · 900&08 EM-P 拓扑图",
+    sourceBadge: "极氪学",
+    factIds: networkStructureLynkFacts.map((f) => f.id),
+    trapIds: [],
+  },
+  {
+    id: "ADAS-Basic-Lynk",
+    name: "ADAS Basic (Lynk)",
+    nameZh: "智驾基础 · 领克",
+    oneLiner:
+      "Perception→Decision→Execution；08 EM-P 5R1V（无TOPS）≠产品课5R10V/116TOPS；900 5R11V1V/L+LiDAR · 超声6F+6R · 100M/1G Ethernet · Safety CANFD",
+    sourceBadge: "极氪学",
+    factIds: adasBasicLynkFacts.map((f) => f.id),
+    trapIds: ["trap-08-adas-5r1v-vs-5r10v"],
+  },
+  {
+    id: "ElectricDoor",
+    name: "Electric Door",
+    nameZh: "电动门",
+    oneLiner: "ZEEKR X：DPOD/PPOD — Private CAN — DDRM/PDRM；Body Exposed CAN；TCAM",
+    sourceBadge: "极氪学",
+    factIds: electricDoorFacts.map((f) => f.id),
+    trapIds: [],
+  },
+  {
+    id: "ElectricControl",
+    name: "Electric Control",
+    nameZh: "电气控制原理",
+    oneLiner: "PWM Vout=Vmax×duty · SENT · PSI5 · NTC · Sensor→ECU→actuator（通用原理，非车型额定）",
+    sourceBadge: "极氪学",
+    factIds: electricControlFacts.map((f) => f.id),
+    trapIds: [],
+  },
+  {
     id: "Zeekr007GT",
     name: "ZEEKR 007GT",
     nameZh: "极氪 007GT",
@@ -1465,7 +1655,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
+  "009≠800V · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -1485,6 +1675,10 @@ export const SEED_GAP_UPDATES = {
     "BECM 课：温传感前更早章节本遍未全转录；Launch Lesson Exam 未做；UI ~45%",
     "007GT 产品课已采（2026-09-05）：800V/ZEEA2.5/7V3R · WLTC 519/655/558 · NDE34 335/520 · AWD 500/790 · 4864×1900×1460/1445；quiz跳过；包电压仍看800V课双badge",
     "007 非GT产品专课待补（Courses搜007仅返回007GT）；8X/9X 产品专课待补（页1无命中；NX21-A2勿假定=9X）",
+    "Network Structure（Lynk）已采（2026-09-05）：GEEA 2.0/2.5/3.0 · LIN/CAN/CAN FD/FlexRay/Ethernet/LVDS · FlexRay/Ethernet/LVDS 课内数；Quiz/Exam 未开 UI~17%",
+    "ADAS Basic（Lynk）已采：08=5R1V无TOPS ≠ 产品课5R10V/116TOPS；900=5R11V1V/L+LiDAR；Exam/Quiz 未开 UI~46%",
+    "Electric Door 已采（X：DPOD/PPOD/Private CAN/DDRM/PDRM/Body Exposed CAN/TCAM）；Exam/Quiz 跳过 UI~97%",
+    "Electric Control 已采短原理（PWM/SENT/PSI5/NTC/sensor→ECU→actuator）；通用课勿外推车型额定；Exam 跳过 UI~44%",
   ],
 };
 
@@ -1496,6 +1690,10 @@ export const ZEEKR_ACADEMY_SEED = {
   lynk08ProductFacts,
   zeekrX2026Facts,
   zeekr007gtFacts,
+  networkStructureLynkFacts,
+  adasBasicLynkFacts,
+  electricDoorFacts,
+  electricControlFacts,
   thermalFacts,
   hvPartsFacts,
   chargingFacts,
