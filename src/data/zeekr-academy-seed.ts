@@ -549,6 +549,102 @@ export const lynk08ProductFacts: AcademyFact[] = [
 ];
 
 
+// ─── Lynk NEW 01 / 01 EM-P Product Training (极氪学; captured 2026-09-05) ───
+
+export const lynk01ProductFacts: AcademyFact[] = [
+  {
+    id: "01pt-identity",
+    topic: "NEW 01 / 01 EM-P identity",
+    text: "Lynk & Co NEW 01 / 01 = Urban Utility Compact SUV；动力 01 EM-P；课内 ≠07 / Z20 / 20 / 9X",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co NEW 01",
+    captured: "2026-09-05",
+    tags: ["01", "EM-P", "CMA"],
+  },
+  {
+    id: "01pt-dims",
+    topic: "NEW 01 dimensions",
+    text: "4545×1860×1694 mm · WB 2734 mm · 课件 golden-ratio 示数 0.605",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co NEW 01",
+    captured: "2026-09-05",
+    tags: ["01"],
+  },
+  {
+    id: "01pt-arch",
+    topic: "NEW 01 architecture / chassis",
+    text: "CMA（Volvo+Geely / CEVT）；模块化；前麦弗逊 / 后多连杆 · HyperPro monotube · long-stroke — 课写 CMA，勿直接标成 CMA Evo",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co NEW 01",
+    captured: "2026-09-05",
+    tags: ["01", "CMA"],
+  },
+  {
+    id: "01pt-powertrain",
+    topic: "01 EM-P powertrain",
+    text: "P1+P2 双电机 3-DHT（串并联；3 前进+倒档）；发动机 BHE15-DFZ-A00 1.5T Miller 102 kW/230 N·m · TE 38.1% · CR 14:1",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co NEW 01",
+    captured: "2026-09-05",
+    tags: ["01", "EM-P", "DHT"],
+  },
+  {
+    id: "01pt-motors-system",
+    topic: "01 EM-P motors / system / performance",
+    text: "P1 60 kW/180 N·m；P2 107 kW/338 N·m；系统 206 kW/535 N·m；0–100 7.71 s catapult / 8.2 s；80–120 4.77 s；Vmax 200 km/h",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co NEW 01",
+    captured: "2026-09-05",
+    tags: ["01", "EM-P"],
+  },
+  {
+    id: "01pt-battery-range",
+    topic: "01 EM-P pack / charge / range",
+    text: "高镍 NCM 17.72 kWh L 形中央通道包；AC 6.6 kW ≈2.8 h；WLTP 综合 >750 km；馈电油耗 5.9–6.2 L/100 km（课件）",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co NEW 01",
+    captured: "2026-09-05",
+    tags: ["01", "battery", "EM-P"],
+  },
+  {
+    id: "01pt-adas-cabin-safety",
+    topic: "NEW 01 ADAS / cabin / brake / NCAP claim",
+    text: "3R1V；Snapdragon 8155 8 TOPS · 12/128GB；10.2″ 仪表 + 15.4″ 中控；100–0 ≤35 m；课内宣称 E-NCAP/C-NCAP 2021 五星",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co NEW 01",
+    captured: "2026-09-05",
+    tags: ["01", "ADAS", "safety"],
+  },
+  {
+    id: "01pt-competitors",
+    topic: "NEW 01 competitor slides",
+    text: "竞品页：RAV4 2.5L 2023 Adventure · CX-5 Signature AWD · Model Y（benchmark）· 08 EM-P（架构对比）",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co NEW 01",
+    captured: "2026-09-05",
+    tags: ["01", "08", "EM-P"],
+  },
+  {
+    id: "01pt-vs-08-dual-badge",
+    topic: "01 vs 08 EM-P dual-badge",
+    text: "01≠08：系统 206 kW ≠ 08 专课 280/436；TE 38.1% ≠ 44.26%；包 17.72 ≠ 39.6 kWh；架构课标 CMA ≠ 08 的 CMA Evo 标签 — 双 badge",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co NEW 01 · EM-P Tech / 08 Product",
+    captured: "2026-09-05",
+    tags: ["01", "08", "EM-P", "CMA"],
+  },
+  {
+    id: "01pt-video-tbd",
+    topic: "NEW 01 video capture gap",
+    text: "PPT 规格已摘；视频约 2:09:33 未完整观看（待补）；Exam/Evaluate 未开 — 本遍以 PPT 确认数为准",
+    sourceBadge: "待补",
+    course: "Product Training of Lynk & Co NEW 01",
+    captured: "2026-09-05",
+    tags: ["01"],
+  },
+];
+
+
 // ─── 2026 ZEEKR X New Model (极氪学; captured 2026-09-04) ─────────────────────
 
 export const zeekrX2026Facts: AcademyFact[] = [
@@ -1389,6 +1485,7 @@ export const academyFacts: AcademyFact[] = [
   ...modelFacts,
   ...lynk900Facts,
   ...lynk08ProductFacts,
+  ...lynk01ProductFacts,
   ...zeekrX2026Facts,
   ...thermalFacts,
   ...hvPartsFacts,
@@ -1540,6 +1637,34 @@ export const academyTraps: AcademyTrap[] = [
     sourceBadge: "极氪学",
     tags: ["08", "ADAS"],
   },
+  {
+    id: "trap-01-vs-08-system-206",
+    wrong: "把 01 EM-P 系统功率写成 08 的 280/436（或反过来）",
+    right: "NEW 01 产品课系统 206 kW / 535 N·m；08 技术专课 FWD 280 / AWD 436 — 分车分 badge",
+    sourceBadge: "极氪学",
+    tags: ["01", "08", "EM-P"],
+  },
+  {
+    id: "trap-01-te-38-vs-44",
+    wrong: "把 01 的 BHE15 TE 38.1% 与 EM-P/08 技术课 44.26% 合成唯一热效率",
+    right: "NEW 01 产品课 BHE15-DFZ-A00 TE 38.1%（CR 14:1）；08/EM-P 技术专课 TE 44.26% — 机型/课源不同，双 badge",
+    sourceBadge: "极氪学",
+    tags: ["01", "08", "EM-P"],
+  },
+  {
+    id: "trap-01-pack-17-vs-39",
+    wrong: "把 01 包 17.72 kWh 与 08 包 39.6 kWh 混用",
+    right: "NEW 01：17.72 kWh NCM L 形包；08 技术专课：39.6 kWh NCM — 分车勿塌缩",
+    sourceBadge: "极氪学",
+    tags: ["01", "08", "battery"],
+  },
+  {
+    id: "trap-01-cma-vs-cma-evo",
+    wrong: "把 NEW 01 直接标成 CMA Evo（与 08 同标签）",
+    right: "NEW 01 产品课写 CMA；08 产品课写 CMA Evo — 除非他课明示，勿把 Evo 标签贴到 01",
+    sourceBadge: "极氪学",
+    tags: ["01", "08", "CMA"],
+  },
 ];
 
 export const ARCH_SEEDS: ArchSeed[] = [
@@ -1575,19 +1700,27 @@ export const ARCH_SEEDS: ArchSeed[] = [
     id: "CMA",
     name: "CMA",
     nameZh: "紧凑模块化",
-    oneLiner: "CEVT · 极氪≠CMA · 08 属 CMA Evo / EM-P",
+    oneLiner: "CEVT · 极氪≠CMA · 01 产品课=CMA（勿贴Evo）· 08 属 CMA Evo / EM-P",
     sourceBadge: "极氪学",
     factIds: cmaFacts.map((f) => f.id),
-    trapIds: ["trap-09-not-cma", "trap-zeekr-not-cma"],
+    trapIds: ["trap-09-not-cma", "trap-zeekr-not-cma", "trap-01-cma-vs-cma-evo"],
   },
   {
     id: "EM-P",
     name: "EM-P",
     nameZh: "超级电混",
-    oneLiner: "08/07 DHT Evo；≠09 MHEV；≠7X BEV",
+    oneLiner: "08/07 DHT Evo；01 EM-P（206/535 · 17.72 · TE38.1%）≠08 280/436·39.6·TE44.26%；≠09 MHEV；≠7X BEV",
     sourceBadge: "极氪学",
     factIds: empFacts.map((f) => f.id),
-    trapIds: ["trap-08-vs-09-hybrid", "trap-09-not-cma", "trap-08-257-vs-280-436"],
+    trapIds: [
+      "trap-08-vs-09-hybrid",
+      "trap-09-not-cma",
+      "trap-08-257-vs-280-436",
+      "trap-01-vs-08-system-206",
+      "trap-01-te-38-vs-44",
+      "trap-01-pack-17-vs-39",
+      "trap-01-cma-vs-cma-evo",
+    ],
   },
   {
     id: "Lynk900",
@@ -1613,6 +1746,21 @@ export const ARCH_SEEDS: ArchSeed[] = [
     sourceBadge: "极氪学",
     factIds: lynk08ProductFacts.map((f) => f.id),
     trapIds: ["trap-08-257-vs-280-436", "trap-08-vs-09-hybrid", "trap-08-adas-5r1v-vs-5r10v"],
+  },
+  {
+    id: "Lynk01Product",
+    name: "Lynk NEW 01 / 01 EM-P Product Training",
+    nameZh: "领克 NEW 01 产品课",
+    oneLiner:
+      "Urban Utility Compact SUV · CMA（非Evo标签）· 4545×1860×1694/WB2734/0.605 · P1+P2 3-DHT · BHE15-DFZ-A00 102kW/230Nm TE38.1% · 系统206/535 · 17.72kWh · WLTP>750 · 3R1V/8155 8TOPS · ≠08 280/436·39.6·TE44.26%",
+    sourceBadge: "极氪学",
+    factIds: lynk01ProductFacts.map((f) => f.id),
+    trapIds: [
+      "trap-01-vs-08-system-206",
+      "trap-01-te-38-vs-44",
+      "trap-01-pack-17-vs-39",
+      "trap-01-cma-vs-cma-evo",
+    ],
   },
   {
     id: "ZeekrX2026",
@@ -1745,7 +1893,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V（本遍销讲勿贴800V课包/续航；dims/pack/rated range待补） · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
+  "009≠800V（本遍销讲勿贴800V课包/续航；dims/pack/rated range待补） · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -1757,6 +1905,7 @@ export const SEED_GAP_UPDATES = {
     "900 EMP 课：尺寸/轴距/轮胎待补；Studied UI ~63%，互动页未全验",
     "SEA 架构专课待补：08 产品课采录时 Courses 搜索页1未找到",
     "08 产品课：Videos 01–03 + PPT 04–08 已采；quiz 跳过；功率须三源分 badge（竞品页/销售攻防/技术专课）",
+    "NEW 01 / 01 EM-P 产品课：PPT 规格已摘（2026-09-05）；视频约2:09:33未完整观看待补；Exam/Evaluate未开；01≠08（206/535·17.72·TE38.1%·CMA vs 280/436·39.6·TE44.26%·CMA Evo）",
     "热泵专课无学习权限；Thermal/HV Parts 课多数 °C/流量/kW 设定点待补（已采 HVCH 7kW）",
     "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包须双 badge 并存",
     "Charging 课：Boost vs Direct / max kW 表待补；Launch Lesson Exam 跳过；UI ~35%",
@@ -1779,6 +1928,7 @@ export const ZEEKR_ACADEMY_SEED = {
   facts: academyFacts,
   lynk900Facts,
   lynk08ProductFacts,
+  lynk01ProductFacts,
   zeekrX2026Facts,
   zeekr007gtFacts,
   zeekr009SalesFacts,
