@@ -681,6 +681,103 @@ export const lynk01ProductFacts: AcademyFact[] = [
 ];
 
 
+
+// ─── Lynk 06 Product Training (极氪学; captured 2026-09-05) ───────────────────
+
+export const lynk06ProductFacts: AcademyFact[] = [
+  {
+    id: "06pt-identity",
+    topic: "06 product training identity",
+    text: "Lynk & Co 06 Product Training = ICE · BHE15 1.5T + 7DCT — 本课 ≠ EM-P；无动力电池包；课进度 100%（C1955518318159941632）",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 06 (C1955518318159941632)",
+    captured: "2026-09-05",
+    tags: ["06", "ICE"],
+  },
+  {
+    id: "06pt-dims",
+    topic: "06 dimensions / cabin / storage",
+    text: "4340×1820×1625 mm · WB 2640 mm；后排腿部空间 869 mm；36 处储物；7 个充电口（车内供电口）",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 06",
+    captured: "2026-09-05",
+    tags: ["06"],
+  },
+  {
+    id: "06pt-arch-tbd",
+    topic: "06 architecture gap",
+    text: "本课未陈述 CMA / SPA（亦未印 BMA）— 架构名待补；勿用本课贴 CMA/SPA/EM-P；公开口径 BMA/BMA evo 另 badge",
+    sourceBadge: "待补",
+    course: "Product Training of Lynk & Co 06",
+    captured: "2026-09-05",
+    tags: ["06", "CMA", "SPA", "BMA"],
+  },
+  {
+    id: "06pt-powertrain",
+    topic: "06 ICE powertrain",
+    text: "BHE15 1.5T 1499 cc · 181 PS / 133 kW / 290 N·m；WLTC 6.4 L/100 km；7DCT 效率 97% · 换档 0.2 s — 非 DHT/EM-P",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 06",
+    captured: "2026-09-05",
+    tags: ["06", "ICE", "BHE15"],
+  },
+  {
+    id: "06pt-bhe15-vs-emp-01",
+    topic: "06 BHE15 vs EM-P / 01 BHE15 dual-badge",
+    text: "同名 BHE15 勿塌缩：06 产品课 133 kW/290 N·m（ICE+7DCT）；01 EM-P 课 BHE15-DFZ-A00 102 kW/230 N·m TE38.1%；EM-P 技术专课 120 kW/230 N·m TE44.26% — 分车分 badge",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 06 · NEW 01 · EM-P Tech",
+    captured: "2026-09-05",
+    tags: ["06", "01", "EM-P", "BHE15"],
+  },
+  {
+    id: "06pt-body-safety",
+    topic: "06 body / passive safety",
+    text: "钢材至 1600 MPa；高强钢占比 63.4%；焊缝 4800+",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 06",
+    captured: "2026-09-05",
+    tags: ["06", "safety"],
+  },
+  {
+    id: "06pt-adas-cabin",
+    topic: "06 ADAS / display / sensors",
+    text: "17 ADAS；ACC/AEB 探测 150 m；LCW 70 m；RCTA 60–90°；12.3″ 显示；摄像头 1280×720；雷达 1.5 m",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 06",
+    captured: "2026-09-05",
+    tags: ["06", "ADAS"],
+  },
+  {
+    id: "06pt-competitors",
+    topic: "06 competitor slides",
+    text: "竞品页：BMW X1 M35i · Kia Seltos 1.4T · Honda HR-V 1.5L EX · Geely Coolray 1.5TD GF+",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 06",
+    captured: "2026-09-05",
+    tags: ["06"],
+  },
+  {
+    id: "06pt-ppt-gap-25-35",
+    topic: "06 PPT viewer gap",
+    text: "PPT slides 25–35 viewer gap noted（本遍未采到可读页）— 待补；已采规格勿用缺口页外推",
+    sourceBadge: "待补",
+    course: "Product Training of Lynk & Co 06 PPT s25–35",
+    captured: "2026-09-05",
+    tags: ["06"],
+  },
+  {
+    id: "06pt-dims-vs-public",
+    topic: "06 length dual-badge vs public",
+    text: "本课长度 4340 mm；公开墙/官网摘曾写 4350×1820×1625 · WB2640 — 双 badge，勿单选覆写；油耗本课 WLTC 6.4 L ≠ 公开摘 6.55 L",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 06 · 公开口径",
+    captured: "2026-09-05",
+    tags: ["06"],
+  },
+];
+
+
 // ─── 2026 ZEEKR X New Model (极氪学; captured 2026-09-04) ─────────────────────
 
 export const zeekrX2026Facts: AcademyFact[] = [
@@ -1522,6 +1619,7 @@ export const academyFacts: AcademyFact[] = [
   ...lynk900Facts,
   ...lynk08ProductFacts,
   ...lynk01ProductFacts,
+  ...lynk06ProductFacts,
   ...zeekrX2026Facts,
   ...thermalFacts,
   ...hvPartsFacts,
@@ -1701,6 +1799,20 @@ export const academyTraps: AcademyTrap[] = [
     sourceBadge: "极氪学",
     tags: ["01", "08", "CMA"],
   },
+  {
+    id: "trap-06-ice-not-emp",
+    wrong: "把 06 讲成 EM-P / 有动力电池包 / 用本课贴 CMA 或 SPA",
+    right: "06 本产品课（C1955518318159941632）= ICE BHE15 133 kW/290 N·m + 7DCT；无 pack；CMA/SPA 本课未陈述（待补）；公开 BMA/BMA evo 另 badge",
+    sourceBadge: "极氪学",
+    tags: ["06", "EM-P", "ICE"],
+  },
+  {
+    id: "trap-06-bhe15-133-vs-102-120",
+    wrong: "把 06 的 BHE15 133 kW/290 N·m 与 01 的 102/230 或 EM-P 专课 120/230 合成唯一机型口径",
+    right: "06 产品课：181 PS/133 kW/290 N·m + 7DCT；01：BHE15-DFZ-A00 102 kW/230 N·m TE38.1%；EM-P 技术专课：120 kW/230 N·m TE44.26% — 分车分 badge",
+    sourceBadge: "极氪学",
+    tags: ["06", "01", "EM-P", "BHE15"],
+  },
 ];
 
 export const ARCH_SEEDS: ArchSeed[] = [
@@ -1745,7 +1857,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
     id: "EM-P",
     name: "EM-P",
     nameZh: "超级电混",
-    oneLiner: "08/07 DHT Evo；01 EM-P（206/535 · 17.72 · TE38.1%）≠08 280/436·39.6·TE44.26%；≠09 MHEV；≠7X BEV",
+    oneLiner: "08/07 DHT Evo；01 EM-P（206/535 · 17.72 · TE38.1%）≠08 280/436·39.6·TE44.26%；≠06 ICE BHE15 133/290+7DCT（无包）；≠09 MHEV；≠7X BEV",
     sourceBadge: "极氪学",
     factIds: empFacts.map((f) => f.id),
     trapIds: [
@@ -1756,6 +1868,8 @@ export const ARCH_SEEDS: ArchSeed[] = [
       "trap-01-te-38-vs-44",
       "trap-01-pack-17-vs-39",
       "trap-01-cma-vs-cma-evo",
+      "trap-06-ice-not-emp",
+      "trap-06-bhe15-133-vs-102-120",
     ],
   },
   {
@@ -1797,6 +1911,16 @@ export const ARCH_SEEDS: ArchSeed[] = [
       "trap-01-pack-17-vs-39",
       "trap-01-cma-vs-cma-evo",
     ],
+  },
+  {
+    id: "Lynk06Product",
+    name: "Lynk 06 Product Training",
+    nameZh: "领克 06 产品课",
+    oneLiner:
+      "ICE · BHE15 1.5T 1499cc 181PS/133kW/290Nm · 7DCT 97%/0.2s · WLTC 6.4L · 4340×1820×1625/WB2640 · 后排腿部869 · 36储物 · 7充电口 · 1600MPa/63.4%HSS/4800+焊 · 17 ADAS · ACC/AEB150m · LCW70m · RCTA60–90° · 12.3″/cam1280×720/radar1.5m · ≠EM-P·无包 · CMA/SPA待补 · PPT s25–35 gap；竞品 X1 M35i/Seltos/HR-V/Coolray",
+    sourceBadge: "极氪学",
+    factIds: lynk06ProductFacts.map((f) => f.id),
+    trapIds: ["trap-06-ice-not-emp", "trap-06-bhe15-133-vs-102-120"],
   },
   {
     id: "ZeekrX2026",
@@ -1929,7 +2053,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V（本遍销讲勿贴800V课包/续航；dims/pack/rated range待补） · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
+  "009≠800V（本遍销讲勿贴800V课包/续航；dims/pack/rated range待补） · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -1942,6 +2066,7 @@ export const SEED_GAP_UPDATES = {
     "SEA 架构专课待补：08 产品课采录时 Courses 搜索页1未找到",
     "08 产品课：Videos 01–03 + PPT 04–08 已采；quiz 跳过；功率须三源分 badge（竞品页/销售攻防/技术专课）",
     "NEW 01 / 01 EM-P 产品课：PPT+主视频已采（2026-09-05）；视频 item 100% · 整课 UI ~18%；Exam/Evaluate未开；视频补 R19 · 5 controls/17 modes · 18 ADAS · 课内碰撞对比速度 72vs64/64vs56/84vs80；01≠08（206/535·17.72·TE38.1%·CMA vs 280/436·39.6·TE44.26%·CMA Evo）",
+    "Lynk 06 产品课已采（2026-09-05，C1955518318159941632，100%）：ICE BHE15 133kW/290Nm+7DCT · ≠EM-P·无包 · CMA/SPA本课待补；4340×1820×1625/WB2640（公开摘4350分badge）· WLTC6.4（公开6.55分badge）· 17ADAS/ACC·AEB150m；PPT s25–35 viewer gap待补",
     "热泵专课无学习权限；Thermal/HV Parts 课多数 °C/流量/kW 设定点待补（已采 HVCH 7kW）",
     "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包须双 badge 并存",
     "Charging 课：Boost vs Direct / max kW 表待补；Launch Lesson Exam 跳过；UI ~35%",
@@ -1965,6 +2090,7 @@ export const ZEEKR_ACADEMY_SEED = {
   lynk900Facts,
   lynk08ProductFacts,
   lynk01ProductFacts,
+  lynk06ProductFacts,
   zeekrX2026Facts,
   zeekr007gtFacts,
   zeekr009SalesFacts,
