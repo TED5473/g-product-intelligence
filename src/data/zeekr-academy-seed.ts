@@ -1804,11 +1804,11 @@ export const zeekr009SalesFacts: AcademyFact[] = [
   {
     id: "009-sales-gaps",
     topic: "009 Sales gaps this capture",
-    text: "本遍销讲：尺寸 / 电池包 kWh / 额定续航 待补 — 勿发明，亦勿从 800V 课贴包/续航",
+    text: "本遍销讲未印尺寸 / 包 kWh / 额定续航 — 勿从 800V 课贴；VX11-A5（All-New 009）已补 5209 / 116 kWh CTP2.0 / WLTP582·NEDC686 — 双 badge，勿把销讲写成已印这些数",
     sourceBadge: "待补",
-    course: "ZEEKR 009 Sales Training",
+    course: "ZEEKR 009 Sales Training · VX11-A5",
     captured: "2026-09-05",
-    tags: ["009", "800V"],
+    tags: ["009", "800V", "VX11-A5"],
   },
   {
     id: "009-sales-not-800v",
@@ -1818,6 +1818,102 @@ export const zeekr009SalesFacts: AcademyFact[] = [
     course: "ZEEKR 009 Sales Training · 800V HV",
     captured: "2026-09-05",
     tags: ["009", "800V"],
+  },
+];
+
+
+// ─── VX11-A5 New Model Launch = All-New ZEEKR009 (极氪学; captured 2026-09-05) ─
+
+export const zeekr009Vx11A5Facts: AcademyFact[] = [
+  {
+    id: "vx11-a5-identity",
+    topic: "VX11-A5 identity = All-New ZEEKR009",
+    text: "课内明示：The All-New ZEEKR009 · ZEEKR009 RHD · 7-seater Aisle / 6-seater Executive / ZEEKR009 Grand；无 8X / 9X 铭牌 — 勿把 VX11-A5 当 8X/9X",
+    sourceBadge: "极氪学",
+    course: "VX11-A5 New Model Launch Training",
+    captured: "2026-09-05",
+    tags: ["009", "VX11-A5", "8x", "9x"],
+  },
+  {
+    id: "vx11-a5-okavango-tbd",
+    topic: "OKAVANGO objective string 待核",
+    text: "Course objective 另显示 OKAVANGO — 待核，勿默认 = All-New 009 / VX11-A5",
+    sourceBadge: "待补",
+    course: "VX11-A5 New Model Launch Training",
+    captured: "2026-09-05",
+    tags: ["009", "VX11-A5", "OKAVANGO"],
+  },
+  {
+    id: "vx11-a5-arch-hv-pack",
+    topic: "VX11-A5 SEA / 400V / pack",
+    text: "SEA；400 V HV；原生 BEV MPV；包 116 kWh CTP2.0 — 009 = 400V ≠ 800V（800V 级是 007/7X）",
+    sourceBadge: "极氪学",
+    course: "VX11-A5 New Model Launch Training",
+    captured: "2026-09-05",
+    tags: ["009", "VX11-A5", "SEA", "800V", "battery"],
+  },
+  {
+    id: "vx11-a5-dims-cabin",
+    topic: "VX11-A5 dimensions / cabin",
+    text: "长 5209 mm；舱 4230×1494；GC 142 mm；step 376；门宽 795 · 门高 1241；平坦地板 7.4 m²；过道 170 / 底 210 / 上 270；三排侧窗 0.5 m²；双全景天窗 2.16 m²；胎 235/50 R19；贯穿尾灯 1.76 m",
+    sourceBadge: "极氪学",
+    course: "VX11-A5 New Model Launch Training",
+    captured: "2026-09-05",
+    tags: ["009", "VX11-A5"],
+  },
+  {
+    id: "vx11-a5-power",
+    topic: "VX11-A5 AWD / X-pin / Lightning",
+    text: "AWD 450 kW / 693 N·m（前 200 + 后 250）；0–100 4.5 s；X-pin；齿轮箱出 250 kW / 373 N·m；Lightning Switch on-demand AWD 0.4 s",
+    sourceBadge: "极氪学",
+    course: "VX11-A5 New Model Launch Training",
+    captured: "2026-09-05",
+    tags: ["009", "VX11-A5", "motor", "AWD"],
+  },
+  {
+    id: "vx11-a5-range-charge",
+    topic: "VX11-A5 range / charge",
+    text: "WLTP 582 km · NEDC 686 km；DC max 205 kW；10–80% 30 min；10 min DC +157 km WLTC / +185 km NEDC",
+    sourceBadge: "极氪学",
+    course: "VX11-A5 New Model Launch Training",
+    captured: "2026-09-05",
+    tags: ["009", "VX11-A5", "battery"],
+  },
+  {
+    id: "vx11-a5-chassis",
+    topic: "VX11-A5 air suspension",
+    text: "双腔空气悬架 55 mm + CCD（本课未复述销讲 dTCS/转圈/侧滑 — 双 badge）",
+    sourceBadge: "极氪学",
+    course: "VX11-A5 New Model Launch Training",
+    captured: "2026-09-05",
+    tags: ["009", "VX11-A5", "chassis"],
+  },
+  {
+    id: "vx11-a5-competitors",
+    topic: "VX11-A5 competitors named + table",
+    text: "点名：M9 / Denza D9 / X9 / MEGA / GL8 / Dreamer / Alphard / EM90（另 tech 提 RR/S-Class；Huawei ADS/HarmonyOS）。表数：M9 5230×1999×1800 WB3110 · 42/100 kWh · 225/630 km · 365/390 kW · 4.9/4.3 s；D9 5250×1960×1920 WB3110 · 箱 410–570/2310 · 20/40 kWh · 103/200/190/620/600 km；X9 5293×1988×1785 WB3160 · 箱 775/2554 · 84.5 LFP/101.5 NCM · 610/702/640 · 235/370 kW",
+    sourceBadge: "极氪学",
+    course: "VX11-A5 New Model Launch Training",
+    captured: "2026-09-05",
+    tags: ["009", "VX11-A5", "competitors"],
+  },
+  {
+    id: "vx11-a5-dual-badge-vs-sales",
+    topic: "VX11-A5 dual-badge vs 009 Sales Training",
+    text: "与销讲对齐：峰 450 kW · 4.5 s · Lightning 0.4 s · X-pin · 箱出 250/373 · 双腔 55 mm。销讲未给而本课补：5209 · 116 kWh CTP2.0 · 400 V · 693 N·m · WLTP 582 / NEDC 686 · DC 205 / 10–80 30 min — 双 badge；销讲交付/竞品销量/100–0 36.9 m/dTCS 等仍以销讲为准",
+    sourceBadge: "极氪学",
+    course: "VX11-A5 New Model Launch Training · ZEEKR 009 Sales Training",
+    captured: "2026-09-05",
+    tags: ["009", "VX11-A5"],
+  },
+  {
+    id: "vx11-a5-not-800v",
+    topic: "VX11-A5 confirms 009 = 400V ≠ 800V",
+    text: "本课明确 400 V；勿把 800V 课包/续航贴到 All-New 009；与 800V 课历史 398 V·116 kWh 表数并存须分 badge（平台称 400V）",
+    sourceBadge: "极氪学",
+    course: "VX11-A5 New Model Launch Training · 800V HV",
+    captured: "2026-09-05",
+    tags: ["009", "VX11-A5", "800V"],
   },
 ];
 
@@ -1985,6 +2081,7 @@ export const academyFacts: AcademyFact[] = [
   ...becmFacts,
   ...zeekr007gtFacts,
   ...zeekr009SalesFacts,
+  ...zeekr009Vx11A5Facts,
   ...networkStructureLynkFacts,
   ...adasBasicLynkFacts,
   ...electricDoorFacts,
@@ -1996,10 +2093,24 @@ export const academyFacts: AcademyFact[] = [
 export const academyTraps: AcademyTrap[] = [
   {
     id: "trap-009-not-800v",
-    wrong: "009 是 800V / 把 800V 课包或续航直接贴到 009 销讲",
-    right: "009 ≠ 800V；800V 级是 007/7X。本遍 009 Sales（2026-09-05）dims / pack kWh / rated range 待补 — 勿从 800V 课贴包/续航；历史 398 V·116 kWh 等须分 badge",
+    wrong: "009 是 800V / 把 800V 课包或续航直接贴到 009 销讲或 VX11-A5",
+    right: "009 = 400V（VX11-A5 明示；800V 课表亦约 398 V）≠ 800V；800V 级是 007/7X。包/续航以 VX11-A5：116 kWh CTP2.0 · WLTP 582 / NEDC 686 — 与销讲（未印这些）双 badge；勿从 800V 课外推",
     sourceBadge: "极氪学",
-    tags: ["009", "800V", "7x", "007"],
+    tags: ["009", "VX11-A5", "800V", "7x", "007"],
+  },
+  {
+    id: "trap-vx11-a5-not-8x-9x",
+    wrong: "VX11-A5 = 8X / 9X",
+    right: "VX11-A5 New Model Launch = All-New ZEEKR009（RHD / Aisle / Executive / Grand）；课内无 8X/9X 铭牌 — 8X/9X 产品专课仍待补",
+    sourceBadge: "极氪学",
+    tags: ["009", "VX11-A5", "8x", "9x"],
+  },
+  {
+    id: "trap-okavango-not-auto-009",
+    wrong: "OKAVANGO = All-New 009 / 自动等同 VX11-A5",
+    right: "VX11-A5 课 objective 另显示 OKAVANGO — 字符串待核，勿默认 = 009",
+    sourceBadge: "待补",
+    tags: ["009", "VX11-A5", "OKAVANGO"],
   },
   {
     id: "trap-7x-not-900v",
@@ -2268,7 +2379,12 @@ export const ARCH_SEEDS: ArchSeed[] = [
     oneLiner: "001/X/009 ≈400V；007/7X = 800V 级（618/685 V）",
     sourceBadge: "极氪学",
     factIds: hv800Facts.map((f) => f.id),
-    trapIds: ["trap-009-not-800v", "trap-7x-not-900v"],
+    trapIds: [
+      "trap-009-not-800v",
+      "trap-vx11-a5-not-8x-9x",
+      "trap-okavango-not-auto-009",
+      "trap-7x-not-900v",
+    ],
   },
   {
     id: "CMA",
@@ -2502,10 +2618,24 @@ export const ARCH_SEEDS: ArchSeed[] = [
     name: "ZEEKR 009 Sales Training",
     nameZh: "极氪 009 销讲",
     oneLiner:
-      "首款为电而生 MPV · 2025交付5.3万 · 月销1000–1500≈3年 · 50万+MPV第一；0–100 4.5s · 100–0 36.9m · 峰450kW；X-pin +9.5%/−24% · 箱96.7→97.7% · 出250kW/373Nm；dTCS 6ms · 双腔55mm · CCD5× · 转圈6.2m · 侧滑0.84°；Lightning 2WD +38–45km · AWD 0.4s；竞品 M9/D9/X9/GL8/MEGA 销量示数；dims/pack/rated range 本课待补 — 009≠800V勿贴包续航",
+      "首款为电而生 MPV · 2025交付5.3万 · 月销1000–1500≈3年 · 50万+MPV第一；0–100 4.5s · 100–0 36.9m · 峰450kW；X-pin +9.5%/−24% · 箱96.7→97.7% · 出250kW/373Nm；dTCS 6ms · 双腔55mm · CCD5× · 转圈6.2m · 侧滑0.84°；Lightning 2WD +38–45km · AWD 0.4s；竞品 M9/D9/X9/GL8/MEGA 销量示数；dims/pack/rated range 本课未印 — 见 VX11-A5 双 badge；009≠800V",
     sourceBadge: "极氪学",
     factIds: zeekr009SalesFacts.map((f) => f.id),
-    trapIds: ["trap-009-not-800v"],
+    trapIds: ["trap-009-not-800v", "trap-vx11-a5-not-8x-9x", "trap-okavango-not-auto-009"],
+  },
+  {
+    id: "Zeekr009Vx11A5",
+    name: "VX11-A5 = All-New ZEEKR009",
+    nameZh: "极氪 All-New 009",
+    oneLiner:
+      "All-New ZEEKR009 RHD/Aisle/Executive/Grand（≠8X/9X）· SEA 400V · 116 kWh CTP2.0 · 5209 · 舱4230×1494 · GC142 · 7.4 m² · 过道170/210/270 · R19 235/50 · 尾灯1.76m · AWD 450kW/693Nm（200+250）· 4.5s · X-pin · 箱出250/373 · Lightning 0.4s · WLTP582/NEDC686 · DC205 · 10–80 30min · 10min +157WLTC/+185NEDC · 空悬55 CCD；竞品 M9/D9/X9/MEGA/GL8/Dreamer/Alphard/EM90；OKAVANGO objective 待核；与销讲双 badge",
+    sourceBadge: "极氪学",
+    factIds: zeekr009Vx11A5Facts.map((f) => f.id),
+    trapIds: [
+      "trap-009-not-800v",
+      "trap-vx11-a5-not-8x-9x",
+      "trap-okavango-not-auto-009",
+    ],
   },
   {
     id: "Zeekr007GT",
@@ -2521,7 +2651,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V（本遍销讲勿贴800V课包/续航；dims/pack/rated range待补） · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230 · 05≠06 ICE（4592/254hp/8AT/BW Gen V ≠4340/133kW/7DCT）· 05≠01/08 EM-P·≠09/900 · Q5宽课表2140须脚注 · 03≠03+（T4Evo/7DCT/160kW ≠ T5Evo/8AT/195kW/5.7s）· 03≠05/06/01 EM-P/08 · 中国竞品价带≠本地MSRP · A200/A4数字待补 · 02 BEV≠06 ICE≠01/08 EM-P · 尺寸近Z20勿映射 · 100–0 34.19≠34.33 dual · 同表02≠ZEEKR X（200kW/5.5s≠428Ps/3.8s）· Niro高1545≠1570 dual · PPT+视频100%";
+  "009≠800V（VX11-A5=All-New 009 明示400V·116kWh·WLTP582/NEDC686；销讲未印这些须双badge；勿贴800V课包/续航） · VX11-A5≠8X/9X · OKAVANGO objective待核≠自动=009 · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230 · 05≠06 ICE（4592/254hp/8AT/BW Gen V ≠4340/133kW/7DCT）· 05≠01/08 EM-P·≠09/900 · Q5宽课表2140须脚注 · 03≠03+（T4Evo/7DCT/160kW ≠ T5Evo/8AT/195kW/5.7s）· 03≠05/06/01 EM-P/08 · 中国竞品价带≠本地MSRP · A200/A4数字待补 · 02 BEV≠06 ICE≠01/08 EM-P · 尺寸近Z20勿映射 · 100–0 34.19≠34.33 dual · 同表02≠ZEEKR X（200kW/5.5s≠428Ps/3.8s）· Niro高1545≠1570 dual · PPT+视频100%";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -2544,7 +2674,8 @@ export const SEED_GAP_UPDATES = {
     "Electric Drive 课：分车峰值 kW/N·m 待补；Lesson Exam 未做；UI Studied ~62%",
     "ODP 课：除 7X 22 kW 外其他 ODP kW 额定待补；Lesson Exam 未做；UI ~52%",
     "BECM 课：温传感前更早章节本遍未全转录；Launch Lesson Exam 未做；UI ~45%",
-    "009 Sales Training 已采短摘（2026-09-05）：定位/交付 · 4.5s/36.9m/450kW · X-pin/箱 · dTCS/双腔/CCD/6.2m/0.84° · Lightning · 竞品销量示数；dims/pack kWh/rated range 本课待补 — 009≠800V勿从800V课贴包续航",
+    "009 Sales Training 已采短摘（2026-09-05）：定位/交付 · 4.5s/36.9m/450kW · X-pin/箱 · dTCS/双腔/CCD/6.2m/0.84° · Lightning · 竞品销量示数；dims/pack/rated range 销讲未印",
+    "VX11-A5 New Model Launch = All-New ZEEKR009（2026-09-05）：RHD/Aisle/Executive/Grand（≠8X/9X）· SEA 400V · 116 kWh CTP2.0 · 5209 · 450/693 · WLTP582/NEDC686 · DC205 · 与销讲双 badge；OKAVANGO objective 待核勿自动=009；Exam 未开",
     "007GT 产品课已采（2026-09-05）：800V/ZEEA2.5/7V3R · WLTC 519/655/558 · NDE34 335/520 · AWD 500/790 · 4864×1900×1460/1445；quiz跳过；包电压仍看800V课双badge",
     "007 非GT产品专课待补（Courses搜007仅返回007GT）；8X/9X 产品专课待补（页1无命中；NX21-A2勿假定=9X）",
     "Network Structure（Lynk）已采（2026-09-05）：GEEA 2.0/2.5/3.0 · LIN/CAN/CAN FD/FlexRay/Ethernet/LVDS · FlexRay/Ethernet/LVDS 课内数；Quiz/Exam 未开 UI~17%",
@@ -2568,6 +2699,7 @@ export const ZEEKR_ACADEMY_SEED = {
   zeekrX2026Facts,
   zeekr007gtFacts,
   zeekr009SalesFacts,
+  zeekr009Vx11A5Facts,
   networkStructureLynkFacts,
   adasBasicLynkFacts,
   electricDoorFacts,
