@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ChevronDown, ChevronRight, Columns2, GitBranch, LayoutGrid, Layers, SlidersHorizontal } from "lucide-react";
+import { BookOpen, ChevronDown, ChevronRight, Columns2, GitBranch, LayoutGrid, Layers, SlidersHorizontal } from "lucide-react";
 import { VehicleCard } from "@/components/vehicle-card";
 import { SrcBadge } from "@/components/src-badge";
 import { ChassisThumb } from "@/components/chassis-thumb";
@@ -87,6 +87,7 @@ function BrandArchFilters() {
 export const APP_NAV = [
   { to: "/", label: "总览", desk: "Overview", icon: LayoutGrid },
   { to: "/architecture", label: "架构", desk: "Architecture", icon: Layers },
+  { to: "/learn", label: "学习", desk: "Learn", icon: BookOpen },
   { to: "/relations", label: "同源", desk: "Relations", icon: GitBranch },
   { to: "/compare", label: "对比", desk: "Compare", icon: Columns2 },
 ] as const;

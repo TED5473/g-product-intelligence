@@ -21,9 +21,11 @@ const VehicleSheet = lazy(() =>
 
 function SheetHost() {
   const v = useVehicleParam();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
-  if (!v || !ready) return null;
+  // Learn Center uses ?v= for step 4; keep sheet on other routes.
+  if (!v || !ready || pathname === "/learn") return null;
   return (
     <Suspense fallback={null}>
       <VehicleSheet />
@@ -43,26 +45,28 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const meta = groupMeta(group);
   const to = (
     pathname === "/architecture" ||
+    pathname === "/learn" ||
     pathname === "/relations" ||
     pathname === "/compare"
       ? pathname
       : "/"
-  ) as "/" | "/architecture" | "/relations" | "/compare";
+  ) as "/" | "/architecture" | "/learn" | "/relations" | "/compare";
 
   useEffect(() => {
     if (useUI.getState().filters.group !== group) setGroup(group);
   }, [group, setGroup]);
 
+  const setSearchOpen = useUI((s) => s.setSearchOpen);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
-        inputRef.current?.focus();
+        setSearchOpen(true);
       }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  }, [setSearchOpen]);
 
   return (
     <div className="flex min-h-dvh flex-col bg-bg text-ink">
@@ -137,7 +141,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         )}
         aria-label="主导航"
       >
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-5">
           {APP_NAV.map((item) => {
             const active =
               item.to === "/"
