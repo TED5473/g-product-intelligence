@@ -1162,6 +1162,85 @@ export const zeekr007gtFacts: AcademyFact[] = [
 ];
 
 
+// ─── ZEEKR 009 Sales Training (极氪学; captured 2026-09-05) ─────────────────
+
+export const zeekr009SalesFacts: AcademyFact[] = [
+  {
+    id: "009-sales-position",
+    topic: "009 Sales positioning / deliveries",
+    text: "首款真正为电而生的 MPV；2025 交付 53,000；月销 1000–1500 持续约 3 年；50 万+ MPV 销量第一（课件主张）",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 009 Sales Training",
+    captured: "2026-09-05",
+    tags: ["009"],
+  },
+  {
+    id: "009-sales-dynamics",
+    topic: "009 Sales dynamics",
+    text: "0–100 4.5 s；100–0 36.9 m；电机峰值 450 kW",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 009 Sales Training",
+    captured: "2026-09-05",
+    tags: ["009", "motor"],
+  },
+  {
+    id: "009-sales-xpin-gearbox",
+    topic: "009 X-pin motor / gearbox",
+    text: "X-pin 电机效率 +9.5% · 体积 −24%；变速箱效率 96.7%→97.7%；齿轮箱输出 250 kW / 373 N·m",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 009 Sales Training",
+    captured: "2026-09-05",
+    tags: ["009", "motor"],
+  },
+  {
+    id: "009-sales-chassis",
+    topic: "009 chassis / control",
+    text: "dTCS 6 ms（约为常规 TCS 的 10×）；双腔空气悬架 55 mm；CCD 5×；转弯直径 6.2 m；侧向滑移角 0.84°",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 009 Sales Training",
+    captured: "2026-09-05",
+    tags: ["009", "chassis"],
+  },
+  {
+    id: "009-sales-lightning-switch",
+    topic: "009 Lightning Switch",
+    text: "Lightning Switch：2WD 续航主张 +38–45 km；AWD 切换 0.4 s",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 009 Sales Training",
+    captured: "2026-09-05",
+    tags: ["009", "AWD"],
+  },
+  {
+    id: "009-sales-competitors",
+    topic: "009 sales competitors (displayed)",
+    text: "竞品页点名：问界 M9 / 腾势 D9 / 小鹏 X9 / GL8 / MEGA；课件展示销量 16462 / 10158 / 6374 / 1625 / 644（统计周期课件未标明）",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 009 Sales Training",
+    captured: "2026-09-05",
+    tags: ["009"],
+  },
+  {
+    id: "009-sales-gaps",
+    topic: "009 Sales gaps this capture",
+    text: "本遍销讲：尺寸 / 电池包 kWh / 额定续航 待补 — 勿发明，亦勿从 800V 课贴包/续航",
+    sourceBadge: "待补",
+    course: "ZEEKR 009 Sales Training",
+    captured: "2026-09-05",
+    tags: ["009", "800V"],
+  },
+  {
+    id: "009-sales-not-800v",
+    topic: "009 ≠ 800V pack/range trap reminder",
+    text: "009 ≠ 800V；本课未给 pack/rated range — 勿把 800V 课包/续航外推到本遍销讲",
+    sourceBadge: "极氪学",
+    course: "ZEEKR 009 Sales Training · 800V HV",
+    captured: "2026-09-05",
+    tags: ["009", "800V"],
+  },
+];
+
+
+
 // ─── Network Structure Introduction Lynk (极氪学; captured 2026-09-05) ───────
 
 export const networkStructureLynkFacts: AcademyFact[] = [
@@ -1318,6 +1397,7 @@ export const academyFacts: AcademyFact[] = [
   ...odpFacts,
   ...becmFacts,
   ...zeekr007gtFacts,
+  ...zeekr009SalesFacts,
   ...networkStructureLynkFacts,
   ...adasBasicLynkFacts,
   ...electricDoorFacts,
@@ -1329,8 +1409,8 @@ export const academyFacts: AcademyFact[] = [
 export const academyTraps: AcademyTrap[] = [
   {
     id: "trap-009-not-800v",
-    wrong: "009 是 800V",
-    right: "009 ≈400V（398 V）/ 116 kWh；800V 级是 007/7X",
+    wrong: "009 是 800V / 把 800V 课包或续航直接贴到 009 销讲",
+    right: "009 ≠ 800V；800V 级是 007/7X。本遍 009 Sales（2026-09-05）dims / pack kWh / rated range 待补 — 勿从 800V 课贴包/续航；历史 398 V·116 kWh 等须分 badge",
     sourceBadge: "极氪学",
     tags: ["009", "800V", "7x", "007"],
   },
@@ -1642,6 +1722,16 @@ export const ARCH_SEEDS: ArchSeed[] = [
     trapIds: [],
   },
   {
+    id: "Zeekr009Sales",
+    name: "ZEEKR 009 Sales Training",
+    nameZh: "极氪 009 销讲",
+    oneLiner:
+      "首款为电而生 MPV · 2025交付5.3万 · 月销1000–1500≈3年 · 50万+MPV第一；0–100 4.5s · 100–0 36.9m · 峰450kW；X-pin +9.5%/−24% · 箱96.7→97.7% · 出250kW/373Nm；dTCS 6ms · 双腔55mm · CCD5× · 转圈6.2m · 侧滑0.84°；Lightning 2WD +38–45km · AWD 0.4s；竞品 M9/D9/X9/GL8/MEGA 销量示数；dims/pack/rated range 本课待补 — 009≠800V勿贴包续航",
+    sourceBadge: "极氪学",
+    factIds: zeekr009SalesFacts.map((f) => f.id),
+    trapIds: ["trap-009-not-800v"],
+  },
+  {
     id: "Zeekr007GT",
     name: "ZEEKR 007GT",
     nameZh: "极氪 007GT",
@@ -1655,7 +1745,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
+  "009≠800V（本遍销讲勿贴800V课包/续航；dims/pack/rated range待补） · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06=BMA≠CMA";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -1673,6 +1763,7 @@ export const SEED_GAP_UPDATES = {
     "Electric Drive 课：分车峰值 kW/N·m 待补；Lesson Exam 未做；UI Studied ~62%",
     "ODP 课：除 7X 22 kW 外其他 ODP kW 额定待补；Lesson Exam 未做；UI ~52%",
     "BECM 课：温传感前更早章节本遍未全转录；Launch Lesson Exam 未做；UI ~45%",
+    "009 Sales Training 已采短摘（2026-09-05）：定位/交付 · 4.5s/36.9m/450kW · X-pin/箱 · dTCS/双腔/CCD/6.2m/0.84° · Lightning · 竞品销量示数；dims/pack kWh/rated range 本课待补 — 009≠800V勿从800V课贴包续航",
     "007GT 产品课已采（2026-09-05）：800V/ZEEA2.5/7V3R · WLTC 519/655/558 · NDE34 335/520 · AWD 500/790 · 4864×1900×1460/1445；quiz跳过；包电压仍看800V课双badge",
     "007 非GT产品专课待补（Courses搜007仅返回007GT）；8X/9X 产品专课待补（页1无命中；NX21-A2勿假定=9X）",
     "Network Structure（Lynk）已采（2026-09-05）：GEEA 2.0/2.5/3.0 · LIN/CAN/CAN FD/FlexRay/Ethernet/LVDS · FlexRay/Ethernet/LVDS 课内数；Quiz/Exam 未开 UI~17%",
@@ -1690,6 +1781,7 @@ export const ZEEKR_ACADEMY_SEED = {
   lynk08ProductFacts,
   zeekrX2026Facts,
   zeekr007gtFacts,
+  zeekr009SalesFacts,
   networkStructureLynkFacts,
   adasBasicLynkFacts,
   electricDoorFacts,
