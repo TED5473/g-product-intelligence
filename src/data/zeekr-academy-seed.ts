@@ -1409,6 +1409,120 @@ export const zeekrXAustraliaMy26Facts: AcademyFact[] = [
   },
 ];
 
+
+// ─── Australian 7X Product course (极氪学; captured 2026-09-05, ~50%) ─────
+
+export const zeekr7xAustraliaFacts: AcademyFact[] = [
+  {
+    id: "7x-au-identity",
+    topic: "Australian 7X Product identity / progress",
+    text: "Australian 7X Product course · 极氪学（2026-09-05）；lesson 01 Zeekr 7X SCORM；Studied ~50%；Materials「No material」；Quiz/Exam 跳过 — ≠ 中国 7X New Model / Sales（双 badge）",
+    sourceBadge: "极氪学",
+    course: "Australian 7X Product course",
+    captured: "2026-09-05",
+    tags: ["7x", "australia"],
+  },
+  {
+    id: "7x-au-unavailable",
+    topic: "Australian 7X AU unavailable features warning",
+    text: "课内明示部分功能/规格澳洲不可用 — 以当地 ZEEKR 规格为准；勿用中国 7X sheet 覆盖 AU 不可用项，亦勿把 AU-only 写回中国课",
+    sourceBadge: "极氪学",
+    course: "Australian 7X Product course",
+    captured: "2026-09-05",
+    tags: ["7x", "australia"],
+  },
+  {
+    id: "7x-au-trims",
+    topic: "Australian 7X trims / Standard Range quiz vs RWD",
+    text: "Labels：Performance AWD* · Long Range RWD · RWD；quiz 亦写 Standard Range。化学：75 kWh LFP = Standard Range；100 kWh NCM = Long Range & AWD。包名：75 = 2nd-gen Zeekr Golden Battery；100 = CATL Qilin — Standard Range（quiz）≠ 界面 RWD 标签须 dual-badge",
+    sourceBadge: "极氪学",
+    course: "Australian 7X Product course",
+    captured: "2026-09-05",
+    tags: ["7x", "australia", "battery"],
+  },
+  {
+    id: "7x-au-dims",
+    topic: "Australian 7X dimensions / aero",
+    text: "4787×1930×1650 · WB 2900 · Cd 0.247（drag −2.7% · 高速续航 +up to 3%）；轮 19 / 20 black / 21 forged — ≠ 墙/公开摘 4825×1930×1666·WB2925（中国 New Model 课未印 L/W/H）— dual-badge",
+    sourceBadge: "极氪学",
+    course: "Australian 7X Product course",
+    captured: "2026-09-05",
+    tags: ["7x", "australia"],
+  },
+  {
+    id: "7x-au-pack-charge",
+    topic: "Australian 7X 800V / packs / charge dual",
+    text: "800V；75 LFP Golden / 100 NCM Qilin。Headline USP：WLTP 543 km* · DC 420 kW · 100 NCM；Detail 100：DC≤420 · AC22 · WLTP≤615；Detail 75：DC≤450 · 800V · WLTP≤480 — headline 543/420 ≠ detail 615/480·450 须 dual-badge 脚注；Boost V<818.4 → 可用常见 400V DC",
+    sourceBadge: "极氪学",
+    course: "Australian 7X Product course",
+    captured: "2026-09-05",
+    tags: ["7x", "australia", "800V", "battery"],
+  },
+  {
+    id: "7x-au-soc-habit",
+    topic: "Australian 7X LFP/NCM charge habit",
+    text: "LFP：日常可 100% · 每周一次 100% 校准；NCM：日常 80–90% · 长途才 100%",
+    sourceBadge: "极氪学",
+    course: "Australian 7X Product course",
+    captured: "2026-09-05",
+    tags: ["7x", "australia", "battery"],
+  },
+  {
+    id: "7x-au-perf",
+    topic: "Australian 7X performance / chassis",
+    text: "AWD 0–100 3.8 s · PM motors + SiC；空悬 5 高度 · 液压衬套隔离增益至 40%；Akebono AWD：对称前四活塞 · 100–0 34.9 m · IPB（iBooster+ESP）",
+    sourceBadge: "极氪学",
+    course: "Australian 7X Product course",
+    captured: "2026-09-05",
+    tags: ["7x", "australia", "AWD"],
+  },
+  {
+    id: "7x-au-interior",
+    topic: "Australian 7X practicality / interior / HUD",
+    text: "货厢 539 / 1978 L；36 储物 · 后排 40:60 · ISOFIX 外后；Snapdragon 8295 · 双 50 W 无线充 · 36.21″ HUD · 360°+APA；前开 66° / 后 ~90°；ACC 步进 1 或 5 km/h",
+    sourceBadge: "极氪学",
+    course: "Australian 7X Product course",
+    captured: "2026-09-05",
+    tags: ["7x", "australia"],
+  },
+  {
+    id: "7x-au-safety",
+    topic: "Australian 7X safety / body / ANCAP claim",
+    text: "7 气囊（>344 L 保护 · 副驾 115 L · 侧帘 2.12 m / 6 s）；扭转刚度 40000 Nm/deg · −820 焊 · −82 件 · 后质量 −11.2%；课件主张 5★ ANCAP / C-NCAP / E-NCAP + C-IASI（示速 50/56/86）— 主张≠已公布成绩单，须脚注",
+    sourceBadge: "极氪学",
+    course: "Australian 7X Product course",
+    captured: "2026-09-05",
+    tags: ["7x", "australia", "safety"],
+  },
+  {
+    id: "7x-au-sentry-esim",
+    topic: "Australian 7X Sentry USB / eSIM",
+    text: "Sentry：P 挡 · HV>20% · 手动 · 须 USB（FAT32/NTFS/exFAT）· 128–256 GB · 无内置 DVR 存储；eSIM 6 GB/月 · 首 5 年；UWB key cell 2450 · 舱内 cam 1",
+    sourceBadge: "极氪学",
+    course: "Australian 7X Product course",
+    captured: "2026-09-05",
+    tags: ["7x", "australia", "safety"],
+  },
+  {
+    id: "7x-au-dual-badge",
+    topic: "Australian 7X dual-badge vs China 7X seed",
+    text: "澳课 ≠ 中国 New Model / Sales：尺寸 4787×1930×1650/WB2900 ≠ 墙公开 4825×1930×1666/WB2925（中国课未印尺寸）；WLTP headline 543 ≠ detail 615/480 ≠ 中国 WLTC 470/625/550；DC headline 420 ≠ 75 detail 450；trim Standard Range（quiz）≠ RWD 标签；AWD 3.8s（澳）vs 销售 475 kW/710 N·m（中国）— 双/多 badge，勿合并一行；AU unavailable 勿互覆",
+    sourceBadge: "极氪学",
+    course: "Australian 7X Product course · 7X New Model Introduction · 7X Sales Training",
+    captured: "2026-09-05",
+    tags: ["7x", "australia"],
+  },
+  {
+    id: "7x-au-progress-gap",
+    topic: "Australian 7X studied ~50%",
+    text: "Studied ~50%；Quiz/Exam 跳过已回 Courses — 勿把本遍写成 100%",
+    sourceBadge: "待补",
+    course: "Australian 7X Product course",
+    captured: "2026-09-05",
+    tags: ["7x", "australia"],
+  },
+];
+
 // ─── Thermal Control (极氪学 Thermal Control System Introduction) ────────────
 
 export const thermalFacts: AcademyFact[] = [
@@ -2258,6 +2372,7 @@ export const academyFacts: AcademyFact[] = [
   ...zeekrX2026Facts,
   ...zeekrXSpanishProductFacts,
   ...zeekrXAustraliaMy26Facts,
+  ...zeekr7xAustraliaFacts,
   ...thermalFacts,
   ...hvPartsFacts,
   ...chargingFacts,
@@ -2577,6 +2692,34 @@ export const academyTraps: AcademyTrap[] = [
     sourceBadge: "极氪学",
     tags: ["x", "australia", "spanish"],
   },
+  {
+    id: "trap-7x-au-wltp-543-vs-detail",
+    wrong: "只报 headline WLTP 543 或只报 detail 615/480 当澳课唯一续航",
+    right: "澳课 headline USP WLTP 543* ≠ detail 100≤615 / 75≤480 — dual-badge 脚注双值；≠ 中国 New Model WLTC 470/625/550",
+    sourceBadge: "极氪学",
+    tags: ["7x", "australia"],
+  },
+  {
+    id: "trap-7x-au-dc-420-vs-450",
+    wrong: "只报 DC 420 或只报 DC 450 当澳课唯一快充峰值",
+    right: "澳课 headline / 100 kWh DC≤420 kW；75 kWh detail DC≤450 kW — dual-badge；勿与 007GT DC 表混写",
+    sourceBadge: "极氪学",
+    tags: ["7x", "australia", "battery"],
+  },
+  {
+    id: "trap-7x-au-std-range-vs-rwd",
+    wrong: "把 quiz「Standard Range」与界面「RWD」当同一标签互覆写",
+    right: "澳课：界面 Labels Performance AWD* / Long Range RWD / RWD；quiz 写 Standard Range = 75 LFP — dual-badge 标明 quiz vs RWD",
+    sourceBadge: "极氪学",
+    tags: ["7x", "australia"],
+  },
+  {
+    id: "trap-7x-au-vs-china",
+    wrong: "把澳 7X 产品课与中国 7X New Model / Sales 尺寸·续航·功率合成一行唯一口径，或忽略 AU unavailable",
+    right: "澳：4787×1930×1650/WB2900 · Cd0.247 · WLTP 543 vs 615/480 · DC420 vs450 · AWD3.8s · Golden/Qilin · ANCAP主张5★；中国 New Model：WLTC470/625/550 · 后310/440 · AWD前165/270 · 12V1R；Sales：475kW/710Nm；中国课未印澳尺寸 — dual-badge；AU unavailable 勿互覆",
+    sourceBadge: "极氪学",
+    tags: ["7x", "australia"],
+  },
 ];
 
 export const ARCH_SEEDS: ArchSeed[] = [
@@ -2611,6 +2754,9 @@ export const ARCH_SEEDS: ArchSeed[] = [
       "trap-vx11-a5-not-8x-9x",
       "trap-okavango-not-auto-009",
       "trap-7x-not-900v",
+      "trap-7x-au-vs-china",
+      "trap-7x-au-wltp-543-vs-detail",
+      "trap-7x-au-dc-420-vs-450",
     ],
   },
   {
@@ -2777,6 +2923,23 @@ export const ARCH_SEEDS: ArchSeed[] = [
     ],
   },
   {
+    id: "Zeekr7xAustralia",
+    name: "Australian 7X Product course",
+    nameZh: "极氪 7X 澳洲产品课",
+    oneLiner:
+      "Australia · 4787×1930×1650/WB2900 · Cd0.247 · 800V · 75 LFP Golden / 100 NCM Qilin · headline WLTP543/DC420 vs detail 615/480·450 dual · AWD3.8s · 8295 · 36.21 HUD · cargo539/1978 · Akebono34.9 · 7气囊 · Sentry USB · eSIM6GB/5yr · ANCAP5★主张 · 扭转40000 · Standard Range quiz≠RWD · vs中国 WLTC470/625/550·475/710 · AU unavailable · Studied~50%",
+    sourceBadge: "极氪学",
+    factIds: zeekr7xAustraliaFacts.map((f) => f.id),
+    trapIds: [
+      "trap-7x-au-wltp-543-vs-detail",
+      "trap-7x-au-dc-420-vs-450",
+      "trap-7x-au-std-range-vs-rwd",
+      "trap-7x-au-vs-china",
+      "trap-7x-not-900v",
+      "trap-007gt-vs-7x-awd-peak",
+    ],
+  },
+  {
     id: "Thermal",
     name: "Thermal Control",
     nameZh: "热管理",
@@ -2911,7 +3074,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V（VX11-A5=All-New 009 明示400V·116kWh·WLTP582/NEDC686；销讲未印这些须双badge；勿贴800V课包/续航） · VX11-A5≠8X/9X · OKAVANGO objective待核≠自动=009 · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 西语X≠2026：Prem200≠250 · Flag315/428HP/3.8s≠365/3.7s · 仅66≠Std61 · AWD420≠WLTC445/415≠02表440 · 4432×1836×1566 · HP272≠268 dual · 视频未完 · 澳MY26X：RWD61 LFP DC250≠230 dual · AWD66 AC22 DC150 · 3.7s≠西语3.8 · 636kN/73%/5V5R12U/Sentry · Studied~50% · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230 · 05≠06 ICE（4592/254hp/8AT/BW Gen V ≠4340/133kW/7DCT）· 05≠01/08 EM-P·≠09/900 · Q5宽课表2140须脚注 · 03≠03+（T4Evo/7DCT/160kW ≠ T5Evo/8AT/195kW/5.7s）· 03≠05/06/01 EM-P/08 · 中国竞品价带≠本地MSRP · A200/A4数字待补 · 02 BEV≠06 ICE≠01/08 EM-P · 尺寸近Z20勿映射 · 100–0 34.19≠34.33 dual · 同表02≠ZEEKR X（200kW/5.5s≠428Ps/3.8s）· Niro高1545≠1570 dual · PPT+视频100%";
+  "009≠800V（VX11-A5=All-New 009 明示400V·116kWh·WLTP582/NEDC686；销讲未印这些须双badge；勿贴800V课包/续航） · VX11-A5≠8X/9X · OKAVANGO objective待核≠自动=009 · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 西语X≠2026：Prem200≠250 · Flag315/428HP/3.8s≠365/3.7s · 仅66≠Std61 · AWD420≠WLTC445/415≠02表440 · 4432×1836×1566 · HP272≠268 dual · 视频未完 · 澳MY26X：RWD61 LFP DC250≠230 dual · AWD66 AC22 DC150 · 3.7s≠西语3.8 · 636kN/73%/5V5R12U/Sentry · Studied~50% · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230 · 05≠06 ICE（4592/254hp/8AT/BW Gen V ≠4340/133kW/7DCT）· 05≠01/08 EM-P·≠09/900 · Q5宽课表2140须脚注 · 03≠03+（T4Evo/7DCT/160kW ≠ T5Evo/8AT/195kW/5.7s）· 03≠05/06/01 EM-P/08 · 中国竞品价带≠本地MSRP · A200/A4数字待补 · 02 BEV≠06 ICE≠01/08 EM-P · 尺寸近Z20勿映射 · 100–0 34.19≠34.33 dual · 同表02≠ZEEKR X（200kW/5.5s≠428Ps/3.8s）· Niro高1545≠1570 dual · PPT+视频100% · 澳7X：4787×1930×1650/WB2900·Cd0.247 · WLTP543≠615/480 dual · DC420≠450 · Standard Range quiz≠RWD · vs中国WLTC470/625/550·475/710 · AU unavailable · Studied~50%";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -2932,6 +3095,7 @@ export const SEED_GAP_UPDATES = {
     "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包须双 badge 并存；与西语产品课及澳 MY26 动力/充电 dual-badge",
     "[Spanish] ZEEKR X Product Training 已采 PPT（2026-09-05）：4432×1836×1566/WB2750 · Prem 200kW/272HP(表268)/343/5.6s · Flag 315kW/428HP/543/3.8s · 100–0 34.5 · 66kWh · DC150 10–80 30min · AC22/4h·11/7.5h · AWD表续航420；vs 2026：200≠250 · 315/3.8≠365/3.7 · Std61仅2026 · 420≠445/415；≠02竞品表 X440/4450；≠澳 MY26 3.7s/DC250；视频 seek 未完 · Quiz 未开",
     "MY26 X Product Course Australia 已采（2026-09-05，Studied ~50% 至 Sentry）：RWD 61 LFP AC11 · DC250（另处230 dual）· AWD 66 NCM AC22 DC150 · NCM 90%/周100% · V2L3.3 · 0–100 3.7s · 扭矩25:75–50:50 · UWB10cm · eSIM6GB/5yrs · CarPlay/AA · AR-HUD · Hi ZEEKR · 636kN · 73%HSS/UHSS · 7气囊 · PSS2ms · 5V5R12U EyeQ4 · Sentry 功能表；vs2026 DC250≠230 · vs西语3.7≠3.8；Exam/Evaluate 未开",
+    "Australian 7X Product course 已采（2026-09-05，~50%）：4787×1930×1650/WB2900 · Cd0.247 · 800V · 75 LFP Golden / 100 NCM Qilin · headline WLTP543/DC420 vs detail 615/480·450 dual · AWD3.8s · 8295 · 36.21 HUD · cargo539/1978 · Akebono34.9 · 7气囊 · Sentry USB · eSIM6GB/5yr · ANCAP5★主张 · 扭转40000 · Standard Range quiz≠RWD · vs中国 New Model WLTC470/625/550 / Sales475/710 · AU unavailable；Quiz/Exam跳过",
     "Charging 课：Boost vs Direct / max kW 表待补；Launch Lesson Exam 跳过；UI ~35%",
     "Electric Drive 课：分车峰值 kW/N·m 待补；Lesson Exam 未做；UI Studied ~62%",
     "ODP 课：除 7X 22 kW 外其他 ODP kW 额定待补；Lesson Exam 未做；UI ~52%",
@@ -2961,6 +3125,7 @@ export const ZEEKR_ACADEMY_SEED = {
   zeekrX2026Facts,
   zeekrXSpanishProductFacts,
   zeekrXAustraliaMy26Facts,
+  zeekr7xAustraliaFacts,
   zeekr007gtFacts,
   zeekr009SalesFacts,
   zeekr009Vx11A5Facts,
