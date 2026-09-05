@@ -1313,6 +1313,102 @@ export const zeekrXSpanishProductFacts: AcademyFact[] = [
   },
 ];
 
+
+// ─── MY26 X Product Course Australia (极氪学; captured 2026-09-05) ─────────
+
+export const zeekrXAustraliaMy26Facts: AcademyFact[] = [
+  {
+    id: "x-au-identity",
+    topic: "MY26 X Australia identity / progress",
+    text: "MY26 X Product Course Australia · 极氪学（2026-09-05）；Studied ~50%（至 Sentry Mode）；Exam/Evaluate 未开 — ≠ 2026 New Model Introduction ≠ [Spanish] Product Training（双 badge）",
+    sourceBadge: "极氪学",
+    course: "MY26 X Product Course Australia",
+    captured: "2026-09-05",
+    tags: ["x", "australia", "MY26"],
+  },
+  {
+    id: "x-au-market",
+    topic: "MY26 X Australia market",
+    text: "Market：Australia MY26 X — 当地培训口径；勿当中国 MSRP",
+    sourceBadge: "极氪学",
+    course: "MY26 X Product Course Australia",
+    captured: "2026-09-05",
+    tags: ["x", "australia", "MY26"],
+  },
+  {
+    id: "x-au-rwd-pack",
+    topic: "MY26 X Australia RWD pack / charge",
+    text: "RWD：61 kWh LFP · AC 11 kW · DC 250 kW（另处印 230 kW）— dual-badge vs 本课双值；≠ 2026 Std 仅印 DC230（须脚注 250/230）",
+    sourceBadge: "极氪学",
+    course: "MY26 X Product Course Australia · 2026 ZEEKR X New Model Introduction",
+    captured: "2026-09-05",
+    tags: ["x", "australia", "battery"],
+  },
+  {
+    id: "x-au-awd-pack",
+    topic: "MY26 X Australia AWD pack / NCM habit",
+    text: "AWD：66 kWh NCM · AC 22 kW · DC 150 kW；NCM 日常充至 90%、每周一次 100%",
+    sourceBadge: "极氪学",
+    course: "MY26 X Product Course Australia",
+    captured: "2026-09-05",
+    tags: ["x", "australia", "battery", "AWD"],
+  },
+  {
+    id: "x-au-perf",
+    topic: "MY26 X Australia performance / V2L",
+    text: "0–100 3.7 s · V2L 3.3 kW · Torque split 25:75–50:50 + L/R torque-vectoring braking — 3.7 s 对齐 2026 Flag；≠ [Spanish] Flag 3.8 s",
+    sourceBadge: "极氪学",
+    course: "MY26 X Product Course Australia · 2026 X · [Spanish] X",
+    captured: "2026-09-05",
+    tags: ["x", "australia", "motor", "AWD"],
+  },
+  {
+    id: "x-au-smart",
+    topic: "MY26 X Australia smart / connectivity",
+    text: "UWB 至 10 cm · BT Digital Key · 选装 UWB Smart Key · NFC；eSIM ≤6 GB / 月刷前 5 年；CarPlay/AA · AR-HUD · Hi ZEEKR",
+    sourceBadge: "极氪学",
+    course: "MY26 X Product Course Australia",
+    captured: "2026-09-05",
+    tags: ["x", "australia"],
+  },
+  {
+    id: "x-au-safety-body",
+    topic: "MY26 X Australia body / airbag / PSS",
+    text: "八面梁 636 kN · 三级吸能；车身 Al10% / normal17% / HSS15% / UHSS39% / 热成型19% → 高强+超高强合计 73%；7 气囊 · 侧帘充气 6 s；PSS 熔断 2 ms 隔离 HV",
+    sourceBadge: "极氪学",
+    course: "MY26 X Product Course Australia",
+    captured: "2026-09-05",
+    tags: ["x", "australia", "safety"],
+  },
+  {
+    id: "x-au-adas-sentry",
+    topic: "MY26 X Australia ADAS / Sentry",
+    text: "5V5R12U · Mobileye EyeQ4 · 可视至 20 m；功能表：LCC+ACC·TAO·LKA·AEB·BSD·DOW·CMSR·LCA·DMS·overspeed·RSPA/RPA·FCTA/RCTA·TSI·PEB·ALC·EMA·APA；Sentry Mode：外摄/传感录制 · App 告警 · 低电量限制",
+    sourceBadge: "极氪学",
+    course: "MY26 X Product Course Australia",
+    captured: "2026-09-05",
+    tags: ["x", "australia", "ADAS", "safety"],
+  },
+  {
+    id: "x-au-dual-badge",
+    topic: "MY26 X Australia dual-badge vs 2026 / Spanish",
+    text: "澳课 ≠ 2026 ≠ 西语：RWD LFP DC 250（另处230）≠ 2026 Std 仅230；AWD 66 NCM AC22 DC150；0–100 3.7 s 对齐 2026 Flag ≠ 西语 Flag 3.8 s/428 HP；西语仅66·Prem200/Flag315；澳课补安全/UWB/eSIM/Sentry — 三源 dual-badge，勿合并一行",
+    sourceBadge: "极氪学",
+    course: "MY26 X Product Course Australia · 2026 ZEEKR X New Model Introduction · [Spanish] ZEEKR X Product Training",
+    captured: "2026-09-05",
+    tags: ["x", "australia", "spanish"],
+  },
+  {
+    id: "x-au-progress-gap",
+    topic: "MY26 X Australia studied ~50%",
+    text: "Studied ~50%（至 Sentry Mode 后无可推进）；Exam/Evaluate 未开 — 勿把本遍写成 100%",
+    sourceBadge: "待补",
+    course: "MY26 X Product Course Australia",
+    captured: "2026-09-05",
+    tags: ["x", "australia"],
+  },
+];
+
 // ─── Thermal Control (极氪学 Thermal Control System Introduction) ────────────
 
 export const thermalFacts: AcademyFact[] = [
@@ -2161,6 +2257,7 @@ export const academyFacts: AcademyFact[] = [
   ...lynk02BevProductFacts,
   ...zeekrX2026Facts,
   ...zeekrXSpanishProductFacts,
+  ...zeekrXAustraliaMy26Facts,
   ...thermalFacts,
   ...hvPartsFacts,
   ...chargingFacts,
@@ -2459,6 +2556,27 @@ export const academyTraps: AcademyTrap[] = [
     sourceBadge: "极氪学",
     tags: ["x", "spanish", "02-BEV"],
   },
+  {
+    id: "trap-x-au-vs-2026-es",
+    wrong: "把澳 MY26 X 产品课与 2026 New Model / [Spanish] Product Training 动力·充电合成一行唯一口径",
+    right: "澳：RWD 61 LFP AC11 · DC250（另处230 dual）· AWD 66 NCM AC22 DC150 · 0–100 3.7s · V2L3.3 · 扭矩25:75–50:50；2026：Std DC230 · Flag 365kW/3.7s；西语：Prem200/Flag315/3.8s · 仅66 — dual-badge 标明课名",
+    sourceBadge: "极氪学",
+    tags: ["x", "australia", "spanish"],
+  },
+  {
+    id: "trap-x-au-dc-250-vs-230",
+    wrong: "只报 DC 250 或只报 DC 230 当澳课 RWD LFP 唯一快充峰值",
+    right: "澳课 RWD 61 LFP：DC 250 kW（另处印 230 kW）— dual-badge 脚注双值；≠ 2026 Std 仅印 230",
+    sourceBadge: "极氪学",
+    tags: ["x", "australia", "battery"],
+  },
+  {
+    id: "trap-x-au-3p7-vs-es-3p8",
+    wrong: "把澳课 3.7 s 与西语 Flag 3.8 s 互覆写，或忽略对齐 2026 Flag",
+    right: "澳课 / 2026 Flag 0–100 3.7 s ≠ [Spanish] Flag 3.8 s（428 HP）— 分 badge",
+    sourceBadge: "极氪学",
+    tags: ["x", "australia", "spanish"],
+  },
 ];
 
 export const ARCH_SEEDS: ArchSeed[] = [
@@ -2620,10 +2738,10 @@ export const ARCH_SEEDS: ArchSeed[] = [
     name: "ZEEKR X 2026",
     nameZh: "极氪 X 2026",
     oneLiner:
-      "400V · Std 61/61.47 LFP @413V CTP IPS2.0 1P132S DC230 · Prem/Flag 66 NCM · Flag AWD 365kW/3.7s/190km/h；勿与旧 BE13-B ~49.6/380.6 或 800V 表 66@392 合并；与西语产品课 200/315·3.8s·420 双 badge",
+      "400V · Std 61/61.47 LFP @413V CTP IPS2.0 1P132S DC230 · Prem/Flag 66 NCM · Flag AWD 365kW/3.7s/190km/h；勿与旧 BE13-B ~49.6/380.6 或 800V 表 66@392 合并；与西语 200/315·3.8s·420 及澳 MY26 DC250/3.7s 双 badge",
     sourceBadge: "极氪学",
     factIds: zeekrX2026Facts.map((f) => f.id),
-    trapIds: ["trap-x-pack-collapse", "trap-x-66-voltage", "trap-x-es-vs-2026"],
+    trapIds: ["trap-x-pack-collapse", "trap-x-66-voltage", "trap-x-es-vs-2026", "trap-x-au-vs-2026-es", "trap-x-au-dc-250-vs-230"],
   },
   {
     id: "ZeekrXSpanishProduct",
@@ -2637,6 +2755,24 @@ export const ARCH_SEEDS: ArchSeed[] = [
       "trap-x-es-vs-2026",
       "trap-x-es-hp-272-vs-268",
       "trap-x-es-range-420",
+      "trap-x-pack-collapse",
+      "trap-x-au-vs-2026-es",
+      "trap-x-au-3p7-vs-es-3p8",
+    ],
+  },
+  {
+    id: "ZeekrXAustraliaMy26",
+    name: "MY26 X Product Course Australia",
+    nameZh: "极氪 X 澳洲 MY26 产品课",
+    oneLiner:
+      "Australia MY26 · RWD 61 LFP AC11 · DC250（另处230 dual）· AWD 66 NCM AC22 DC150 · NCM 90%/周100% · V2L3.3 · 0–100 3.7s · 扭矩25:75–50:50 · UWB10cm · eSIM6GB/5yrs · CarPlay/AA · AR-HUD · Hi ZEEKR · 636kN · 73%HSS/UHSS · 7气囊 · PSS2ms · 5V5R12U EyeQ4 · Sentry · Studied~50% · vs2026 DC250≠230 · vs西语3.7≠3.8 dual-badge",
+    sourceBadge: "极氪学",
+    factIds: zeekrXAustraliaMy26Facts.map((f) => f.id),
+    trapIds: [
+      "trap-x-au-vs-2026-es",
+      "trap-x-au-dc-250-vs-230",
+      "trap-x-au-3p7-vs-es-3p8",
+      "trap-x-es-vs-2026",
       "trap-x-pack-collapse",
     ],
   },
@@ -2775,7 +2911,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V（VX11-A5=All-New 009 明示400V·116kWh·WLTP582/NEDC686；销讲未印这些须双badge；勿贴800V课包/续航） · VX11-A5≠8X/9X · OKAVANGO objective待核≠自动=009 · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 西语X≠2026：Prem200≠250 · Flag315/428HP/3.8s≠365/3.7s · 仅66≠Std61 · AWD420≠WLTC445/415≠02表440 · 4432×1836×1566 · HP272≠268 dual · 视频未完 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230 · 05≠06 ICE（4592/254hp/8AT/BW Gen V ≠4340/133kW/7DCT）· 05≠01/08 EM-P·≠09/900 · Q5宽课表2140须脚注 · 03≠03+（T4Evo/7DCT/160kW ≠ T5Evo/8AT/195kW/5.7s）· 03≠05/06/01 EM-P/08 · 中国竞品价带≠本地MSRP · A200/A4数字待补 · 02 BEV≠06 ICE≠01/08 EM-P · 尺寸近Z20勿映射 · 100–0 34.19≠34.33 dual · 同表02≠ZEEKR X（200kW/5.5s≠428Ps/3.8s）· Niro高1545≠1570 dual · PPT+视频100%";
+  "009≠800V（VX11-A5=All-New 009 明示400V·116kWh·WLTP582/NEDC686；销讲未印这些须双badge；勿贴800V课包/续航） · VX11-A5≠8X/9X · OKAVANGO objective待核≠自动=009 · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 西语X≠2026：Prem200≠250 · Flag315/428HP/3.8s≠365/3.7s · 仅66≠Std61 · AWD420≠WLTC445/415≠02表440 · 4432×1836×1566 · HP272≠268 dual · 视频未完 · 澳MY26X：RWD61 LFP DC250≠230 dual · AWD66 AC22 DC150 · 3.7s≠西语3.8 · 636kN/73%/5V5R12U/Sentry · Studied~50% · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230 · 05≠06 ICE（4592/254hp/8AT/BW Gen V ≠4340/133kW/7DCT）· 05≠01/08 EM-P·≠09/900 · Q5宽课表2140须脚注 · 03≠03+（T4Evo/7DCT/160kW ≠ T5Evo/8AT/195kW/5.7s）· 03≠05/06/01 EM-P/08 · 中国竞品价带≠本地MSRP · A200/A4数字待补 · 02 BEV≠06 ICE≠01/08 EM-P · 尺寸近Z20勿映射 · 100–0 34.19≠34.33 dual · 同表02≠ZEEKR X（200kW/5.5s≠428Ps/3.8s）· Niro高1545≠1570 dual · PPT+视频100%";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -2793,8 +2929,9 @@ export const SEED_GAP_UPDATES = {
     "Lynk 03 产品课已采（2026-09-05，~92%，Video9 skipped）：CMA · 4684×1843×1460/WB2730 · 03 T4Evo+7DCT Evo 160kW/325Nm（0–100待补）· 03+ T5Evo+Aisin 8AT 195kW/380Nm/5.7s · 7DCT-Evo 380Nm/97.2%·95.5%/15→18L/min/4.3L · 8AT 96kg · BW 6th-gen 4WD 100:0/50:50 · stab 22→22.5；中国竞品价带 SA3/BMW1/Lamando/Civic/Axela ≠本地MSRP；区域 03/A200/A4 表头无 A200/A4 数字待补；≠03+混写 ≠05/06/01 EM-P/08",
     "Lynk 02 BEV 产品课已采（2026-09-05，PPT+视频 100%）：SEA RWD · 4460×1845×1573/WB2755 · 200kW/343Nm/5.5s · 66kWh NCM · WLTC 465/435 · 4.5C 10–80 30min · V2L 3.3 · Brembo 17 · 100–0 34.19/34.33 dual · moose 81.7 · 22 HW/16 ADAS · 能耗17.6 · 视频补 Cd0.259/+46.9km · 视野111°/85°·遮挡>99%/>95% · side-seal 0泄漏/+2%语音/3patents · 转向50ms/0.1 · 后排7-layer · Niro高1545/1570 dual；竞品 Atto3/ID.3/Niro/ZEEKR X；尺寸近Z20勿映射；≠06 ICE ≠01/08 EM-P",
     "热泵专课无学习权限；Thermal/HV Parts 课多数 °C/流量/kW 设定点待补（已采 HVCH 7kW）",
-    "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包须双 badge 并存；与西语产品课动力/续航 dual-badge",
-    "[Spanish] ZEEKR X Product Training 已采 PPT（2026-09-05）：4432×1836×1566/WB2750 · Prem 200kW/272HP(表268)/343/5.6s · Flag 315kW/428HP/543/3.8s · 100–0 34.5 · 66kWh · DC150 10–80 30min · AC22/4h·11/7.5h · AWD表续航420；vs 2026：200≠250 · 315/3.8≠365/3.7 · Std61仅2026 · 420≠445/415；≠02竞品表 X440/4450；视频 seek 未完 · Quiz 未开",
+    "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包须双 badge 并存；与西语产品课及澳 MY26 动力/充电 dual-badge",
+    "[Spanish] ZEEKR X Product Training 已采 PPT（2026-09-05）：4432×1836×1566/WB2750 · Prem 200kW/272HP(表268)/343/5.6s · Flag 315kW/428HP/543/3.8s · 100–0 34.5 · 66kWh · DC150 10–80 30min · AC22/4h·11/7.5h · AWD表续航420；vs 2026：200≠250 · 315/3.8≠365/3.7 · Std61仅2026 · 420≠445/415；≠02竞品表 X440/4450；≠澳 MY26 3.7s/DC250；视频 seek 未完 · Quiz 未开",
+    "MY26 X Product Course Australia 已采（2026-09-05，Studied ~50% 至 Sentry）：RWD 61 LFP AC11 · DC250（另处230 dual）· AWD 66 NCM AC22 DC150 · NCM 90%/周100% · V2L3.3 · 0–100 3.7s · 扭矩25:75–50:50 · UWB10cm · eSIM6GB/5yrs · CarPlay/AA · AR-HUD · Hi ZEEKR · 636kN · 73%HSS/UHSS · 7气囊 · PSS2ms · 5V5R12U EyeQ4 · Sentry 功能表；vs2026 DC250≠230 · vs西语3.7≠3.8；Exam/Evaluate 未开",
     "Charging 课：Boost vs Direct / max kW 表待补；Launch Lesson Exam 跳过；UI ~35%",
     "Electric Drive 课：分车峰值 kW/N·m 待补；Lesson Exam 未做；UI Studied ~62%",
     "ODP 课：除 7X 22 kW 外其他 ODP kW 额定待补；Lesson Exam 未做；UI ~52%",
@@ -2823,6 +2960,7 @@ export const ZEEKR_ACADEMY_SEED = {
   lynk02BevProductFacts,
   zeekrX2026Facts,
   zeekrXSpanishProductFacts,
+  zeekrXAustraliaMy26Facts,
   zeekr007gtFacts,
   zeekr009SalesFacts,
   zeekr009Vx11A5Facts,
