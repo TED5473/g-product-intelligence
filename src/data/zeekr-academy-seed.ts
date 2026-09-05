@@ -953,6 +953,130 @@ export const lynk03ProductFacts: AcademyFact[] = [
 ];
 
 
+
+
+// ─── Lynk 02 BEV Product Training (极氪学; captured 2026-09-05) ───────────────
+
+export const lynk02BevProductFacts: AcademyFact[] = [
+  {
+    id: "02bev-identity",
+    topic: "02 BEV product training identity",
+    text: "Lynk & Co 02 (BEV) Product Training = Compact Coupe SUV / Premium Sporty E-SUV · SEA · RWD；课进度：6 PPT 100% · 视频总长 02:43:55 平台 Studied ~2%（待补）· Quiz 未开 — 本课 ≠ 06 ICE ≠ 01/08 EM-P；≠ 国内 CMA 02 Hatchback",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 02 (BEV)",
+    captured: "2026-09-05",
+    tags: ["02", "02-BEV", "SEA", "BEV"],
+  },
+  {
+    id: "02bev-design",
+    topic: "02 BEV design language",
+    text: "第二代 “Dawn of Light / The Next Day”；突出式浮动尾灯、无框外后视镜、隐藏式水切（课内宣称）",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 02 (BEV)",
+    captured: "2026-09-05",
+    tags: ["02-BEV"],
+  },
+  {
+    id: "02bev-dims",
+    topic: "02 BEV dimensions",
+    text: "4460×1845×1573 mm · WB 2755 mm · WB/L 0.618；离地间隙 191 / 174 mm",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 02 (BEV)",
+    captured: "2026-09-05",
+    tags: ["02-BEV"],
+  },
+  {
+    id: "02bev-dims-vs-z20",
+    topic: "02 BEV dims vs Z20 public (do not map)",
+    text: "本课尺寸 4460×1845×1573 与 Z20 公开口径同形，但课内未明示 02=Z20 — 勿自动等同/映射；动力亦异（本课 200 kW/5.5 s vs Z20 公开 250 kW/5.3 s）分 badge",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 02 (BEV) · 公开口径 Z20",
+    captured: "2026-09-05",
+    tags: ["02-BEV", "Z20"],
+  },
+  {
+    id: "02bev-powertrain",
+    topic: "02 BEV powertrain",
+    text: "SEA RWD · SiC 三合一电驱 · PMSM 8 层扁线 · 峰值 200 kW / 272 Ps / 343 N·m · 0–100 5.5 s · Vmax 180 km/h · 电机效率 97.86%",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 02 (BEV)",
+    captured: "2026-09-05",
+    tags: ["02-BEV", "SEA", "RWD"],
+  },
+  {
+    id: "02bev-battery-range",
+    topic: "02 BEV pack / WLTC range",
+    text: "NCM 66 kWh；WLTC 465 / 435 km（双值保留）",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 02 (BEV)",
+    captured: "2026-09-05",
+    tags: ["02-BEV", "battery"],
+  },
+  {
+    id: "02bev-charge-v2l",
+    topic: "02 BEV charge / V2L",
+    text: "4.5C；10–80% 30 min；30 min 至高补能 325+ km；V2L 3.3 kW；充电口后置",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 02 (BEV)",
+    captured: "2026-09-05",
+    tags: ["02-BEV", "charging", "V2L"],
+  },
+  {
+    id: "02bev-energy",
+    topic: "02 BEV official energy use",
+    text: "课内竞品页官方能耗 17.6 kWh/100 km",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 02 (BEV)",
+    captured: "2026-09-05",
+    tags: ["02-BEV", "energy"],
+  },
+  {
+    id: "02bev-chassis-brake",
+    topic: "02 BEV chassis / brake / moose",
+    text: "前 MacPherson · 后五连杆；Brembo 17″ 前后通风盘；100–0 34.19 m（另页 34.33 m，dual）；连续 10× 100–0；盘温限 650°C；moose 81.7 km/h",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 02 (BEV)",
+    captured: "2026-09-05",
+    tags: ["02-BEV", "chassis", "brake"],
+  },
+  {
+    id: "02bev-cabin-adas",
+    topic: "02 BEV cabin / ADAS / safety",
+    text: "Dragon Eagle One Plus 7 nm · Snapdragon 8155；HK 14 speakers / 5.1 / 1600 W；CID 15.4″ · cluster 10.2″ · 双无线 15 W；22 sensing HW · 16 ADAS · 540° · 7 airbags；E-NCAP 五星 claim · Tank Body",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 02 (BEV)",
+    captured: "2026-09-05",
+    tags: ["02-BEV", "ADAS", "safety"],
+  },
+  {
+    id: "02bev-competitors",
+    topic: "02 BEV competitor table",
+    text: "课内表：02 4460×1845×1573/WB2755 · 200kW/272Ps/343 · 5.5s/180 · 66/435｜Atto 3 4455×1875×1615/2720 · 150/204/310 · 7.3/160 · 60.48/420｜ID.3 4260×1810×1560/2765 · 125/170/310 · 8.2/160 · 52.8/385｜Niro EV 4420×1825×1545/2720 · 148/201/255 · 7.5/167 · 64.8/463｜ZEEKR X 4450×1836×1572/2750 · 428 Ps/543 · 3.8/190 · 66/440；另点名 Smart #1 / Seal U / eQ7 / Ora 03 / Kona EV",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 02 (BEV)",
+    captured: "2026-09-05",
+    tags: ["02-BEV", "competitors", "x"],
+  },
+  {
+    id: "02bev-vs-zeekr-x",
+    topic: "02 BEV vs ZEEKR X on same competitor slide",
+    text: "同竞品表：02 200 kW / 5.5 s vs ZEEKR X 428 Ps / 3.8 s — 同页并列勿塌缩；X 详参另看 2026 X 产品课（Std/Prem/Flag 分档）",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 02 (BEV)",
+    captured: "2026-09-05",
+    tags: ["02-BEV", "x", "competitors"],
+  },
+  {
+    id: "02bev-video-gap",
+    topic: "02 BEV video progress gap",
+    text: "PPT 6 份 100%；视频 Studied ~2%（总长 02:43:55）— 待补；已采规格以 PPT 为准，勿用未看视频外推",
+    sourceBadge: "待补",
+    course: "Product Training of Lynk & Co 02 (BEV) video",
+    captured: "2026-09-05",
+    tags: ["02-BEV"],
+  },
+];
+
 // ─── 2026 ZEEKR X New Model (极氪学; captured 2026-09-04) ─────────────────────
 
 export const zeekrX2026Facts: AcademyFact[] = [
@@ -1797,6 +1921,7 @@ export const academyFacts: AcademyFact[] = [
   ...lynk06ProductFacts,
   ...lynk05ProductFacts,
   ...lynk03ProductFacts,
+  ...lynk02BevProductFacts,
   ...zeekrX2026Facts,
   ...thermalFacts,
   ...hvPartsFacts,
@@ -2032,6 +2157,34 @@ export const academyTraps: AcademyTrap[] = [
     sourceBadge: "极氪学",
     tags: ["03", "competitors", "price"],
   },
+  {
+    id: "trap-02bev-not-06-01-08",
+    wrong: "把 02 BEV 与 06 ICE / 01·08 EM-P（或国内 CMA 02 Hatchback）规格混用",
+    right: "02 BEV 产品课 = SEA RWD 纯电 Compact Coupe SUV · 4460×1845×1573/WB2755 · 200 kW/343 N·m/5.5 s · 66 kWh NCM；≠06 ICE BHE15+7DCT；≠01/08 EM-P；≠国内 CMA 02 Hatchback（墙上 4448/CMA）",
+    sourceBadge: "极氪学",
+    tags: ["02-BEV", "06", "01", "08", "ICE", "EM-P"],
+  },
+  {
+    id: "trap-02bev-not-z20",
+    wrong: "因尺寸同形把本课 02 BEV 自动等同/映射为 Z20",
+    right: "本课尺寸 4460×1845×1573 接近 Z20 公开口径，但课内未明示 02=Z20 — 勿自动映射；且本课 200 kW/5.5 s ≠ Z20 公开 250 kW/5.3 s，分 badge",
+    sourceBadge: "极氪学",
+    tags: ["02-BEV", "Z20"],
+  },
+  {
+    id: "trap-02bev-100-0-dual",
+    wrong: "只报 34.19 m 或只报 34.33 m 当唯一 100–0 值",
+    right: "课件双页：100–0 34.19 m 与 34.33 m — dual-badge，简报须脚注双值",
+    sourceBadge: "极氪学",
+    tags: ["02-BEV", "brake"],
+  },
+  {
+    id: "trap-02bev-vs-zeekr-x",
+    wrong: "把同竞品页的 02 与 ZEEKR X 动力/加速合成一行",
+    right: "同表并列：02 200 kW / 5.5 s vs X 428 Ps / 3.8 s — 勿塌缩；X 分档详参看 2026 X 产品课",
+    sourceBadge: "极氪学",
+    tags: ["02-BEV", "x", "competitors"],
+  },
 ];
 
 export const ARCH_SEEDS: ArchSeed[] = [
@@ -2076,7 +2229,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
     id: "EM-P",
     name: "EM-P",
     nameZh: "超级电混",
-    oneLiner: "08/07 DHT Evo；01 EM-P（206/535 · 17.72 · TE38.1%）≠08 280/436·39.6·TE44.26%；≠06 ICE BHE15 133/290+7DCT（无包）；≠05 ICE 254hp/350+8AT+BW Gen V；≠03/03+ ICE T4Evo/T5Evo；≠09 MHEV；≠7X BEV",
+    oneLiner: "08/07 DHT Evo；01 EM-P（206/535 · 17.72 · TE38.1%）≠08 280/436·39.6·TE44.26%；≠06 ICE BHE15 133/290+7DCT（无包）；≠05 ICE 254hp/350+8AT+BW Gen V；≠03/03+ ICE T4Evo/T5Evo；≠02 BEV SEA RWD；≠09 MHEV；≠7X BEV",
     sourceBadge: "极氪学",
     factIds: empFacts.map((f) => f.id),
     trapIds: [
@@ -2091,6 +2244,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
       "trap-06-bhe15-133-vs-102-120",
       "trap-05-not-emp-01-08",
       "trap-03-not-05-06-01-08",
+      "trap-02bev-not-06-01-08",
     ],
   },
   {
@@ -2165,6 +2319,21 @@ export const ARCH_SEEDS: ArchSeed[] = [
       "trap-03-not-03plus",
       "trap-03-not-05-06-01-08",
       "trap-03-china-price-not-local-msrp",
+    ],
+  },
+  {
+    id: "Lynk02BevProduct",
+    name: "Lynk 02 BEV Product Training",
+    nameZh: "领克 02 BEV 产品课",
+    oneLiner:
+      "SEA RWD · Compact Coupe SUV · 4460×1845×1573/WB2755 · 200kW/343Nm/5.5s · 66kWh NCM · WLTC 465/435 · 4.5C 10–80 30min · V2L 3.3 · Brembo 17 · 100–0 34.19/34.33 dual · moose 81.7 · 22 HW/16 ADAS · 能耗 17.6 · 竞品 Atto3/ID.3/Niro/ZEEKR X · PPT100%/视频~2%待补 · ≠06 ICE ≠01/08 EM-P · 尺寸近Z20勿映射",
+    sourceBadge: "极氪学",
+    factIds: lynk02BevProductFacts.map((f) => f.id),
+    trapIds: [
+      "trap-02bev-not-06-01-08",
+      "trap-02bev-not-z20",
+      "trap-02bev-100-0-dual",
+      "trap-02bev-vs-zeekr-x",
     ],
   },
   {
@@ -2298,7 +2467,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V（本遍销讲勿贴800V课包/续航；dims/pack/rated range待补） · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230 · 05≠06 ICE（4592/254hp/8AT/BW Gen V ≠4340/133kW/7DCT）· 05≠01/08 EM-P·≠09/900 · Q5宽课表2140须脚注 · 03≠03+（T4Evo/7DCT/160kW ≠ T5Evo/8AT/195kW/5.7s）· 03≠05/06/01 EM-P/08 · 中国竞品价带≠本地MSRP · A200/A4数字待补";
+  "009≠800V（本遍销讲勿贴800V课包/续航；dims/pack/rated range待补） · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230 · 05≠06 ICE（4592/254hp/8AT/BW Gen V ≠4340/133kW/7DCT）· 05≠01/08 EM-P·≠09/900 · Q5宽课表2140须脚注 · 03≠03+（T4Evo/7DCT/160kW ≠ T5Evo/8AT/195kW/5.7s）· 03≠05/06/01 EM-P/08 · 中国竞品价带≠本地MSRP · A200/A4数字待补 · 02 BEV≠06 ICE≠01/08 EM-P · 尺寸近Z20勿映射 · 100–0 34.19≠34.33 dual · 同表02≠ZEEKR X（200kW/5.5s≠428Ps/3.8s）· PPT100%/视频~2%待补";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -2314,6 +2483,7 @@ export const SEED_GAP_UPDATES = {
     "Lynk 06 产品课已采（2026-09-05，C1955518318159941632，100%）：ICE BHE15 133kW/290Nm+7DCT · ≠EM-P·无包 · CMA/SPA本课待补；4340×1820×1625/WB2640（公开摘4350分badge）· WLTC6.4（公开6.55分badge）· 17ADAS/ACC·AEB150m；PPT s25–35 viewer gap待补",
     "Lynk 05 产品课已采（2026-09-05，C1955464229049405440，100%）：Sporty Coupe SUV · 4592×1879×1628/WB2734 · 254hp/350Nm · 0–100 6.7s · Aisin 8AT · BorgWarner Gen V AWD · 20 ADAS · 78.4%HSS · 12.3″+12.8″ · Infinity 10；竞品 Q5 SPB（宽课表2140须脚注）/GLC 300 Coupe/X4；≠06 ICE ≠01/08 EM-P；Quiz/Exam 未开",
     "Lynk 03 产品课已采（2026-09-05，~92%，Video9 skipped）：CMA · 4684×1843×1460/WB2730 · 03 T4Evo+7DCT Evo 160kW/325Nm（0–100待补）· 03+ T5Evo+Aisin 8AT 195kW/380Nm/5.7s · 7DCT-Evo 380Nm/97.2%·95.5%/15→18L/min/4.3L · 8AT 96kg · BW 6th-gen 4WD 100:0/50:50 · stab 22→22.5；中国竞品价带 SA3/BMW1/Lamando/Civic/Axela ≠本地MSRP；区域 03/A200/A4 表头无 A200/A4 数字待补；≠03+混写 ≠05/06/01 EM-P/08",
+    "Lynk 02 BEV 产品课已采（2026-09-05，PPT 100%/视频~2%待补）：SEA RWD · 4460×1845×1573/WB2755 · 200kW/343Nm/5.5s · 66kWh NCM · WLTC 465/435 · 4.5C 10–80 30min · V2L 3.3 · Brembo 17 · 100–0 34.19/34.33 dual · moose 81.7 · 22 HW/16 ADAS · 能耗17.6 · 竞品 Atto3/ID.3/Niro/ZEEKR X；尺寸近Z20勿映射；≠06 ICE ≠01/08 EM-P",
     "热泵专课无学习权限；Thermal/HV Parts 课多数 °C/流量/kW 设定点待补（已采 HVCH 7kW）",
     "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包须双 badge 并存",
     "Charging 课：Boost vs Direct / max kW 表待补；Launch Lesson Exam 跳过；UI ~35%",
@@ -2340,6 +2510,7 @@ export const ZEEKR_ACADEMY_SEED = {
   lynk06ProductFacts,
   lynk05ProductFacts,
   lynk03ProductFacts,
+  lynk02BevProductFacts,
   zeekrX2026Facts,
   zeekr007gtFacts,
   zeekr009SalesFacts,
