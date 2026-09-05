@@ -778,6 +778,93 @@ export const lynk06ProductFacts: AcademyFact[] = [
 ];
 
 
+
+// ─── Lynk 05 Product Training (极氪学; captured 2026-09-05) ───────────────────
+
+export const lynk05ProductFacts: AcademyFact[] = [
+  {
+    id: "05pt-identity",
+    topic: "05 product training identity",
+    text: "Lynk & Co 05 Product Training = Sporty Coupe SUV · Ultimate IS STANDARD, Ultimately Sporty Coupe SUV；课进度 100%（C1955464229049405440；Part 6 Competitor 24/24；Quiz/Exam 未开）— 本课 ≠ 06 ICE ≠ 01/08 EM-P ≠ 09/900",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 05 (C1955464229049405440)",
+    captured: "2026-09-05",
+    tags: ["05", "ICE"],
+  },
+  {
+    id: "05pt-design",
+    topic: "05 design / cabin materials",
+    text: "Gothenburg Design；Mega-city Contrast；Urban Skyline；Nappa + Nubuck",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 05",
+    captured: "2026-09-05",
+    tags: ["05"],
+  },
+  {
+    id: "05pt-dims",
+    topic: "05 dimensions",
+    text: "4592×1879×1628 mm · WB 2734 mm（竞品表完整尺寸）",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 05",
+    captured: "2026-09-05",
+    tags: ["05"],
+  },
+  {
+    id: "05pt-powertrain",
+    topic: "05 ICE powertrain / AWD",
+    text: "254 hp @ 5500 rpm · 350 N·m @ 1800–4800 rpm · 0–100 6.7 s · Aisin 8AT · BorgWarner Gen V intelligent AWD — 本课 Product House 未明确写 EM-P/动力电池；按燃油+AWD 口径，勿写成 08 EM-P",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 05",
+    captured: "2026-09-05",
+    tags: ["05", "ICE", "AWD"],
+  },
+  {
+    id: "05pt-safety-cabin",
+    topic: "05 ADAS / body / cabin",
+    text: "20 ADAS；HSS 78.4%；global five-star claim；AQS；wireless charging；Infinity™ 10 speakers；cluster 12.3″ · center 12.8″；panoramic sunroof（竞品对比页）",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 05",
+    captured: "2026-09-05",
+    tags: ["05", "ADAS", "safety"],
+  },
+  {
+    id: "05pt-vs-q5-sportback",
+    topic: "05 vs Audi Q5 Sportback",
+    text: "课表：05 4592/1879/1628 · WB2734 · 254 hp · 350 N·m · 0–100 6.7s｜Q5 SPB 4682/2140/1662 · WB2824 · 249 hp · 370 N·m · 6.3s；屏 12.3+12.8 vs 12.3+10.1；05 Nappa+Infinity 10 vs Q5 普通皮/无品牌音响；05 20 ADAS — Q5 宽 2140 为课表原值（或含外后视镜），引用须注明课表",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 05 Part 6",
+    captured: "2026-09-05",
+    tags: ["05", "competitors"],
+  },
+  {
+    id: "05pt-vs-glc-300-coupe",
+    topic: "05 vs Mercedes GLC 300 Coupe",
+    text: "课表：05 4592/1879/1628 · WB2734 · 254 hp · 350 · 6.7s｜GLC 300 Coupe 4731/1890/1600 · WB2873 · 258 hp · 370 · 6.3s；屏 12.3+12.8 vs 7+10.25；扬声器 10 vs 13；05 另有手套箱冷藏、指纹、AQS、主动净化、DVR USB",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 05 Part 6",
+    captured: "2026-09-05",
+    tags: ["05", "competitors"],
+  },
+  {
+    id: "05pt-vs-bmw-x4",
+    topic: "05 vs BMW X4",
+    text: "课表：05 4592/1879/1628 · WB2734 · 254 hp · 350 · 6.7s｜X4 4751/1918/1621 · WB2864 · 184 hp · 300 · 8.4s；屏 12.3+12.8 vs 5.7+8.8；天窗全景 vs 小型全景",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 05 Part 6",
+    captured: "2026-09-05",
+    tags: ["05", "competitors"],
+  },
+  {
+    id: "05pt-q5-width-2140",
+    topic: "Q5 width 2140 course-table note",
+    text: "竞品表印 Q5 Sportback 宽度 2140 mm（异常偏宽，或含外后视镜口径）— 引用时注明「课表原值 2140」，勿当裸车身宽覆写",
+    sourceBadge: "极氪学",
+    course: "Product Training of Lynk & Co 05 Part 6",
+    captured: "2026-09-05",
+    tags: ["05", "competitors"],
+  },
+];
+
 // ─── 2026 ZEEKR X New Model (极氪学; captured 2026-09-04) ─────────────────────
 
 export const zeekrX2026Facts: AcademyFact[] = [
@@ -1620,6 +1707,7 @@ export const academyFacts: AcademyFact[] = [
   ...lynk08ProductFacts,
   ...lynk01ProductFacts,
   ...lynk06ProductFacts,
+  ...lynk05ProductFacts,
   ...zeekrX2026Facts,
   ...thermalFacts,
   ...hvPartsFacts,
@@ -1813,6 +1901,27 @@ export const academyTraps: AcademyTrap[] = [
     sourceBadge: "极氪学",
     tags: ["06", "01", "EM-P", "BHE15"],
   },
+  {
+    id: "trap-05-not-06-ice",
+    wrong: "把 05 与 06 ICE 规格混用（4340 / 133 kW 7DCT 等）",
+    right: "05 产品课（C1955464229049405440）= Sporty Coupe SUV · 4592×1879×1628/WB2734 · 254 hp/350 N·m · 0–100 6.7s · Aisin 8AT · BorgWarner Gen V AWD；06 = 4340×1820×1625/WB2640 · BHE15 133 kW/290 N·m + 7DCT — 分车",
+    sourceBadge: "极氪学",
+    tags: ["05", "06", "ICE"],
+  },
+  {
+    id: "trap-05-not-emp-01-08",
+    wrong: "把 05 讲成 01/08 EM-P（或 09/900 电混）",
+    right: "05 本产品课按燃油+AWD（Aisin 8AT · BorgWarner Gen V）；Product House 未明确写 EM-P/动力电池 — 勿写成 01/08 EM-P；≠ 09/900",
+    sourceBadge: "极氪学",
+    tags: ["05", "01", "08", "EM-P"],
+  },
+  {
+    id: "trap-05-q5-width-2140",
+    wrong: "把课表 Q5 Sportback 宽 2140 mm 当裸车身宽直接外推",
+    right: "Part 6 竞品表印 Q5 宽 2140（或含外后视镜）— 引用须注明课表原值 2140，勿覆写常规裸车身宽口径",
+    sourceBadge: "极氪学",
+    tags: ["05", "competitors"],
+  },
 ];
 
 export const ARCH_SEEDS: ArchSeed[] = [
@@ -1857,7 +1966,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
     id: "EM-P",
     name: "EM-P",
     nameZh: "超级电混",
-    oneLiner: "08/07 DHT Evo；01 EM-P（206/535 · 17.72 · TE38.1%）≠08 280/436·39.6·TE44.26%；≠06 ICE BHE15 133/290+7DCT（无包）；≠09 MHEV；≠7X BEV",
+    oneLiner: "08/07 DHT Evo；01 EM-P（206/535 · 17.72 · TE38.1%）≠08 280/436·39.6·TE44.26%；≠06 ICE BHE15 133/290+7DCT（无包）；≠05 ICE 254hp/350+8AT+BW Gen V；≠09 MHEV；≠7X BEV",
     sourceBadge: "极氪学",
     factIds: empFacts.map((f) => f.id),
     trapIds: [
@@ -1870,6 +1979,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
       "trap-01-cma-vs-cma-evo",
       "trap-06-ice-not-emp",
       "trap-06-bhe15-133-vs-102-120",
+      "trap-05-not-emp-01-08",
     ],
   },
   {
@@ -1921,6 +2031,16 @@ export const ARCH_SEEDS: ArchSeed[] = [
     sourceBadge: "极氪学",
     factIds: lynk06ProductFacts.map((f) => f.id),
     trapIds: ["trap-06-ice-not-emp", "trap-06-bhe15-133-vs-102-120"],
+  },
+  {
+    id: "Lynk05Product",
+    name: "Lynk 05 Product Training",
+    nameZh: "领克 05 产品课",
+    oneLiner:
+      "Sporty Coupe SUV · 4592×1879×1628/WB2734 · 254hp/350Nm · 0–100 6.7s · Aisin 8AT · BorgWarner Gen V AWD · 20 ADAS · 78.4%HSS · 12.3″+12.8″ · Infinity 10 · 竞品 Q5 SPB/GLC 300 Coupe/X4（Q5宽课表2140须脚注）· ≠06 ICE ≠01/08 EM-P",
+    sourceBadge: "极氪学",
+    factIds: lynk05ProductFacts.map((f) => f.id),
+    trapIds: ["trap-05-not-06-ice", "trap-05-not-emp-01-08", "trap-05-q5-width-2140"],
   },
   {
     id: "ZeekrX2026",
@@ -2053,7 +2173,7 @@ export const ARCH_SEEDS: ArchSeed[] = [
 
 /** One-line wall trap string (matches pm-wall archCompare.trap style) */
 export const WALL_TRAP_LINE =
-  "009≠800V（本遍销讲勿贴800V课包/续航；dims/pack/rated range待补） · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230";
+  "009≠800V（本遍销讲勿贴800V课包/续航；dims/pack/rated range待补） · 7X≠900V · 09≠CMA≠EM-P · 900 EM-P≠09 MHEV（3DHT+P4≠P0+8AT）· P4不在3DHT内 · 50≠唯一/须脚注52.38 · NEDC170≠CLTC280 · 08功率三源：产品课竞品页350Nm/6.5s ≠ 销售257/6.75 ≠ 专课280/436 · 01≠08：系统206≠280/436 · TE38.1%≠44.26% · 包17.72≠39.6 · CMA≠CMA Evo标签 · X包勿合并：2026 Std 61@413 ≠ BE13-B ~49.6@380.6 ≠ 800V表66@392 · 007GT WLTC≠800V包压表 · 007GT 500/790≠7X 475/710 · 08 ADAS：产品课5R10V/116TOPS ≠ Basic课5R1V无TOPS · SPA-Evo课：L3-L5 vs L2+冲突 · 「66%」轴距延伸是陷阱 · E8=SEA≠GEA · 06本课=ICE BHE15 133kW/290Nm 7DCT≠EM-P·无包·CMA/SPA待补（公开BMA另badge）· BHE15：06的133/290 ≠01的102/230 ≠专课120/230 · 05≠06 ICE（4592/254hp/8AT/BW Gen V ≠4340/133kW/7DCT）· 05≠01/08 EM-P·≠09/900 · Q5宽课表2140须脚注";
 
 /** Gaps to clear / keep in pm-wall.gaps after merge */
 export const SEED_GAP_UPDATES = {
@@ -2067,6 +2187,7 @@ export const SEED_GAP_UPDATES = {
     "08 产品课：Videos 01–03 + PPT 04–08 已采；quiz 跳过；功率须三源分 badge（竞品页/销售攻防/技术专课）",
     "NEW 01 / 01 EM-P 产品课：PPT+主视频已采（2026-09-05）；视频 item 100% · 整课 UI ~18%；Exam/Evaluate未开；视频补 R19 · 5 controls/17 modes · 18 ADAS · 课内碰撞对比速度 72vs64/64vs56/84vs80；01≠08（206/535·17.72·TE38.1%·CMA vs 280/436·39.6·TE44.26%·CMA Evo）",
     "Lynk 06 产品课已采（2026-09-05，C1955518318159941632，100%）：ICE BHE15 133kW/290Nm+7DCT · ≠EM-P·无包 · CMA/SPA本课待补；4340×1820×1625/WB2640（公开摘4350分badge）· WLTC6.4（公开6.55分badge）· 17ADAS/ACC·AEB150m；PPT s25–35 viewer gap待补",
+    "Lynk 05 产品课已采（2026-09-05，C1955464229049405440，100%）：Sporty Coupe SUV · 4592×1879×1628/WB2734 · 254hp/350Nm · 0–100 6.7s · Aisin 8AT · BorgWarner Gen V AWD · 20 ADAS · 78.4%HSS · 12.3″+12.8″ · Infinity 10；竞品 Q5 SPB（宽课表2140须脚注）/GLC 300 Coupe/X4；≠06 ICE ≠01/08 EM-P；Quiz/Exam 未开",
     "热泵专课无学习权限；Thermal/HV Parts 课多数 °C/流量/kW 设定点待补（已采 HVCH 7kW）",
     "2026 X：Prem/Flag 66 NCM 电压/电芯详参本课待补；Quiz/exam 未做；旧 BE13-B 与 800V 表包须双 badge 并存",
     "Charging 课：Boost vs Direct / max kW 表待补；Launch Lesson Exam 跳过；UI ~35%",
@@ -2091,6 +2212,7 @@ export const ZEEKR_ACADEMY_SEED = {
   lynk08ProductFacts,
   lynk01ProductFacts,
   lynk06ProductFacts,
+  lynk05ProductFacts,
   zeekrX2026Facts,
   zeekr007gtFacts,
   zeekr009SalesFacts,
